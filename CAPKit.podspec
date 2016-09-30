@@ -42,8 +42,12 @@ Pod::Spec.new do |s|
   s.dependency 'GZIP', '~> 1.0.2'
   s.dependency 'SSKeychain', '~> 1.2.2'
   s.dependency 'AnimatedGIFImageSerialization-fork', '~> 0.2.1'
-  s.dependency 'iOS-WebP-fork', '~> 0.4'
+  s.dependency 'iOS-WebP', '~> 0.4'
 
-  s.dependency 'lua53', '~> 0.0.8'
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SRCROOT)/Pods/lua53/lua-5.3.3/src $(SRCROOT)/Pods/lua53/lua53"}
+  s.dependency 'CAPKit-lua53', '~> 0.1.0'
+  s.dependency 'CAPKit-3rdparty-libs', '~> 0.1.0'
+  s.dependency 'CAPKit-sqlcipher', '~> 0.1.0'
+  s.dependency 'CAPKit-OpenCV24x', '~> 2.4.10'
+  
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/CAPKit-lua53/lua-5.3.3/src $(PODS_ROOT)/CAPKit-lua53/lua53"}
 end
