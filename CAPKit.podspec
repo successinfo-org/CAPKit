@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.dependency 'DTCoreText', '~> 1.6.12'
   s.dependency 'TouchJSON', '~> 1.1'
   s.dependency 'ASIHTTPRequest', '~> 1.8.2'
-  s.dependency 'FMDB/common', '~> 2.6.2'
+  s.dependency 'FMDB/FTS', '~> 2.6.2'
   s.dependency 'Reachability', '~> 3.1.1'
   s.dependency 'ZipArchive', '~> 1.4.0'
   s.dependency 'UIDevice-Hardware', '~> 0.1.3'
