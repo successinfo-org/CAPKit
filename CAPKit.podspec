@@ -48,6 +48,7 @@ Pod::Spec.new do |s|
   s.dependency 'CAPKit-3rdparty-libs', '~> 0.1.0'
   s.dependency 'CAPKit-sqlcipher', '~> 0.1.0'
   s.dependency 'CAPKit-OpenCV24x', '~> 2.4.10'
+  s.dependency 'CAPKit-Box2D', '~> 0.1.0'
   
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/CAPKit-lua53/lua-5.3.3/src $(PODS_ROOT)/CAPKit-lua53/lua53"}
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/#{s.name}/lua-5.3.3/src $(PODS_ROOT)/#{s.name}/lua53"}
 end
