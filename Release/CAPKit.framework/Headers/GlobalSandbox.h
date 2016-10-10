@@ -28,4 +28,6 @@
 
 - (NSData *) resolveData: (NSString *) appId withPath: (NSString *) path;
 
+- (void) clear;
+
 @end

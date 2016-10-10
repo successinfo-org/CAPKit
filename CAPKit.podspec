@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "samchang" => "sam.chang@me.com" }
   s.platform     = :ios, "7.0.0"
-  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.1" }
+  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.2" }
   s.frameworks   = 'AssetsLibrary', 'MessageUI', 'AddressBookUI', 'AddressBook', 'Accelerate', 'MapKit', 'AudioToolbox', 'CoreTelephony', 'QuickLook', 'Social', 'CoreLocation'
   s.libraries = 'resolv'
 
@@ -41,8 +41,8 @@ Pod::Spec.new do |s|
   s.dependency 'GZIP', '~> 1.0.2'
   s.dependency 'SSKeychain', '~> 1.2.2'
   s.dependency 'AnimatedGIFImageSerialization-fork', '~> 0.2.1'
-  s.dependency 'iOS-WebP', '~> 0.4'
 
+  s.dependency 'CAPKit-iOS-WebP', '~> 0.4'
   s.dependency 'CAPKit-lua53', '~> 0.1.0'
   s.dependency 'CAPKit-3rdparty-libs', '~> 0.1.0'
   s.dependency 'CAPKit-sqlcipher', '~> 0.1.0'

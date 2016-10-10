@@ -1,10 +1,9 @@
 @interface EOSMap : NSObject <EOSMapInterface>{
     NSMutableDictionary *dataMap;
-    
-#ifdef DEBUG_EOS
-    @public
-    NSObject *parent;
-#endif
 }
+
+#ifdef DEBUG_EOS
+@property (nonatomic, weak) NSObject *parent;
+#endif
 
 @end

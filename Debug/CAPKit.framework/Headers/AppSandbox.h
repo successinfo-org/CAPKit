@@ -4,7 +4,7 @@
     LuaObjectProxy *proxy;
 }
 
-@property (nonatomic, readonly) GlobalSandbox *globalSandbox;
+@property (nonatomic, weak, readonly) GlobalSandbox *globalSandbox;
 @property (nonatomic, readonly) LuaHelper *helper;
 @property (nonatomic, readonly) ScreenScale *scale;
 @property (nonatomic, readonly) id<AppLifecycle> lifecycle;

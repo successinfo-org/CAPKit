@@ -4,5 +4,6 @@
 
 @optional
 - (void) onLoad;
+- (void) onUnload;
 
 @end

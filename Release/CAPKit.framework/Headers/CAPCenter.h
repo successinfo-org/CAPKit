@@ -9,8 +9,6 @@
     Class containerClass;
 }
 
-@property (nonatomic, weak) CAPContainer *lastContainer;
-
 @property (nonatomic, assign) BOOL EOS_DEBUG_BOOL;
 @property (nonatomic, assign) BOOL EOS_DEBUGGER_BOOL;
 @property (nonatomic, assign) BOOL screenAutoRotation;
@@ -35,6 +33,10 @@
                         withOption: (CAPContainerOption *) option;
 
 - (NSArray *) listAllContainers;
+
+- (void) removeContainer: (CAPContainer *) container;
+
+- (void) removeAllContainers;
 
 - (CAPContainer *) lastContainer DEPRECATED_ATTRIBUTE;
 
