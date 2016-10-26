@@ -20,8 +20,6 @@
 
 - (NSString *) getSessionId;
 
-- (void) applyDefaults: (NSUserDefaults *) uds;
-
 - (void) makeSafeMode;
 
 - (void) preparePackage;

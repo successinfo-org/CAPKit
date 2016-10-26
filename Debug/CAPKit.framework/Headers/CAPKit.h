@@ -65,6 +65,7 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 
 #import <CAPKit/EventConstants.h>
 #import <CAPKit/BaseEvent.h>
+#import <CAPKit/BaseEvent+Private.h>
 #import <CAPKit/BroadcastEvent.h>
 #import <CAPKit/UnicastEvent.h>
 
