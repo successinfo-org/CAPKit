@@ -13,6 +13,7 @@
 @interface CAPContainer : NSObject <GlobalSandboxDelegate> {
     UIView *busyView;
     UIView *busyBodyView;
+    UIProgressView *progressView;
     UIActivityIndicatorView *indicatorView;
     NSInteger busyCount;
 
@@ -37,6 +38,8 @@
 
 - (void) presentModal: (AppContext *) context;
 - (void) dismissModal;
+
+- (void) setProgress: (float) progress;
 
 - (void) reloadPage: (AppContext *) context;
 
