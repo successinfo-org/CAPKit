@@ -16,6 +16,8 @@
 @property (nonatomic, readonly) id<PageLifecycle> lifecycle;
 @property (nonatomic, readonly) NSString *pageId;
 
+@property (nonatomic, readonly) NSMapTable *weakFunctions;
+
 - (id) initWithAppSandbox: (AppSandbox *) sandbox withPageId: (NSString *) pid;
 
 - (void) runLuaBuffer: (NSString *) buffer;

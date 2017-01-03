@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.1.7"
+  s.version      = "0.1.8"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "samchang" => "sam.chang@me.com" }
   s.platform     = :ios, "7.0.0"
-  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.7" }
+  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.8" }
   s.frameworks   = 'AssetsLibrary', 'MessageUI', 'AddressBookUI', 'AddressBook', 'Accelerate', 'MapKit', 'AudioToolbox', 'CoreTelephony', 'QuickLook', 'Social', 'CoreLocation'
   s.libraries = 'resolv'
 

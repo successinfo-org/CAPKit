@@ -22,6 +22,7 @@
 
 - (void) _LUA_removeChildById: (NSObject *) wid DEPRECATED_ATTRIBUTE;
 - (void) _LUA_removeChild: (NSObject *) wid;
+- (void) _LUA_removeChild: (NSObject *) wid : (NSNumber *) destroy;
 
 - (void) _LUA_removeChildAt: (int) idx;
 

@@ -15,6 +15,7 @@
 @property (nonatomic, readonly) NSMutableArray *pageList;
 @property (nonatomic, readonly) LuaState *state;
 @property (nonatomic, readonly) NSMutableArray *libraryPaths;
+@property (nonatomic, readonly) NSMapTable *weakFunctions;
 //@property (nonatomic, assign) int envRef;
 
 - (id) initWithGlobalSandbox: (GlobalSandbox *) sandbox withManifest: (ManifestM *) m withAppPath: (NSString *) path withDataPath: (NSString *) dpath;
