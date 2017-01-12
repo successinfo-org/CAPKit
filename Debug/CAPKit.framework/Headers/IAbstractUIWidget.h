@@ -20,9 +20,9 @@
 
 - (void) resumeLayout;
 
-- (LuaImage *) _LUA_getSnapshot;
+- (LuaImage *) _COROUTINE_getSnapshot;
 
-- (LuaImage *) getContentSnapshot;
+- (LuaImage *) _COROUTINE_getContentSnapshot;
 
 - (PackedArray *) getRect;
 

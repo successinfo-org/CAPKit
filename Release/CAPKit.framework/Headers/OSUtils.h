@@ -59,6 +59,10 @@
 
 + (void) runSyncBlockOnMain: (dispatch_block_t) blk;
 
+typedef id (^block_with_returnvalue)(void);
+
++ (id) runBlockOnMainWithReturnValue: (block_with_returnvalue) b;
+
 + (void) runBlockOnBackground: (dispatch_block_t) blk;
 
 + (AppSandbox *) getSandboxFromState: (lua_State *) L;
