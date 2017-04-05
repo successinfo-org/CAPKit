@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0.0"
   s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.10" }
   s.frameworks   = 'AssetsLibrary', 'MessageUI', 'AddressBookUI', 'AddressBook', 'Accelerate', 'MapKit', 'AudioToolbox', 'CoreTelephony', 'QuickLook', 'Social', 'CoreLocation'
+  s.weak_framework = 'WebKit'
   s.libraries = 'resolv'
 
   s.default_subspec = 'Release'
