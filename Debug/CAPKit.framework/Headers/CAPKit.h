@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 
 #import <CAPKit/LuaRef.h>
 #import <CAPKit/LuaFunction.h>
+#import <CAPKit/LuaFunctionWatcher.h>
 #import <CAPKit/LuaObjectProxy.h>
 #import <CAPKit/LuaProxyObject.h>
 #import <CAPKit/LuaObjectProxyCompatible.h>
@@ -62,6 +63,9 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/EOSMap.h>
 #import <CAPKit/EOSList.h>
 #import <CAPKit/PackedArray.h>
+
+#import <CAPKit/LuaImage.h>
+#import <CAPKit/ModelBuilder.h>
 
 #import <CAPKit/EventConstants.h>
 #import <CAPKit/BaseEvent.h>

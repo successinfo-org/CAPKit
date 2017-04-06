@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/CAPKit.h</key>
 		<data>
-		MZ38qxtOCqPPyXGCq59Sv9Wwi5Y=
+		M8bH1b3/aVgunZ68S71lgu1QKU4=
 		</data>
 		<key>Headers/CAPPanelView.h</key>
 		<data>
@@ -82,7 +82,11 @@
 		</data>
 		<key>Headers/DownloadInfo.h</key>
 		<data>
-		lsfVM8n8qnvAENdZFw7RJXFgQ3I=
+		gtLxoz45TRibwJoC8QiSjQbWv6Q=
+		</data>
+		<key>Headers/DownloadService.h</key>
+		<data>
+		s12m1fGOAkIzOVcysh1h1dbeT1U=
 		</data>
 		<key>Headers/EGORefreshTableHeaderView.h</key>
 		<data>
@@ -144,6 +148,10 @@
 		<data>
 		u36zGSMG8dMzw3m9dhbSudCZDs8=
 		</data>
+		<key>Headers/IDownloadService.h</key>
+		<data>
+		i9kwQyMVQpc5CYuz9ghtF/GjNQs=
+		</data>
 		<key>Headers/IListWidget.h</key>
 		<data>
 		G1qsHkLP+3pEcUovyXGMylXLfcE=
@@ -190,7 +198,7 @@
 		</data>
 		<key>Headers/LuaFunctionWatcher.h</key>
 		<data>
-		rVDwcH50N8t93BvTpvWdRNqr8Rk=
+		xZvtiR5CYgzjlV49NnkXkWPCyLQ=
 		</data>
 		<key>Headers/LuaImage.h</key>
 		<data>
@@ -242,7 +250,7 @@
 		</data>
 		<key>Headers/ModelBuilder.h</key>
 		<data>
-		VIi94vrhnG1XMLaPQX+dtWhzYpY=
+		AxiLsBlhWhsAyqaR6oE1bA3M/S0=
 		</data>
 		<key>Headers/OSUtils.h</key>
 		<data>
@@ -812,10 +820,6 @@
 		<data>
 		a3YllZSpdptYA5jdwwT+BlklCZE=
 		</data>
-		<key>PrivateHeaders/DownloadService.h</key>
-		<data>
-		FQ5+W/wewursDFK3NYfRQDCs69M=
-		</data>
 		<key>PrivateHeaders/EGORefreshScrollView.h</key>
 		<data>
 		hlcIloBFOTePwX86ucPe/iVqn/M=
@@ -826,7 +830,7 @@
 		</data>
 		<key>PrivateHeaders/EOSButton.h</key>
 		<data>
-		IllL8A6bq7xFIP5munL7h/6cVS0=
+		msqn6FwCMjvJCDQYIJThAtrEXmc=
 		</data>
 		<key>PrivateHeaders/EOSCollectionHelper.h</key>
 		<data>
@@ -894,11 +898,7 @@
 		</data>
 		<key>PrivateHeaders/IDownloadInfo.h</key>
 		<data>
-		GUOYiKSJRs0BPYenoMwPmkg7Ksc=
-		</data>
-		<key>PrivateHeaders/IDownloadService.h</key>
-		<data>
-		wmxhlt5mJOOApG8wmtqZqKH4QIw=
+		KvfRtfreb9hZWcT4BArK62efe2c=
 		</data>
 		<key>PrivateHeaders/IEMailService.h</key>
 		<data>
@@ -1690,11 +1690,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MZ38qxtOCqPPyXGCq59Sv9Wwi5Y=
+			M8bH1b3/aVgunZ68S71lgu1QKU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			mS4ClEOcHosnHN+numkawbdrv/lCngm0HCP3OaJe/nM=
+			EcMUO57vRkgra4HVAWLFUH48Y63NXz0W54Zc63KLqIM=
 			</data>
 		</dict>
 		<key>Headers/CAPPanelView.h</key>
@@ -1756,11 +1756,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lsfVM8n8qnvAENdZFw7RJXFgQ3I=
+			gtLxoz45TRibwJoC8QiSjQbWv6Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			GWG4DaLQOl4wowhzXGLm/ryL5ACgqvdHTbCIyQj8LZU=
+			Ampl7yOxva7F7NOcwHXUCfEvXn4hf+VfQcgOrSQwHuI=
+			</data>
+		</dict>
+		<key>Headers/DownloadService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s12m1fGOAkIzOVcysh1h1dbeT1U=
+			</data>
+			<key>hash2</key>
+			<data>
+			naF7LO1bFnOPLqrT/4b14v0KukIcpC5L78IagCLbWFE=
 			</data>
 		</dict>
 		<key>Headers/EGORefreshTableHeaderView.h</key>
@@ -1928,6 +1939,17 @@
 			H0oHlKPIUau9BEeEWfhi0NnWwrviK6VyY/PCV5ajoNc=
 			</data>
 		</dict>
+		<key>Headers/IDownloadService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i9kwQyMVQpc5CYuz9ghtF/GjNQs=
+			</data>
+			<key>hash2</key>
+			<data>
+			NMtoSuZtiQ/GExQSELwqsQpRClzD7jWoRMw1QFg72to=
+			</data>
+		</dict>
 		<key>Headers/IListWidget.h</key>
 		<dict>
 			<key>hash</key>
@@ -2053,11 +2075,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rVDwcH50N8t93BvTpvWdRNqr8Rk=
+			xZvtiR5CYgzjlV49NnkXkWPCyLQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			yXxb8/460JOiTOjDVE+orBDY+LrRQlZdYW5tV+r/hh8=
+			cz1pHgWt7qHDjhgLiID5rN00brGLvZsnd39AuSlbU7I=
 			</data>
 		</dict>
 		<key>Headers/LuaImage.h</key>
@@ -2196,11 +2218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VIi94vrhnG1XMLaPQX+dtWhzYpY=
+			AxiLsBlhWhsAyqaR6oE1bA3M/S0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2s17fMXVb2DUfavz2FdYtW7efFcnl3deiZKgwhZ6V6o=
+			V7VuxmtCsJVzvvn9rm1+OprnvDZFZZi1t1XGcB6Hz2Y=
 			</data>
 		</dict>
 		<key>Headers/OSUtils.h</key>
@@ -3754,17 +3776,6 @@
 			o5/TddMHTVTi57vlOQZYkY99AFnyD+LXN+YUbHe6Na4=
 			</data>
 		</dict>
-		<key>PrivateHeaders/DownloadService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FQ5+W/wewursDFK3NYfRQDCs69M=
-			</data>
-			<key>hash2</key>
-			<data>
-			ws7X/7ZtrX83oM4lCpxcedQ8iAY8M84/WR862QbGYYk=
-			</data>
-		</dict>
 		<key>PrivateHeaders/EGORefreshScrollView.h</key>
 		<dict>
 			<key>hash</key>
@@ -3791,11 +3802,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IllL8A6bq7xFIP5munL7h/6cVS0=
+			msqn6FwCMjvJCDQYIJThAtrEXmc=
 			</data>
 			<key>hash2</key>
 			<data>
-			B25dbOm3dXKr3D3VC8nhRrsbC21Rhf6z4QeQTPaIGJw=
+			52PNhRPsgDb8l/y0asFswS1XNP/1p4CjK3q57eVtjII=
 			</data>
 		</dict>
 		<key>PrivateHeaders/EOSCollectionHelper.h</key>
@@ -3978,22 +3989,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GUOYiKSJRs0BPYenoMwPmkg7Ksc=
+			KvfRtfreb9hZWcT4BArK62efe2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			j4aUot0LDyX0gnFt3E+EHEw1VQB5WpKq5ePOfjI6Zbc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IDownloadService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wmxhlt5mJOOApG8wmtqZqKH4QIw=
-			</data>
-			<key>hash2</key>
-			<data>
-			adWY9NCqNJfOhX9WhcZmvKIxz1rCZPyaeizzfWbC5Rg=
+			dHCBK3uNMQvTAmczPnMOMOComeZscSzt9j7ywmzwDEk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IEMailService.h</key>

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIWidgetM.h"
-#import "ViewM.h"
+#import <CAPKit/UIWidgetM.h>
+#import <CAPKit/ViewM.h>
 
 @class PageM;
 

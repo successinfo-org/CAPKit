@@ -8,8 +8,6 @@
 
 #import <CAPKit/CAPKit.h>
 #import "ASIHTTPRequest.h"
-#import "LuaObjectProxyCompatible.h"
-#import "AbstractLuaTableCompatible.h"
 #import "FMDatabase.h"
 
 typedef enum{

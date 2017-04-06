@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LuaFunction.h"
+#import <CAPKit/LuaFunction.h>
 
 @interface LuaFunctionWatcher : NSObject{
     LuaFunction *func;
