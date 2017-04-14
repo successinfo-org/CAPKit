@@ -33,8 +33,6 @@
 
 - (PageSandbox *) getSandbox;
 
-- (UIViewController<PagePanel> *) getParent;
-
 - (void) setParent: (UIViewController<PagePanel> *) vc;
 
 - (void) reloadSize;

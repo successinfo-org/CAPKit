@@ -1,7 +1,7 @@
 @class PageSandbox;
 @class ViewWidget;
 
-@interface CAPPanelView : UIView <PagePanel> {
+@interface CAPPanelView : UIView <PagePanel, UIGestureRecognizerDelegate> {
     UIInterfaceOrientation lastOrientation;
     CGRect latestReloadFrame;
     
