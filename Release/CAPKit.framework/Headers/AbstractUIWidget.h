@@ -29,7 +29,7 @@ dest;\
 @class ViewWidget;
 
 /**This class is the base class of all Widget*/
-@interface AbstractUIWidget : AbstractLuaTableCompatible <LuaObjectProxyCompatible, IAbstractUIWidget, ILuaReference>{
+@interface AbstractUIWidget : AbstractLuaTableCompatible <IAbstractUIWidget, ILuaReference>{
     UIWidgetM *attributeModel;
 
     NSDictionary *styleDic;

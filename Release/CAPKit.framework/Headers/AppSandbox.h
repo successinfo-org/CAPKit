@@ -1,6 +1,6 @@
 @class LuaHelper;
 
-@interface AppSandbox : DefaultSandbox <LuaObjectProxyCompatible, AppSandboxInterface>{
+@interface AppSandbox : DefaultSandbox <AppSandboxInterface>{
     LuaObjectProxy *proxy;
 }
 

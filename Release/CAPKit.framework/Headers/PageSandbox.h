@@ -1,4 +1,4 @@
-@interface PageSandbox : DefaultSandbox <LuaObjectProxyCompatible, PageSandboxInterface>{
+@interface PageSandbox : DefaultSandbox <PageSandboxInterface>{
     AppSandbox *appSandbox;
     NSMutableArray *editingFocusStack;
     LuaObjectProxy *proxy;

@@ -19,7 +19,7 @@ typedef enum{
     DownloadStatusNotFound
 } DownloadStatus;
 
-@interface DownloadInfo : AbstractLuaTableCompatible <ASIHTTPRequestDelegate, LuaObjectProxyCompatible>{
+@interface DownloadInfo : AbstractLuaTableCompatible <ASIHTTPRequestDelegate>{
     NSMutableArray *progressWatchers;
     NSMutableArray *statusWatchers;
     

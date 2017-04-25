@@ -1,6 +1,6 @@
 @class AppSandbox;
 
-@interface GlobalSandbox : DefaultSandbox <GlobalSandboxInterface, LuaObjectProxyCompatible>{
+@interface GlobalSandbox : DefaultSandbox <GlobalSandboxInterface>{
     LuaObjectProxy *proxy;
 
     NSMutableDictionary *pkgApps;

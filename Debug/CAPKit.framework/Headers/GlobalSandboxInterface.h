@@ -5,7 +5,7 @@
 
 - (void) scanApps DEPRECATED_ATTRIBUTE;
 
-- (EOSList *) listApps: (NSString *) category DEPRECATED_ATTRIBUTE;
+- (NSArray *) listApps: (NSString *) category DEPRECATED_ATTRIBUTE;
 
 - (AppSandbox *) getAppSandbox: (NSString *) appId DEPRECATED_ATTRIBUTE;
 - (AppSandbox *) getAppSandboxById: (NSString *) appId DEPRECATED_ATTRIBUTE;

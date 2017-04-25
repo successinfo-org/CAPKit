@@ -10,7 +10,7 @@
 #import "FMDatabase.h"
 #import <CAPKit/IDownloadService.h>
 
-@interface DownloadService : AbstractLuaTableCompatible <IService, LuaObjectProxyCompatible, IDownloadService>{
+@interface DownloadService : AbstractLuaTableCompatible <IService, IDownloadService>{
     FMDatabase *downloaddb;
     NSMutableDictionary *downloadInfos;
 }

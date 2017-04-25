@@ -33,8 +33,6 @@
 
 - (PageSandbox *) getSandbox;
 
-- (void) setParent: (UIViewController<PagePanel> *) vc;
-
 - (void) reloadSize;
 
 -(id)initWithURL: (NSURL *) url withSandbox: (PageSandbox *) sandbox;
