@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
   s.dependency 'GZIP', '~> 1.0.2'
   s.dependency 'SSKeychain', '~> 1.2.2'
   s.dependency 'AnimatedGIFImageSerialization-fork', '~> 0.2.1'
+  s.dependency 'Bugly', '~> 2.4.8'
 
   s.dependency 'CAPKit-iOS-WebP', '~> 0.4'
   s.dependency 'CAPKit-lua53', '~> 0.1.0'
