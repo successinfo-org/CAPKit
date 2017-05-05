@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.1.18"
+  s.version      = "0.1.19"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "samchang" => "sam.chang@me.com" }
   s.platform     = :ios, "7.0.0"
-  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.18" }
+  s.source       = { :git => "https://github.com/successinfo-org/CAPKit.git", :tag => "v0.1.19" }
   s.frameworks   = 'AssetsLibrary', 'MessageUI', 'AddressBookUI', 'AddressBook', 'Accelerate', 'MapKit', 'AudioToolbox', 'CoreTelephony', 'QuickLook', 'Social', 'CoreLocation'
   s.weak_framework = 'WebKit'
   s.libraries = 'resolv'
@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Release'
 
   s.subspec 'Release' do |ss|
-    ss.resource = 'Debug/builtin'
-    ss.ios.vendored_frameworks = 'Debug/CAPKit.framework'
+    ss.resource = 'Release/builtin'
+    ss.ios.vendored_frameworks = 'Release/CAPKit.framework'
   end
 
   s.subspec 'Resource' do |ss|
-    ss.resource = 'Debug/builtin'
+    ss.resource = 'Release/builtin'
   end
 
   s.subspec 'Debug' do |ss|
