@@ -23,8 +23,6 @@ typedef enum{
     NSMutableArray *progressWatchers;
     NSMutableArray *statusWatchers;
     
-    LuaObjectProxy *proxy;
-    
     @public
     int progress;
     

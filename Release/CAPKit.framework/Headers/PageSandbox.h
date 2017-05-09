@@ -1,7 +1,6 @@
 @interface PageSandbox : DefaultSandbox <PageSandboxInterface>{
     AppSandbox *appSandbox;
     NSMutableArray *editingFocusStack;
-    LuaObjectProxy *proxy;
     
     @public
     NSInteger widgetCount;

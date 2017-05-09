@@ -1,8 +1,6 @@
 @class LuaHelper;
 
-@interface AppSandbox : DefaultSandbox <AppSandboxInterface>{
-    LuaObjectProxy *proxy;
-}
+@interface AppSandbox : DefaultSandbox <AppSandboxInterface>
 
 @property (nonatomic, weak, readonly) GlobalSandbox *globalSandbox;
 @property (nonatomic, readonly) LuaHelper *helper;
