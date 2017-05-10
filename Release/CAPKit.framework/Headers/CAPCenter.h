@@ -3,6 +3,9 @@
 @class CAPContainer;
 @class CAPRenderView;
 
+#define CAPDidEnterBackgroundNotification @"CAPDidEnterBackgroundNotification"
+#define CAPWillEnterForegroundNotification @"CAPWillEnterForegroundNotification"
+
 @interface CAPCenter : NSObject {
     NSMutableArray *containers;
     Reachability *reachability;

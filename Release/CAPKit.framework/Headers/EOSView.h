@@ -1,5 +1,5 @@
 @interface EOSView : UIView{
-#ifdef DEBUG_EOS
+#ifdef DEBUG_EOS_DRAWRECT
     UIColor *debugColor;
 #endif
 }
