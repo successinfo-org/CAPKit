@@ -19,8 +19,11 @@
     BOOL initedSubview;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-property-synthesis"
 @property (nonatomic, readonly) ViewM *model;
 @property (nonatomic, readonly) ViewM *stableModel;
+#pragma clang diagnostic pop
 
 @property (nonatomic, assign) BOOL destroyOnRemoved;
 

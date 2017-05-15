@@ -1,9 +1,6 @@
 @interface PageSandbox : DefaultSandbox <PageSandboxInterface>{
     AppSandbox *appSandbox;
     NSMutableArray *editingFocusStack;
-    
-    @public
-    NSInteger widgetCount;
 }
 
 @property (nonatomic, weak) CAPPanelView<PagePanel> *panelView;
@@ -16,6 +13,7 @@
 @property (nonatomic, readonly) NSString *pageId;
 
 @property (nonatomic, readonly) NSMapTable *weakFunctions;
+@property (atomic, assign) NSInteger widgetCount;
 
 - (id) initWithAppSandbox: (AppSandbox *) sandbox withPageId: (NSString *) pid;
 
@@ -28,8 +26,6 @@
 - (AppSandbox *) getAppSandbox;
 
 - (GlobalSandbox *) getGlobalSandbox;
-
-- (NSInteger) getWidgetCount;
 
 - (void) loadScripts: (PageM *) pagem;
 

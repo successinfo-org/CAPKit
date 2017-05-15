@@ -47,8 +47,11 @@
     BOOL dragDowning;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-property-synthesis"
 @property (nonatomic, readonly) ListM *model;
 @property (nonatomic, readonly) ListM *stableModel;
+#pragma clang diagnostic pop
 
 @property (nonatomic, readonly) UITableView *listView;
 @property (nonatomic, readonly) EGORefreshTableHeaderView *refreshTableView;

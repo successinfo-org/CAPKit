@@ -48,7 +48,6 @@
 - (void) startBusy: (NSString *) ycenter withTitle: (NSString *) title;
 - (void) stopBusy;
 
-- (void) initProxy: (NSURL *) optionalURL;
 - (void) initBusyView;
 - (BOOL) prepareEnv: (NSString *) currentAppVersion withOutSafeMode: (BOOL) withOutSafeMode;
 
