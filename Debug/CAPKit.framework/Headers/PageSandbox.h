@@ -1,9 +1,10 @@
 @interface PageSandbox : DefaultSandbox <PageSandboxInterface>{
-    AppSandbox *appSandbox;
     NSMutableArray *editingFocusStack;
 }
 
 @property (nonatomic, weak) CAPPanelView<PagePanel> *panelView;
+
+@property (nonatomic, weak) AppSandbox *appSandbox;
 
 @property (nonatomic, readonly) int envRef;
 @property (nonatomic, readonly) LuaState *state;

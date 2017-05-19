@@ -11,8 +11,7 @@
 
 /**The View Widget*/
 @interface ViewWidget : AbstractUIWidget<IViewWidget>{
-    NSMutableArray *subitems;
-    
+    NSMutableArray *internalSubitems;
     CGRect contentRect;
     UIView *view;
     
@@ -24,6 +23,8 @@
 @property (nonatomic, readonly) ViewM *model;
 @property (nonatomic, readonly) ViewM *stableModel;
 #pragma clang diagnostic pop
+
+@property (nonatomic, readonly, copy) NSArray *subitems;
 
 @property (nonatomic, assign) BOOL destroyOnRemoved;
 
