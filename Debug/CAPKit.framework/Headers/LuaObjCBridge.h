@@ -16,4 +16,4 @@ extern int lua_objc_fieldset(lua_State* L);
 
 int lua_objc_block_function(lua_State *L);
 
-void LuaError(lua_State *L);
+void LuaError(lua_State *L, int errfunc);

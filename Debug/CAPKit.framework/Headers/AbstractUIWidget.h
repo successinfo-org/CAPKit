@@ -65,6 +65,8 @@ dest;\
 @property (nonatomic, weak) ViewWidget *parent;
 @property (nonatomic, readonly, getter = getBackgroundColor) UIColor *backgroundColor;
 
+@property (nonatomic, assign) BOOL clipsToBounds;
+
 /**initialize this class with UIWidgetM Model
  
  @param m the model of this `Widget`
