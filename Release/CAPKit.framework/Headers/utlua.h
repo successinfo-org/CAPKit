@@ -1,4 +1,8 @@
+#ifdef __ANDROID__
+#include "lua.h"
+#else
 #include <lua53/lua.h>
+#endif
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
