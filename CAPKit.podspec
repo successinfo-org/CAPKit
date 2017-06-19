@@ -23,7 +23,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Resource' do |ss|
-    ss.source_files = 'extension/**/*.*'
     ss.resource = 'Release/builtin'
   end
 
