@@ -114,8 +114,6 @@ static ThreadStates sState;
 void ThreadStateInitalize()
 {
     int rc;
-
-    assert([NSThread isMainThread]);
     
     rc = pthread_mutex_init(&sStateLock, NULL);
     assert(rc == 0);
@@ -130,8 +128,6 @@ void ThreadStateInitalize()
 void ThreadStateBeginInterruption()
 {
     int rc;
-
-    assert([NSThread isMainThread]);
     
     rc = pthread_mutex_lock(&sStateLock);
     assert(rc == 0);
@@ -148,8 +144,6 @@ void ThreadStateBeginInterruption()
 void ThreadStateEndInterruption()
 {
     int rc;
-
-    assert([NSThread isMainThread]);
     
     rc = pthread_mutex_lock(&sStateLock);
     assert(rc == 0);
@@ -442,7 +436,6 @@ OSStatus DoConvertFile(CFURLRef sourceURL, CFURLRef destinationURL, OSType outpu
     OSStatus error = noErr;
     
     // in this sample we should never be on the main thread here
-    assert(![NSThread isMainThread]);
     
     // transition thread state to kStateRunning before continuing
     ThreadStateSetRunning();
