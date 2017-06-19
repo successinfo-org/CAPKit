@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/CAPKit.h</key>
 		<data>
-		M8bH1b3/aVgunZ68S71lgu1QKU4=
+		oMtiBMJlqtWlTEGSr+blQ3rHnnQ=
 		</data>
 		<key>Headers/CAPPanelView.h</key>
 		<data>
@@ -80,17 +80,13 @@
 		<data>
 		zzaS14/lXgXnJIH0XFZqVQKoxHA=
 		</data>
-		<key>Headers/DownloadInfo.h</key>
+		<key>Headers/DeviceM.h</key>
 		<data>
-		LRDpaWrqGur1ob2jX7havDPvME4=
+		UwZgrShFMFeEokzpkz1g2dDBUWY=
 		</data>
-		<key>Headers/DownloadService.h</key>
+		<key>Headers/DeviceService.h</key>
 		<data>
-		PWVy7HaUMKH5AX6H2hl2dsJTixI=
-		</data>
-		<key>Headers/EGORefreshTableHeaderView.h</key>
-		<data>
-		1L4b2NlWDGcbo+SMfnokIEL+du8=
+		RQrF1OJAURTohTl62aWe2of11VY=
 		</data>
 		<key>Headers/EOSList.h</key>
 		<data>
@@ -148,14 +144,6 @@
 		<data>
 		u36zGSMG8dMzw3m9dhbSudCZDs8=
 		</data>
-		<key>Headers/IDownloadService.h</key>
-		<data>
-		i9kwQyMVQpc5CYuz9ghtF/GjNQs=
-		</data>
-		<key>Headers/IListWidget.h</key>
-		<data>
-		G1qsHkLP+3pEcUovyXGMylXLfcE=
-		</data>
 		<key>Headers/ILuaError.h</key>
 		<data>
 		gEiVjlEA5FPZmhCtkDoV9tjphM4=
@@ -176,13 +164,9 @@
 		<data>
 		ul8NYkPFOxD7mY6TxUSnkpBPZr8=
 		</data>
-		<key>Headers/ListM.h</key>
+		<key>Headers/LocaleService.h</key>
 		<data>
-		gt4ZrHgZPym1ls+xLwDAVA/D5HU=
-		</data>
-		<key>Headers/ListWidget.h</key>
-		<data>
-		IBLN+Vi045WBn95k8CbPN6AQ8t0=
+		wk37ymPvUEzgIv5vwpkPU94t9sQ=
 		</data>
 		<key>Headers/LruCache.h</key>
 		<data>
@@ -356,14 +340,6 @@
 		<data>
 		FUOaywfK7D8eHKIMGB0yA4tY4mI=
 		</data>
-		<key>PrivateHeaders/AQPlayer.h</key>
-		<data>
-		VhUM51/VCGZyfLKNzMmPX2N2E1w=
-		</data>
-		<key>PrivateHeaders/AQRecorder.h</key>
-		<data>
-		3GNQcVj2lcJ9JYnwQk6lVEYQnPY=
-		</data>
 		<key>PrivateHeaders/AdvancedTakePhoto.h</key>
 		<data>
 		kyTf9UWt3OGkQtbW6BBszj4HPEM=
@@ -372,77 +348,9 @@
 		<data>
 		6rZ0NrvrxwBpiaZUcf8U5G5ipCI=
 		</data>
-		<key>PrivateHeaders/BMXSwipableCell.h</key>
-		<data>
-		1F5IDgpjOHsIHZBXOar6PhEyPdI=
-		</data>
-		<key>PrivateHeaders/BMXSwipableCellGestureDelegate.h</key>
-		<data>
-		Bnum8dpLr3tOQVYzu1kxlkcSrpo=
-		</data>
 		<key>PrivateHeaders/BSWebViewUserAgent.h</key>
 		<data>
 		oKEFBLI4J7HYcF3Wq0sjlfR1HNg=
-		</data>
-		<key>PrivateHeaders/BarcodeService.h</key>
-		<data>
-		WGBbtO9a2s7Al4i9eM6sm+sy4X0=
-		</data>
-		<key>PrivateHeaders/BeaconService.h</key>
-		<data>
-		FNJp9046mCtNWlH6+f2scNFrXVQ=
-		</data>
-		<key>PrivateHeaders/BusyM.h</key>
-		<data>
-		A0TdPWWC/3C7vDkxXC/K1TAiKYQ=
-		</data>
-		<key>PrivateHeaders/BusyService.h</key>
-		<data>
-		eqPn4dqaWwPmJXXtcPO7jVg1tcM=
-		</data>
-		<key>PrivateHeaders/BusyWidget.h</key>
-		<data>
-		zRd6r+8ph9y1mVEUVZgvhmLd2XE=
-		</data>
-		<key>PrivateHeaders/ButtonM.h</key>
-		<data>
-		DluT7cbvZfcSAtTkRWO6N+aesYg=
-		</data>
-		<key>PrivateHeaders/ButtonWidget.h</key>
-		<data>
-		eko9Y1cmtuPx8mS/x0Fwv3VudFI=
-		</data>
-		<key>PrivateHeaders/CADebugMacros.h</key>
-		<data>
-		yUAGyu1vc1urHtgJ0iI/6LmTpBU=
-		</data>
-		<key>PrivateHeaders/CAMath.h</key>
-		<data>
-		IIMayVVb5i2et3mwjAnozpcm3ag=
-		</data>
-		<key>PrivateHeaders/CAStreamBasicDescription.h</key>
-		<data>
-		ZelFzmX2FuXtLVXl0jK52VsbhrU=
-		</data>
-		<key>PrivateHeaders/CAXException.h</key>
-		<data>
-		OyungPG73hUxqizW+t+xUXNWl9k=
-		</data>
-		<key>PrivateHeaders/CanvasDisplayView.h</key>
-		<data>
-		U45vuux7/AKW8oFKAHI9HeY/fWI=
-		</data>
-		<key>PrivateHeaders/CanvasM.h</key>
-		<data>
-		n0NgG07wmGKby3nkCmqsS1/KNt4=
-		</data>
-		<key>PrivateHeaders/CanvasWidget.h</key>
-		<data>
-		loJCJfO+peNg9awXA4uRXJbus80=
-		</data>
-		<key>PrivateHeaders/ContactsService.h</key>
-		<data>
-		qkEMiFsKr/AxX66G2gV9QT+E/Jk=
 		</data>
 		<key>PrivateHeaders/Cv3dTracker2dTrackedObject.h</key>
 		<data>
@@ -804,153 +712,33 @@
 		<data>
 		+LNNyPV1NMGHO0Hxolj/kfiJJ5U=
 		</data>
-		<key>PrivateHeaders/DeviceM.h</key>
-		<data>
-		UwZgrShFMFeEokzpkz1g2dDBUWY=
-		</data>
-		<key>PrivateHeaders/DeviceService.h</key>
-		<data>
-		RQrF1OJAURTohTl62aWe2of11VY=
-		</data>
-		<key>PrivateHeaders/DocumentPreviewService.h</key>
-		<data>
-		YqLFqoDkzILGoJSeaOnzx8gFwjE=
-		</data>
 		<key>PrivateHeaders/DownloadManager.h</key>
 		<data>
 		a3YllZSpdptYA5jdwwT+BlklCZE=
-		</data>
-		<key>PrivateHeaders/EGORefreshScrollView.h</key>
-		<data>
-		hlcIloBFOTePwX86ucPe/iVqn/M=
-		</data>
-		<key>PrivateHeaders/EMailService.h</key>
-		<data>
-		gIeIsaw1KbU/UsFdkKmi7hDW1gc=
-		</data>
-		<key>PrivateHeaders/EOSButton.h</key>
-		<data>
-		msqn6FwCMjvJCDQYIJThAtrEXmc=
 		</data>
 		<key>PrivateHeaders/EOSCollectionHelper.h</key>
 		<data>
 		U7ySzqWogTkbeXh1Akkuyzks7dQ=
 		</data>
-		<key>PrivateHeaders/EOSLabel.h</key>
-		<data>
-		HSfJUjvN0Os1W4YNmU4I5t+uD+0=
-		</data>
-		<key>PrivateHeaders/EOSPath.h</key>
-		<data>
-		LgnGgtTxD4+/sECKJ+IjpUrxzdk=
-		</data>
-		<key>PrivateHeaders/EOSScrollView.h</key>
-		<data>
-		yhyfcByg29bmtbSz2skYJJI5Klo=
-		</data>
-		<key>PrivateHeaders/EOSTextField.h</key>
-		<data>
-		T/9w0x1Da4TVAx5ygT6hrNW745Y=
-		</data>
-		<key>PrivateHeaders/EOSTextView.h</key>
-		<data>
-		nDAkSyxuMZZMvO//TM7LSBLDkoI=
-		</data>
 		<key>PrivateHeaders/EOSTimer.h</key>
 		<data>
 		SuczSw5ZkJS4O0WXy7KLr/9dsZE=
-		</data>
-		<key>PrivateHeaders/EOSToolbar.h</key>
-		<data>
-		2UOsMeFgSDwYReUkVqkcLW2XpK4=
 		</data>
 		<key>PrivateHeaders/EOSURLCache.h</key>
 		<data>
 		IjkpwRuXMicx4uXbiXqvo1rT8JM=
 		</data>
-		<key>PrivateHeaders/FileService.h</key>
-		<data>
-		832temKTLyhe3mGQCZG4SfmDkXM=
-		</data>
 		<key>PrivateHeaders/FreeTypeFace.h</key>
 		<data>
 		zKZqIl/ZKk4VHJPT3waUHzQuoC4=
-		</data>
-		<key>PrivateHeaders/HBoxM.h</key>
-		<data>
-		+N5d3aEvYNae5//HLSVESieLqM0=
-		</data>
-		<key>PrivateHeaders/HBoxWidget.h</key>
-		<data>
-		cZ73THaCsBonypgvdzL+QHbBQPo=
 		</data>
 		<key>PrivateHeaders/HandleOpenURLEvent.h</key>
 		<data>
 		O4Qp4gcxI01+CcGSoQIUrC3ka2U=
 		</data>
-		<key>PrivateHeaders/ICanvasWidget.h</key>
-		<data>
-		Z82g3bueWKphWaM1eYINHkvKAno=
-		</data>
-		<key>PrivateHeaders/IDocumentPreviewService.h</key>
-		<data>
-		H8xVzMDvDVnmeQD7NIYy6rMPsuw=
-		</data>
-		<key>PrivateHeaders/IDownloadInfo.h</key>
-		<data>
-		KvfRtfreb9hZWcT4BArK62efe2c=
-		</data>
-		<key>PrivateHeaders/IEMailService.h</key>
-		<data>
-		zNkx1yC5nskylo24gvSswCh3QMo=
-		</data>
 		<key>PrivateHeaders/IEOSTimer.h</key>
 		<data>
 		+zsiCCmAzCbjo2SvfzC5+Fw6aW0=
-		</data>
-		<key>PrivateHeaders/IImageWidget.h</key>
-		<data>
-		kKnNDCFuLWQDk+Tg7eXAYUAJFvI=
-		</data>
-		<key>PrivateHeaders/ILBCService.h</key>
-		<data>
-		t2HgKVVJafqtIXQg6W4a0RH2EeU=
-		</data>
-		<key>PrivateHeaders/ILabelWidget.h</key>
-		<data>
-		snhLRVOE6KakQmfF5wjyNrxmC3U=
-		</data>
-		<key>PrivateHeaders/ILocationService.h</key>
-		<data>
-		cTBt2DTJIWgZpc6YCYI76ZZpD9I=
-		</data>
-		<key>PrivateHeaders/IScrollViewWidget.h</key>
-		<data>
-		r0oZQh1tB7MlPHUZ6B4oTnM/aj8=
-		</data>
-		<key>PrivateHeaders/ITextAreaWidget.h</key>
-		<data>
-		RCWKXl1x9+s2bb6T2yrMZH1PysI=
-		</data>
-		<key>PrivateHeaders/ITextfieldWidget.h</key>
-		<data>
-		iSLcJDXugfdhv+wms5Idk0k1ovY=
-		</data>
-		<key>PrivateHeaders/IToolBarWidget.h</key>
-		<data>
-		w+9oF90A0Z4w9PjVkIjfM5d600s=
-		</data>
-		<key>PrivateHeaders/IVideoWidget.h</key>
-		<data>
-		DIhtx+cLge+Uz00P4KTy2Ia7OU8=
-		</data>
-		<key>PrivateHeaders/IWebViewWidget.h</key>
-		<data>
-		9JyWs4lrzcRweAQJJKVZAyxXwOY=
-		</data>
-		<key>PrivateHeaders/ImageM.h</key>
-		<data>
-		Tzj84cR2dbkJ+7sHY6LFr5iRCGU=
 		</data>
 		<key>PrivateHeaders/ImagePreviewController.h</key>
 		<data>
@@ -959,14 +747,6 @@
 		<key>PrivateHeaders/ImageProcessController.h</key>
 		<data>
 		PDSTzjvLTafkJzmarxXJB05QSyQ=
-		</data>
-		<key>PrivateHeaders/ImageService.h</key>
-		<data>
-		qLTzr2kA9tI0VVjUWcs7mkemxVU=
-		</data>
-		<key>PrivateHeaders/ImageWidget.h</key>
-		<data>
-		oOlAHEN02piLfnDD4cZj6jn7kYo=
 		</data>
 		<key>PrivateHeaders/InvocationLuaHelper.h</key>
 		<data>
@@ -1000,34 +780,6 @@
 		<data>
 		FyBSg3KFrkbCu6WwTLKiPnS123w=
 		</data>
-		<key>PrivateHeaders/LabelM.h</key>
-		<data>
-		q5dYeBheafNuz1CPNjUrkvESNT8=
-		</data>
-		<key>PrivateHeaders/LabelWidget.h</key>
-		<data>
-		2Uend4ScAVJ2lcp++TgrinGoRPc=
-		</data>
-		<key>PrivateHeaders/ListWidgetCell.h</key>
-		<data>
-		iMBZ6y+w6F5GB7XXSR7Yt2fvO8o=
-		</data>
-		<key>PrivateHeaders/LocalNotificationService.h</key>
-		<data>
-		9HxnsaFdqbt+E6MtJokdNvsv8Ls=
-		</data>
-		<key>PrivateHeaders/LocaleService.h</key>
-		<data>
-		wk37ymPvUEzgIv5vwpkPU94t9sQ=
-		</data>
-		<key>PrivateHeaders/LocationService.h</key>
-		<data>
-		SS2kSh7/w2cfmgLYCfiDgabefvM=
-		</data>
-		<key>PrivateHeaders/LuaABRecord.h</key>
-		<data>
-		kS2YgpXbHD161yzKj+aWKG2O/vc=
-		</data>
 		<key>PrivateHeaders/LuaEvent.h</key>
 		<data>
 		6u7ssD0W+HLq0gm0BNdwgqt0eRI=
@@ -1036,21 +788,9 @@
 		<data>
 		xv/0fR5kadbPtxtBK70OBWZYNX0=
 		</data>
-		<key>PrivateHeaders/LuaHeading.h</key>
-		<data>
-		UJIH6H7JFWR1qrAgsPdxNN5H9SQ=
-		</data>
 		<key>PrivateHeaders/LuaHelper.h</key>
 		<data>
 		OWJDUxm1T9CGVUB7Ba/fNYp8Et0=
-		</data>
-		<key>PrivateHeaders/LuaLocation.h</key>
-		<data>
-		AyBWL+0TeLNL5iUCz9amzm+6jDY=
-		</data>
-		<key>PrivateHeaders/MP3Service.h</key>
-		<data>
-		sv3HRGu0xiR7wnTEKgRzhTPwaxM=
 		</data>
 		<key>PrivateHeaders/MaskView.h</key>
 		<data>
@@ -1063,10 +803,6 @@
 		<key>PrivateHeaders/MethodSwizzling.h</key>
 		<data>
 		E7P2/xooxAV8ZsHUySe1ZHAKZXI=
-		</data>
-		<key>PrivateHeaders/MotionService.h</key>
-		<data>
-		xMFoIlD8t0Ol/j8YyOcQK2R3hMw=
 		</data>
 		<key>PrivateHeaders/MyMutableURLRequest.h</key>
 		<data>
@@ -1084,10 +820,6 @@
 		<data>
 		NgRmO8eBfHmZDDn+DDicnWaflWE=
 		</data>
-		<key>PrivateHeaders/PhotoService.h</key>
-		<data>
-		l4ITprVrmUCjY0ZwqN4lPoe1h2I=
-		</data>
 		<key>PrivateHeaders/PushNotificationEvent.h</key>
 		<data>
 		5gi4p0anqrAHCxSv4Eyvebm+VWQ=
@@ -1096,93 +828,13 @@
 		<data>
 		oAbFyDi+M4yTweOrYaA8B7fmp5Y=
 		</data>
-		<key>PrivateHeaders/ScreenService.h</key>
-		<data>
-		NsH6u0G6GWr2OGWiyeMoqrNo8Sg=
-		</data>
-		<key>PrivateHeaders/ScrollViewM.h</key>
-		<data>
-		TkwU0GLIQVVr7CRruALV+MBHQA0=
-		</data>
-		<key>PrivateHeaders/ScrollViewWidget.h</key>
-		<data>
-		A0TxpI73cdntyXrec9MQiq7sAEM=
-		</data>
 		<key>PrivateHeaders/ShakeEvent.h</key>
 		<data>
 		xK8fI6DE62VqoL8dcT83gOecsVQ=
 		</data>
-		<key>PrivateHeaders/SwipableScrollview.h</key>
-		<data>
-		vU21OXorwvdr0qpzJFT5cgm4ORE=
-		</data>
-		<key>PrivateHeaders/SwitchM.h</key>
-		<data>
-		+j63kAfqcd5pR4IHGxZgGSai138=
-		</data>
-		<key>PrivateHeaders/SwitchWidget.h</key>
-		<data>
-		GK/DBr/z3hGHQJ1p3v/Ustv5pNM=
-		</data>
-		<key>PrivateHeaders/TabItemM.h</key>
-		<data>
-		lhnbzas0v3bVoVJUgyWm5de1iCk=
-		</data>
-		<key>PrivateHeaders/TextAreaM.h</key>
-		<data>
-		m7aNSmOX620i89mEtkyU17uGI/w=
-		</data>
-		<key>PrivateHeaders/TextAreaWidget.h</key>
-		<data>
-		pXByYTx+enHzQW9jO6yPGTg+Juk=
-		</data>
-		<key>PrivateHeaders/TextfieldM.h</key>
-		<data>
-		ih7jnk7ol3HxjyNp+yeFNqbZ6l4=
-		</data>
-		<key>PrivateHeaders/TextfieldWidget.h</key>
-		<data>
-		toe/J0CnB8A4uTq3BKs/99oNonU=
-		</data>
-		<key>PrivateHeaders/ToolBarM.h</key>
-		<data>
-		FARCdMv3VglElGkxrnonipsz/MY=
-		</data>
-		<key>PrivateHeaders/ToolBarWidget.h</key>
-		<data>
-		OIBWqSNdPPkph6DqtVqZG52vbUo=
-		</data>
 		<key>PrivateHeaders/UIColor-Expanded.h</key>
 		<data>
 		ABzchSuHBVAUe9qzU7CGuQw9Kh4=
-		</data>
-		<key>PrivateHeaders/UITableViewController+BMXSwipableCellSupport.h</key>
-		<data>
-		ryoKSGwSf5GqmmpS2Iwh8VVgcmk=
-		</data>
-		<key>PrivateHeaders/VBoxM.h</key>
-		<data>
-		VqeE4pAbka587lk4N32ATZvv6pE=
-		</data>
-		<key>PrivateHeaders/VBoxWidget.h</key>
-		<data>
-		0VafTJUZKJMTdD5TKHIHm7cGCXc=
-		</data>
-		<key>PrivateHeaders/VideoM.h</key>
-		<data>
-		MLSg/1OOm8KvRmWeS1TVH8nEQq4=
-		</data>
-		<key>PrivateHeaders/VideoWidget.h</key>
-		<data>
-		0mftn8OqPHEgjefwOixBuOjL5gg=
-		</data>
-		<key>PrivateHeaders/WebViewM.h</key>
-		<data>
-		ke3H/5n6OsYKAhFYd8vz0geN48g=
-		</data>
-		<key>PrivateHeaders/WebViewWidget.h</key>
-		<data>
-		AdjaTnhslkPQfaxb5E1Cg/pHG+4=
 		</data>
 		<key>PrivateHeaders/WidgetViewController.h</key>
 		<data>
@@ -1191,10 +843,6 @@
 		<key>PrivateHeaders/WillRotateDirectionEvent.h</key>
 		<data>
 		lBcbacnxK8ZsePOJUMSl1Uc+7O8=
-		</data>
-		<key>PrivateHeaders/ZBarService.h</key>
-		<data>
-		nAHB6RIbOx8MjUS3VsUyPDfUpCU=
 		</data>
 		<key>PrivateHeaders/aes.h</key>
 		<data>
@@ -1690,11 +1338,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M8bH1b3/aVgunZ68S71lgu1QKU4=
+			oMtiBMJlqtWlTEGSr+blQ3rHnnQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			EcMUO57vRkgra4HVAWLFUH48Y63NXz0W54Zc63KLqIM=
+			7kHSg+cYuZn9XdCDYH7PrUT+Fw+GFPQErDupIrniF6c=
 			</data>
 		</dict>
 		<key>Headers/CAPPanelView.h</key>
@@ -1752,37 +1400,26 @@
 			lw7eb/p/kWi7/xzE7NO6FW/U/RQHuR2wnfmxvOf+OnU=
 			</data>
 		</dict>
-		<key>Headers/DownloadInfo.h</key>
+		<key>Headers/DeviceM.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LRDpaWrqGur1ob2jX7havDPvME4=
+			UwZgrShFMFeEokzpkz1g2dDBUWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/TQfWwJRzLFSE/ix+TXnte+fnm2dExCNMqU2Bmav4F4=
+			6U4F1FTXht5/OBnEDT3sIS4VDBsbjuiSyWVIJCdcfdg=
 			</data>
 		</dict>
-		<key>Headers/DownloadService.h</key>
+		<key>Headers/DeviceService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PWVy7HaUMKH5AX6H2hl2dsJTixI=
+			RQrF1OJAURTohTl62aWe2of11VY=
 			</data>
 			<key>hash2</key>
 			<data>
-			M43Md0pk+VcSeX81QVXR2/AFFcxRGFaddw+VHrpcFGM=
-			</data>
-		</dict>
-		<key>Headers/EGORefreshTableHeaderView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1L4b2NlWDGcbo+SMfnokIEL+du8=
-			</data>
-			<key>hash2</key>
-			<data>
-			hRjwTVFZ1yE6iD82GgZOD+RxoT6y6/f60NtQqpzxeHo=
+			7ekMW0zKpWRu/oEBZ+31NmxSYyE7MOD20QwKLj4WBaQ=
 			</data>
 		</dict>
 		<key>Headers/EOSList.h</key>
@@ -1939,28 +1576,6 @@
 			H0oHlKPIUau9BEeEWfhi0NnWwrviK6VyY/PCV5ajoNc=
 			</data>
 		</dict>
-		<key>Headers/IDownloadService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			i9kwQyMVQpc5CYuz9ghtF/GjNQs=
-			</data>
-			<key>hash2</key>
-			<data>
-			NMtoSuZtiQ/GExQSELwqsQpRClzD7jWoRMw1QFg72to=
-			</data>
-		</dict>
-		<key>Headers/IListWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			G1qsHkLP+3pEcUovyXGMylXLfcE=
-			</data>
-			<key>hash2</key>
-			<data>
-			TFpDBUQj60qSxjvcoKKkCbTbCWp/OytLS/n4I++tjsM=
-			</data>
-		</dict>
 		<key>Headers/ILuaError.h</key>
 		<dict>
 			<key>hash</key>
@@ -2016,26 +1631,15 @@
 			O8Djn6rJcGS1c/FBQaL+aGtNFAmmudTLQWIRo3tvygw=
 			</data>
 		</dict>
-		<key>Headers/ListM.h</key>
+		<key>Headers/LocaleService.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gt4ZrHgZPym1ls+xLwDAVA/D5HU=
+			wk37ymPvUEzgIv5vwpkPU94t9sQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			jnReDzFD+dmnJEDMCuo6FSpRYNTKeieliuANLmBwcio=
-			</data>
-		</dict>
-		<key>Headers/ListWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IBLN+Vi045WBn95k8CbPN6AQ8t0=
-			</data>
-			<key>hash2</key>
-			<data>
-			6/xLxgiP8A/6LuT9e7xi/dCYyUqFHqiqJNc5QnHzArw=
+			mHv/uGbolLJUGbMdOQj2DKF2rW585g2Da8ORdUYIV2c=
 			</data>
 		</dict>
 		<key>Headers/LruCache.h</key>
@@ -2500,28 +2104,6 @@
 			aM+A+9O4amIpWOBBQRbF6IK+c5oOxc9pZItXQ1JHkOQ=
 			</data>
 		</dict>
-		<key>PrivateHeaders/AQPlayer.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VhUM51/VCGZyfLKNzMmPX2N2E1w=
-			</data>
-			<key>hash2</key>
-			<data>
-			AJadr4Y/PJVcc4XO2z0QsBeOQFhRbO5A+vMaiM2+sFo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/AQRecorder.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3GNQcVj2lcJ9JYnwQk6lVEYQnPY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Xe/mcp6L9YCYgl5uuv+wR3v35c474xVtjO8UXptSCPA=
-			</data>
-		</dict>
 		<key>PrivateHeaders/AdvancedTakePhoto.h</key>
 		<dict>
 			<key>hash</key>
@@ -2544,28 +2126,6 @@
 			zj2Sg+L6Yom6UGjRj+ie8zcfvH/OwuBI2XdUkFbSdks=
 			</data>
 		</dict>
-		<key>PrivateHeaders/BMXSwipableCell.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1F5IDgpjOHsIHZBXOar6PhEyPdI=
-			</data>
-			<key>hash2</key>
-			<data>
-			BWgh6r8iMjhA7TERjwMlBB2gyAGXzvHNQ8ZmHF2hInk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BMXSwipableCellGestureDelegate.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Bnum8dpLr3tOQVYzu1kxlkcSrpo=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ook34sb4FxVSz5yXpD3hftD36G/vUMWrHhtnw0fSXP0=
-			</data>
-		</dict>
 		<key>PrivateHeaders/BSWebViewUserAgent.h</key>
 		<dict>
 			<key>hash</key>
@@ -2575,171 +2135,6 @@
 			<key>hash2</key>
 			<data>
 			B7GhLFOoEwmyI28/BraooY88ysT52Un8mDRlFbrYa4k=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BarcodeService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WGBbtO9a2s7Al4i9eM6sm+sy4X0=
-			</data>
-			<key>hash2</key>
-			<data>
-			QmhCnDKsKxCilMQiPoH+tgeA46GEP/Tdhdja5uKr8J0=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BeaconService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FNJp9046mCtNWlH6+f2scNFrXVQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			0+K0+YhbLuMi5lW31ziIolXKjx57g4/jP+XEXXkhPlI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BusyM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			A0TdPWWC/3C7vDkxXC/K1TAiKYQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			yWzRdtW7QKqQN4GaEAc7C31oWUMqb41Y6bSP9eRfscc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BusyService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eqPn4dqaWwPmJXXtcPO7jVg1tcM=
-			</data>
-			<key>hash2</key>
-			<data>
-			ccGAedc0ZUOFp/uZiIlCo9JhIf2qpNC+AyFbM22gvWQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/BusyWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zRd6r+8ph9y1mVEUVZgvhmLd2XE=
-			</data>
-			<key>hash2</key>
-			<data>
-			MtZd7zmqs4MG/3NwQOTlLZE++Qq3+uyOIxpGW05jYPg=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ButtonM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DluT7cbvZfcSAtTkRWO6N+aesYg=
-			</data>
-			<key>hash2</key>
-			<data>
-			+OvaiCilKkMDEpCf88MG1LbsbweZAnqcCOMV15bvv30=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ButtonWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eko9Y1cmtuPx8mS/x0Fwv3VudFI=
-			</data>
-			<key>hash2</key>
-			<data>
-			swUyWbaJ+e7ul1WV/OgDp37Tf0KTCtAyTCJj1Y9bwiQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CADebugMacros.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yUAGyu1vc1urHtgJ0iI/6LmTpBU=
-			</data>
-			<key>hash2</key>
-			<data>
-			bEgaz+ypz3u+mhulICADPNkrezreO1JygKYtMWjksvE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CAMath.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IIMayVVb5i2et3mwjAnozpcm3ag=
-			</data>
-			<key>hash2</key>
-			<data>
-			61rDfFWbF7vQ284SG4wPpDc+9jz6N83l5QnBdDQUdqU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CAStreamBasicDescription.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZelFzmX2FuXtLVXl0jK52VsbhrU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Lc3nqUuebB/96Qcm0HuA2Mw5MUW08ZViFqOHZ68Qyvc=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CAXException.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OyungPG73hUxqizW+t+xUXNWl9k=
-			</data>
-			<key>hash2</key>
-			<data>
-			FpHV+6pOfI89h7+aXvsVrvnBQpfLwtwrhG1otroJuhk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CanvasDisplayView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			U45vuux7/AKW8oFKAHI9HeY/fWI=
-			</data>
-			<key>hash2</key>
-			<data>
-			b23yh1fi5UbcHtCviX2S0iKCs2S6zTIYSqEGM2ULLRE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CanvasM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			n0NgG07wmGKby3nkCmqsS1/KNt4=
-			</data>
-			<key>hash2</key>
-			<data>
-			M5BsK2LDXdH1VsipAl7rATsZcnwnnnnaYhy6MUiLtXw=
-			</data>
-		</dict>
-		<key>PrivateHeaders/CanvasWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			loJCJfO+peNg9awXA4uRXJbus80=
-			</data>
-			<key>hash2</key>
-			<data>
-			67Ro0kf6rfqLarD+R8XZvZfxlSSbVPu0TVHagxmL3pQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ContactsService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qkEMiFsKr/AxX66G2gV9QT+E/Jk=
-			</data>
-			<key>hash2</key>
-			<data>
-			lNIUhYK51Du74A0ASs9BpcEMY+1VtQ04XaoX7k2+YsE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/Cv3dTracker2dTrackedObject.h</key>
@@ -3732,39 +3127,6 @@
 			EvlGGMOPqEAq4Z8HqmaP16FbynA9UoOcBcGe24UTuY8=
 			</data>
 		</dict>
-		<key>PrivateHeaders/DeviceM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UwZgrShFMFeEokzpkz1g2dDBUWY=
-			</data>
-			<key>hash2</key>
-			<data>
-			6U4F1FTXht5/OBnEDT3sIS4VDBsbjuiSyWVIJCdcfdg=
-			</data>
-		</dict>
-		<key>PrivateHeaders/DeviceService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RQrF1OJAURTohTl62aWe2of11VY=
-			</data>
-			<key>hash2</key>
-			<data>
-			7ekMW0zKpWRu/oEBZ+31NmxSYyE7MOD20QwKLj4WBaQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/DocumentPreviewService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			YqLFqoDkzILGoJSeaOnzx8gFwjE=
-			</data>
-			<key>hash2</key>
-			<data>
-			pgtC/B58XtrvLDBqFF4krD2L+zsk3Q20fYczJ6OJomo=
-			</data>
-		</dict>
 		<key>PrivateHeaders/DownloadManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -3774,39 +3136,6 @@
 			<key>hash2</key>
 			<data>
 			o5/TddMHTVTi57vlOQZYkY99AFnyD+LXN+YUbHe6Na4=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EGORefreshScrollView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hlcIloBFOTePwX86ucPe/iVqn/M=
-			</data>
-			<key>hash2</key>
-			<data>
-			6sRuLXhxbecCKRoDCboecGYgW4ByRV39JxmbK26pM6A=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EMailService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gIeIsaw1KbU/UsFdkKmi7hDW1gc=
-			</data>
-			<key>hash2</key>
-			<data>
-			OamlC+USGeuFuSOwSxj449z7l4KEEg7oHZExCI06lW8=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSButton.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			msqn6FwCMjvJCDQYIJThAtrEXmc=
-			</data>
-			<key>hash2</key>
-			<data>
-			52PNhRPsgDb8l/y0asFswS1XNP/1p4CjK3q57eVtjII=
 			</data>
 		</dict>
 		<key>PrivateHeaders/EOSCollectionHelper.h</key>
@@ -3820,61 +3149,6 @@
 			gqhFQNuy5ixEEmF2PXgaetOR+X0pb48F77HwQLiIVIc=
 			</data>
 		</dict>
-		<key>PrivateHeaders/EOSLabel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HSfJUjvN0Os1W4YNmU4I5t+uD+0=
-			</data>
-			<key>hash2</key>
-			<data>
-			/7YnvY4eCf0pv3lUcc5xpAF/bwO/CX9YfFSN7X5nULE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSPath.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LgnGgtTxD4+/sECKJ+IjpUrxzdk=
-			</data>
-			<key>hash2</key>
-			<data>
-			Pp64jdyC12WSIfy9qKwvSgeoLn6sGxJkg3jFBV9cUrM=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSScrollView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yhyfcByg29bmtbSz2skYJJI5Klo=
-			</data>
-			<key>hash2</key>
-			<data>
-			ng/rAQXk8aFTCJVQ90kJ7xFOBFgUFtRb0Tw3wp2DZcQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSTextField.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			T/9w0x1Da4TVAx5ygT6hrNW745Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			TAuckDJPBlWQa/o4aeo4ymwn4JaGY0AVyTOZPNFW6eo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSTextView.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nDAkSyxuMZZMvO//TM7LSBLDkoI=
-			</data>
-			<key>hash2</key>
-			<data>
-			BgWx9HxQEeDEGF4vv/qC2udiS9gnHYWN9CMveMneUds=
-			</data>
-		</dict>
 		<key>PrivateHeaders/EOSTimer.h</key>
 		<dict>
 			<key>hash</key>
@@ -3884,17 +3158,6 @@
 			<key>hash2</key>
 			<data>
 			y4aaX15nC05ldp3UWUDOCzf1f4nMf+HuEZeKFmqtKcg=
-			</data>
-		</dict>
-		<key>PrivateHeaders/EOSToolbar.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2UOsMeFgSDwYReUkVqkcLW2XpK4=
-			</data>
-			<key>hash2</key>
-			<data>
-			0RXij776r+zc18l6BO+Mh99T6uLlygOeK61ptTV7NWY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/EOSURLCache.h</key>
@@ -3908,17 +3171,6 @@
 			tbfCz4IP0CZDWVmlZ/ITk4KZ/8ZF702jVze0qdjk2S8=
 			</data>
 		</dict>
-		<key>PrivateHeaders/FileService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			832temKTLyhe3mGQCZG4SfmDkXM=
-			</data>
-			<key>hash2</key>
-			<data>
-			GSWM4hYR+edN4hi4B60k8crBv2SF0T4PHA9z1TZ7bPA=
-			</data>
-		</dict>
 		<key>PrivateHeaders/FreeTypeFace.h</key>
 		<dict>
 			<key>hash</key>
@@ -3928,28 +3180,6 @@
 			<key>hash2</key>
 			<data>
 			8/N5UQ5hDMZPKuEe8PWnBz1st3m0ZljxhCgSm8Itlig=
-			</data>
-		</dict>
-		<key>PrivateHeaders/HBoxM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+N5d3aEvYNae5//HLSVESieLqM0=
-			</data>
-			<key>hash2</key>
-			<data>
-			51gXJtg2Wvhn+x4Wi7fnjHXw7WXod5nr8aZbxtv35MI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/HBoxWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cZ73THaCsBonypgvdzL+QHbBQPo=
-			</data>
-			<key>hash2</key>
-			<data>
-			H70Fnte8vdIkILt9bcOdXIuFsi5mhkNMVXaW3pJ7cM8=
 			</data>
 		</dict>
 		<key>PrivateHeaders/HandleOpenURLEvent.h</key>
@@ -3963,50 +3193,6 @@
 			BxzGmrejIrL3ol4MjQc9R2IJdSk1Rxl+pqBqS6HSu8s=
 			</data>
 		</dict>
-		<key>PrivateHeaders/ICanvasWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Z82g3bueWKphWaM1eYINHkvKAno=
-			</data>
-			<key>hash2</key>
-			<data>
-			aujS67K4uF7obPnV/FlfgIEOOxyoFD9cxtJTAIP9ukM=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IDocumentPreviewService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			H8xVzMDvDVnmeQD7NIYy6rMPsuw=
-			</data>
-			<key>hash2</key>
-			<data>
-			SOK7oqgW9Y8Hd8PThQeS4ZS8X/2bq3JybYLKxr1X4oU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IDownloadInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KvfRtfreb9hZWcT4BArK62efe2c=
-			</data>
-			<key>hash2</key>
-			<data>
-			dHCBK3uNMQvTAmczPnMOMOComeZscSzt9j7ywmzwDEk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IEMailService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zNkx1yC5nskylo24gvSswCh3QMo=
-			</data>
-			<key>hash2</key>
-			<data>
-			FnxeG2yXF8Rm3D4yi0HN7l/ovp/FlVNd3d7vcxa6TwQ=
-			</data>
-		</dict>
 		<key>PrivateHeaders/IEOSTimer.h</key>
 		<dict>
 			<key>hash</key>
@@ -4016,127 +3202,6 @@
 			<key>hash2</key>
 			<data>
 			3wBqSKP9Bz4epdZQSaMr61mH4n7Uvv/FRuC6Hb9zsJk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IImageWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kKnNDCFuLWQDk+Tg7eXAYUAJFvI=
-			</data>
-			<key>hash2</key>
-			<data>
-			DlvizWS/z3Q1MdgmQASNQ1uJe3KC3lG6UT0JTyEK8kg=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ILBCService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			t2HgKVVJafqtIXQg6W4a0RH2EeU=
-			</data>
-			<key>hash2</key>
-			<data>
-			wPb0rk7LL2yTZ932kxnU5zWoIiUxYcimJKKbWfCp9Gg=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ILabelWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			snhLRVOE6KakQmfF5wjyNrxmC3U=
-			</data>
-			<key>hash2</key>
-			<data>
-			Yd99cseQ51ajdjdrRN37EIm1EgnzDRmqWYOn7DRHOHM=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ILocationService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cTBt2DTJIWgZpc6YCYI76ZZpD9I=
-			</data>
-			<key>hash2</key>
-			<data>
-			VVY8YLKNLx4iFAo76tIRGTAQf3uLNlteHNbcBrPsq9c=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IScrollViewWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			r0oZQh1tB7MlPHUZ6B4oTnM/aj8=
-			</data>
-			<key>hash2</key>
-			<data>
-			yuhoLhLbijRRMmPxWN3Y15ee9cMiFxoYtltYKcYllY4=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ITextAreaWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RCWKXl1x9+s2bb6T2yrMZH1PysI=
-			</data>
-			<key>hash2</key>
-			<data>
-			kOeFGxooK9D/YcRCGlurlrnAZcs4m3P5Auyx6oQtZfE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ITextfieldWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iSLcJDXugfdhv+wms5Idk0k1ovY=
-			</data>
-			<key>hash2</key>
-			<data>
-			wBsVc2QCpfj6kNqgMYR0cOMVTxcQ0IkLlKBPjjJr0Ks=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IToolBarWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			w+9oF90A0Z4w9PjVkIjfM5d600s=
-			</data>
-			<key>hash2</key>
-			<data>
-			StvIYMSLrmiuGxuu0wFIAQdQ9A4RtPqE9ifEEFBVQW8=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IVideoWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DIhtx+cLge+Uz00P4KTy2Ia7OU8=
-			</data>
-			<key>hash2</key>
-			<data>
-			p953Ujp3kl48EUm/sLHddSmgZawD6jpTgvfymLFmiKo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/IWebViewWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9JyWs4lrzcRweAQJJKVZAyxXwOY=
-			</data>
-			<key>hash2</key>
-			<data>
-			aU4tkKM3xS3XoBTTzRDYEqHe00Iif3VepFM8ZM/hcYE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ImageM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Tzj84cR2dbkJ+7sHY6LFr5iRCGU=
-			</data>
-			<key>hash2</key>
-			<data>
-			FkAZabSa4yNgqXGCkBxHj3SiXB/Mu97ij7SmMfZVBBw=
 			</data>
 		</dict>
 		<key>PrivateHeaders/ImagePreviewController.h</key>
@@ -4159,28 +3224,6 @@
 			<key>hash2</key>
 			<data>
 			C6t0YmX5I00a/3CXVIH1RbB+acGGz0yQmG+/VGDOOyY=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ImageService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qLTzr2kA9tI0VVjUWcs7mkemxVU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Cr9dP2LOpGs6Nkr55Vtkij0rJFhKsK9TLHZqwkQswaE=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ImageWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oOlAHEN02piLfnDD4cZj6jn7kYo=
-			</data>
-			<key>hash2</key>
-			<data>
-			WBI3eD4LtBsjDm58850j1APGf6R7x9uuEnUkx0QHAlQ=
 			</data>
 		</dict>
 		<key>PrivateHeaders/InvocationLuaHelper.h</key>
@@ -4271,83 +3314,6 @@
 			EVktJ0Bw8gcD4vRMukF4P+7H5n3OqDhsQ+ulGZ9Q4Po=
 			</data>
 		</dict>
-		<key>PrivateHeaders/LabelM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q5dYeBheafNuz1CPNjUrkvESNT8=
-			</data>
-			<key>hash2</key>
-			<data>
-			+96gNmyU26xE8LO3gmxKZgGVlFfiFSEdaUKlm6YNDX4=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LabelWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2Uend4ScAVJ2lcp++TgrinGoRPc=
-			</data>
-			<key>hash2</key>
-			<data>
-			YaVzUx3+qvWRK+//VuxHFvIz2/0FlYOSRPvklwKAH3g=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ListWidgetCell.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iMBZ6y+w6F5GB7XXSR7Yt2fvO8o=
-			</data>
-			<key>hash2</key>
-			<data>
-			dCkGzryx8GWsX9neUXmQwCDUI1ArGMDIdlxV3GPtkXA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LocalNotificationService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9HxnsaFdqbt+E6MtJokdNvsv8Ls=
-			</data>
-			<key>hash2</key>
-			<data>
-			QFvSCaCDF3UFFLIahsxRxUznVgJHUfWrkVrSKr5KboU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LocaleService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wk37ymPvUEzgIv5vwpkPU94t9sQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			mHv/uGbolLJUGbMdOQj2DKF2rW585g2Da8ORdUYIV2c=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LocationService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			SS2kSh7/w2cfmgLYCfiDgabefvM=
-			</data>
-			<key>hash2</key>
-			<data>
-			YlS7jWPwHon3y4YE+agYpp/IP5iaDdIhzgbqOoXSs0E=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LuaABRecord.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kS2YgpXbHD161yzKj+aWKG2O/vc=
-			</data>
-			<key>hash2</key>
-			<data>
-			x16UkaEe3+2tBrrrsr9paM29muIpQV+u9yzvNrCHh2g=
-			</data>
-		</dict>
 		<key>PrivateHeaders/LuaEvent.h</key>
 		<dict>
 			<key>hash</key>
@@ -4370,17 +3336,6 @@
 			qWG5CW4P85tvDTG5eteAW6jXrT4ktU3cBDFAFnCiIcU=
 			</data>
 		</dict>
-		<key>PrivateHeaders/LuaHeading.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UJIH6H7JFWR1qrAgsPdxNN5H9SQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			Lk3F/uk/Qcvrn3NyNR3sBM21qY6ECxLaYh9EmoSJUag=
-			</data>
-		</dict>
 		<key>PrivateHeaders/LuaHelper.h</key>
 		<dict>
 			<key>hash</key>
@@ -4390,28 +3345,6 @@
 			<key>hash2</key>
 			<data>
 			X2H7rNVHegkh6FxnaE9JtITJ7E1bvB0f8nl/EygSS0g=
-			</data>
-		</dict>
-		<key>PrivateHeaders/LuaLocation.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AyBWL+0TeLNL5iUCz9amzm+6jDY=
-			</data>
-			<key>hash2</key>
-			<data>
-			TNY+SlN38tZw+nqbZdUTtsccuINzHRraiYoDJyFQwBo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/MP3Service.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sv3HRGu0xiR7wnTEKgRzhTPwaxM=
-			</data>
-			<key>hash2</key>
-			<data>
-			V1VQmjPy4DpzaQaxTDHM+qSkL4o70WCZms5br86JsFM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MaskView.h</key>
@@ -4445,17 +3378,6 @@
 			<key>hash2</key>
 			<data>
 			6u5Osr6b8/c7xfvmesAjbFEwPac202Y66QF3nHCE9VA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/MotionService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xMFoIlD8t0Ol/j8YyOcQK2R3hMw=
-			</data>
-			<key>hash2</key>
-			<data>
-			xk2xAZdtq0r9eD78z/P5GO3mMD0F5VnwxkEUwB5/qRg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MyMutableURLRequest.h</key>
@@ -4502,17 +3424,6 @@
 			v4wZQ4c7rDL4N2InHSbhgoL0kq/gH/jA4Mq8SjpsF6w=
 			</data>
 		</dict>
-		<key>PrivateHeaders/PhotoService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			l4ITprVrmUCjY0ZwqN4lPoe1h2I=
-			</data>
-			<key>hash2</key>
-			<data>
-			1Z5//9l8DtlxdnfM57ryKpIrfL5jqgBI6+dSsG8ILtQ=
-			</data>
-		</dict>
 		<key>PrivateHeaders/PushNotificationEvent.h</key>
 		<dict>
 			<key>hash</key>
@@ -4535,39 +3446,6 @@
 			qzlsrHsrsAJUEh/5x9x5fgOh/sU1Mra+HV1TMwrQH6k=
 			</data>
 		</dict>
-		<key>PrivateHeaders/ScreenService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NsH6u0G6GWr2OGWiyeMoqrNo8Sg=
-			</data>
-			<key>hash2</key>
-			<data>
-			HR4xv5qWLQey7hMVsr0eX3yELO8VrxPmqdPRX+9DkzQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ScrollViewM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TkwU0GLIQVVr7CRruALV+MBHQA0=
-			</data>
-			<key>hash2</key>
-			<data>
-			sJcjuQGAJt7mGt56P5uQM3V/kpuNgZDrLZ2zOTXq2IA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ScrollViewWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			A0TxpI73cdntyXrec9MQiq7sAEM=
-			</data>
-			<key>hash2</key>
-			<data>
-			6zmutebObPCY7dH35mUjc/l/P7Jnf5VDLnSiurWEZFQ=
-			</data>
-		</dict>
 		<key>PrivateHeaders/ShakeEvent.h</key>
 		<dict>
 			<key>hash</key>
@@ -4579,116 +3457,6 @@
 			QxaMOZdw/65ZOZvgtuu4C79nKfgz4qupSlDsf0lHpXM=
 			</data>
 		</dict>
-		<key>PrivateHeaders/SwipableScrollview.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vU21OXorwvdr0qpzJFT5cgm4ORE=
-			</data>
-			<key>hash2</key>
-			<data>
-			dN7KV80mQTr/dpd/LwIWv0de/m9R9hOoup4sia7vUhQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/SwitchM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+j63kAfqcd5pR4IHGxZgGSai138=
-			</data>
-			<key>hash2</key>
-			<data>
-			Zm3MmB81jL+W8hA1X0Act7FlE2fV/Ko7H1IOrI6gf8k=
-			</data>
-		</dict>
-		<key>PrivateHeaders/SwitchWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GK/DBr/z3hGHQJ1p3v/Ustv5pNM=
-			</data>
-			<key>hash2</key>
-			<data>
-			x6/remyCME2/qC7fBqdkNFsq9sXEt9d3rmEL9/770e0=
-			</data>
-		</dict>
-		<key>PrivateHeaders/TabItemM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lhnbzas0v3bVoVJUgyWm5de1iCk=
-			</data>
-			<key>hash2</key>
-			<data>
-			HLgVMl27wuAyRgrrRe1KvnHNW+sUJgO0/sXndNyedEY=
-			</data>
-		</dict>
-		<key>PrivateHeaders/TextAreaM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			m7aNSmOX620i89mEtkyU17uGI/w=
-			</data>
-			<key>hash2</key>
-			<data>
-			hIZfP2t67TJb+CooLr3lusklGow1UrEAeT9QsmtGHdU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/TextAreaWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pXByYTx+enHzQW9jO6yPGTg+Juk=
-			</data>
-			<key>hash2</key>
-			<data>
-			LGjeOwost0qj7DXRK/TyuiGgrjoAl+H0v/y1jD/UF2A=
-			</data>
-		</dict>
-		<key>PrivateHeaders/TextfieldM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ih7jnk7ol3HxjyNp+yeFNqbZ6l4=
-			</data>
-			<key>hash2</key>
-			<data>
-			DvI1jV0BSP+hvq9iy1dKbCEyoCUbtt+pkPx6eF0tWZo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/TextfieldWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			toe/J0CnB8A4uTq3BKs/99oNonU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Tc2PNp2JbLMaB9SlCFCEmZZKnblb+6Rul+0H30qz1h8=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ToolBarM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FARCdMv3VglElGkxrnonipsz/MY=
-			</data>
-			<key>hash2</key>
-			<data>
-			QJVLPa7eZg3/YzAQlc/eOTqrFLqdiOxQx1AwsLVygdA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ToolBarWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OIBWqSNdPPkph6DqtVqZG52vbUo=
-			</data>
-			<key>hash2</key>
-			<data>
-			bcoFNPcBw8rZnWybyAwRG0rxXvvjfviGV3cJsN4s7k0=
-			</data>
-		</dict>
 		<key>PrivateHeaders/UIColor-Expanded.h</key>
 		<dict>
 			<key>hash</key>
@@ -4698,83 +3466,6 @@
 			<key>hash2</key>
 			<data>
 			wkmMWB14xPxQ/Ry3BVhHW9S8SDfzORQUdmW+W7AYGXo=
-			</data>
-		</dict>
-		<key>PrivateHeaders/UITableViewController+BMXSwipableCellSupport.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ryoKSGwSf5GqmmpS2Iwh8VVgcmk=
-			</data>
-			<key>hash2</key>
-			<data>
-			vPwBnqxlJMltGDRlPrPtfXnPMHqRGPUllfcE86SQsdI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/VBoxM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VqeE4pAbka587lk4N32ATZvv6pE=
-			</data>
-			<key>hash2</key>
-			<data>
-			iHrpCvtxK8u+VV+ENQFwFdTjOB0V2E6IWtywhcNf6zs=
-			</data>
-		</dict>
-		<key>PrivateHeaders/VBoxWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0VafTJUZKJMTdD5TKHIHm7cGCXc=
-			</data>
-			<key>hash2</key>
-			<data>
-			YHT1gs7kiiBBFAscnBRJoVh8V/azXHq063EfR9Gd8WI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/VideoM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MLSg/1OOm8KvRmWeS1TVH8nEQq4=
-			</data>
-			<key>hash2</key>
-			<data>
-			Cfu+G9VAJ42ETRhnU3yePYQkWD/jmmfn6KzPBcsk7QI=
-			</data>
-		</dict>
-		<key>PrivateHeaders/VideoWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0mftn8OqPHEgjefwOixBuOjL5gg=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ad/oBe8Vwin8lrC5n3PyTf7eTAn4InfFzfKjo4tc37A=
-			</data>
-		</dict>
-		<key>PrivateHeaders/WebViewM.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ke3H/5n6OsYKAhFYd8vz0geN48g=
-			</data>
-			<key>hash2</key>
-			<data>
-			a21U9qbkGiHxNkpCtdrax3YdWdCnlUkJdN6iX/BgvMQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/WebViewWidget.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AdjaTnhslkPQfaxb5E1Cg/pHG+4=
-			</data>
-			<key>hash2</key>
-			<data>
-			0V++mXLd+YKpFuVJ1TwLueSEsLXwH1HE9EjUjwVUilc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/WidgetViewController.h</key>
@@ -4797,17 +3488,6 @@
 			<key>hash2</key>
 			<data>
 			rFV0DdvzV7+HqtTvz/c6pd2Kd+3CCZgAMnN3MxJFchA=
-			</data>
-		</dict>
-		<key>PrivateHeaders/ZBarService.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nAHB6RIbOx8MjUS3VsUyPDfUpCU=
-			</data>
-			<key>hash2</key>
-			<data>
-			rn0XuCyTDHYHSiXKJnn59gCM/ugNgAXv3XgjC99LIUY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/aes.h</key>

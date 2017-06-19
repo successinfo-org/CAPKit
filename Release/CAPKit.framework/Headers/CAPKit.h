@@ -120,4 +120,6 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/RootViewController.h>
 #import <CAPKit/CAPAppDelegate.h>
 
+#import <Bugly/Bugly.h>
+
 #endif
