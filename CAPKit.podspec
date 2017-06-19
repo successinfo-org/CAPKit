@@ -13,20 +13,22 @@ Pod::Spec.new do |s|
   s.frameworks   = 'AssetsLibrary', 'MessageUI', 'AddressBookUI', 'AddressBook', 'Accelerate', 'MapKit', 'AudioToolbox', 'CoreTelephony', 'QuickLook', 'Social', 'CoreLocation'
   s.weak_framework = 'WebKit'
   s.libraries = 'resolv'
-  s.source_files = 'extension/**/*.{h,m}'
 
   s.default_subspec = 'Release'
 
   s.subspec 'Release' do |ss|
+    ss.source_files = 'extension/**/*.*'
     ss.resource = 'Release/builtin'
     ss.ios.vendored_frameworks = 'Release/CAPKit.framework'
   end
 
   s.subspec 'Resource' do |ss|
+    ss.source_files = 'extension/**/*.*'
     ss.resource = 'Release/builtin'
   end
 
   s.subspec 'Debug' do |ss|
+    ss.source_files = 'extension/**/*.*'
     ss.resource = 'Debug/builtin'
     ss.ios.vendored_frameworks = 'Debug/CAPKit.framework'
   end
