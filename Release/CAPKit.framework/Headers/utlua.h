@@ -30,9 +30,15 @@
 #include <stdbool.h>
 #endif
 
+#ifdef __ANDROID__
 #include <lauxlib.h>
 #include <lua.h>
 #include <lualib.h>
+#else
+#include <lua53/lauxlib.h>
+#include <lua53/lua.h>
+#include <lua53/lualib.h>
+#endif
 
 #include <event.h>
 #include <event2/bufferevent.h>
