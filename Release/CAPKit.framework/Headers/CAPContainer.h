@@ -54,6 +54,8 @@
 - (NSString *) appBundleName;
 - (NSString *) hydraBundleName;
 
+- (NSString *) preferredLanguage;
+
 - (void) shutdown;
 
 @end
