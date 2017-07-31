@@ -165,27 +165,34 @@
     return YES;
 }
 
-- (void)textFieldDidChange :(UITextField *)textField {
+- (void)textFieldDidChange :(NSNotification *)obj {
     NSString *text = textfieldView.text;
-//    if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
-//        text = [text substringToIndex: self.model.maxLength];
-//        textfieldView.text = text;
-//    }
+    NSString *lang = [textfieldView.textInputMode primaryLanguage];
+    if ([lang isEqualToString:@"zh-Hans"]) {
+        UITextRange *selectedRange = [textfieldView markedTextRange];
+        UITextPosition *position = [textfieldView positionFromPosition:selectedRange.start offset:0];
+        if (!position) {
+            if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
+                text = [text substringToIndex: self.model.maxLength];
+                textfieldView.text = text;
+            }
+        }
+        else{
+
+        }
+    }
+    else{
+        if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
+            text = [text substringToIndex: self.model.maxLength];
+            textfieldView.text = text;
+        }
+    }
+
     self.model.text = text;
     self.stableModel.text = text;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [OSUtils executeDirect: self.model.onchange withSandbox: self.pageSandbox withObject: self];
     });
-}
-
--(BOOL)textField:(UITextField *)textField
-shouldChangeCharactersInRange:(NSRange)range
-replacementString:(NSString *)string{
-    if (((TextfieldM *) self.model).maxLength > 0) {
-        return [textField.text length] - range.length + [string length] <= ((TextfieldM *) self.model).maxLength;
-    }
-
-    return YES;
 }
 
 -(BOOL)textFieldShouldEndEditing:(UITextField *)textField{

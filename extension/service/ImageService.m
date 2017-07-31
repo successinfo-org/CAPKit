@@ -1,11 +1,3 @@
-//
-//  ImageService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 5/12/14.
-//  Copyright (c) 2014 HP. All rights reserved.
-//
-
 #import "ImageService.h"
 
 @implementation ImageService

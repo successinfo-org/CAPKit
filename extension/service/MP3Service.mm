@@ -1,11 +1,3 @@
-//
-//  MP3Service.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 9/7/15.
-//  Copyright (c) 2015 HP. All rights reserved.
-//
-
 #import "MP3Service.h"
 #import <lame/lame.h>
 

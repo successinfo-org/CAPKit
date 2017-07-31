@@ -1,11 +1,3 @@
-//
-//  MP3Service.h
-//  EOSFramework
-//
-//  Created by Sam Chang on 9/7/15.
-//  Copyright (c) 2015 HP. All rights reserved.
-//
-
 #import <CAPKit/CAPKit.h>
 #import "AQRecorder.h"
 #import <AudioToolbox/AudioSession.h>

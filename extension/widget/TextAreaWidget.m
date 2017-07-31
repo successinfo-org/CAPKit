@@ -135,23 +135,31 @@
     [OSUtils executeDirect: self.model.onblur withSandbox: self.pageSandbox withObject: self];
 }
 
-- (BOOL)textView:(UITextView *)tview shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    if (self.model.maxLength > 0) {
-        return [tview.text length] - range.length + [text length] <= self.model.maxLength;
-    }
-    return YES;
-}
-
 - (void)textViewDidChange:(UITextView *) tview{
+    NSString *text = textView.text;
+    NSString *lang = [textView.textInputMode primaryLanguage];
+    if ([lang isEqualToString:@"zh-Hans"]) {
+        UITextRange *selectedRange = [textView markedTextRange];
+        UITextPosition *position = [textView positionFromPosition:selectedRange.start offset:0];
+        if (!position) {
+            if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
+                text = [text substringToIndex: self.model.maxLength];
+                textView.text = text;
+            }
+        }
+        else{
 
-//    NSString *text = textView.text;
-//    if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
-//        text = [text substringToIndex: self.model.maxLength];
-//        textView.text = text;
-//    }
+        }
+    }
+    else{
+        if (self.model.maxLength > 0 && [text length] > self.model.maxLength) {
+            text = [text substringToIndex: self.model.maxLength];
+            textView.text = text;
+        }
+    }
 
-    self.model.text = textView.text;
-    self.stableModel.text = textView.text;
+    self.model.text = text;
+    self.stableModel.text = text;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [OSUtils executeDirect: self.model.onchange withSandbox: self.pageSandbox withObject: self];
     });

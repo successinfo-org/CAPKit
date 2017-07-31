@@ -1,11 +1,3 @@
-//
-//  BeaconService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 3/23/15.
-//  Copyright (c) 2015 HP. All rights reserved.
-//
-
 #import "BeaconService.h"
 #import <CAPKit/GlobalSandbox.h>
 #import <CAPKit/LuaFunctionWatcher.h>

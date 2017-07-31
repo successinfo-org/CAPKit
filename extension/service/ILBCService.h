@@ -1,11 +1,3 @@
-//
-//  ILBCService.h
-//  EOSFramework
-//
-//  Created by Sam Chang on 15/8/20.
-//  Copyright (c) 2015年 HP. All rights reserved.
-//
-
 #import <CAPKit/CAPKit.h>
 #import "AQRecorder.h"
 #import <AudioToolbox/AudioSession.h>

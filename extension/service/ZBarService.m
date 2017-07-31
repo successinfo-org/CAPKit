@@ -1,11 +1,3 @@
-//
-//  ZBarService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 5/20/14.
-//  Copyright (c) 2014 HP. All rights reserved.
-//
-
 #import "ZBarService.h"
 #import "ZBarSDK.h"
 #import <CAPKit/CAPKit.h>

@@ -1,11 +1,3 @@
-//
-//  BarcodeService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 4/18/16.
-//  Copyright © 2016 HP. All rights reserved.
-//
-
 #import "BarcodeService.h"
 #import <CAPKit/CAPKit.h>
 #import <CAPKit/UIApplication+UIApplication_AppDimensions.h>

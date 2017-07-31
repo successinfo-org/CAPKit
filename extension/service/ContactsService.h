@@ -1,11 +1,3 @@
-//
-//  ContactsService.h
-//  EOSFramework
-//
-//  Created by Sam Chang on 4/17/14.
-//  Copyright (c) 2014 HP. All rights reserved.
-//
-
 #import <CAPKit/CAPKit.h>
 #import "lua.h"
 

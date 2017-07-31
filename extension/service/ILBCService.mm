@@ -1,11 +1,3 @@
-//
-//  ILBCService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 15/8/20.
-//  Copyright (c) 2015年 HP. All rights reserved.
-//
-
 #import "ILBCService.h"
 
 extern OSStatus DoConvertFile(CFURLRef sourceURL, CFURLRef destinationURL, OSType outputFormat, Float64 outputSampleRate);

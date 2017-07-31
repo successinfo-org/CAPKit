@@ -1,11 +1,3 @@
-//
-//  MotionService.m
-//  EOSFramework
-//
-//  Created by Sam Chang on 6/4/14.
-//  Copyright (c) 2014 HP. All rights reserved.
-//
-
 #import "MotionService.h"
 
 @implementation MotionService
