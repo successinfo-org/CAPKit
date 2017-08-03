@@ -11,10 +11,46 @@
 CGFloat kMovieViewOffsetX = 20.0;
 CGFloat kMovieViewOffsetY = 20.0;
 
+@interface VideoWidget ()
+
+@property (nonatomic, assign) BOOL idleTimerDisabled;
+
+@end
+
 @implementation VideoWidget
+
+static int idleTimerDisabledCount;
+
++(void)initialize{
+    idleTimerDisabledCount = 0;
+}
 
 +(void)load {
     [WidgetMap bind: @"video" withModelClassName: @"VideoM" withWidgetClassName: @"VideoWidget"];
+}
+
+- (void) stopIdleTimer {
+    if (!_idleTimerDisabled) {
+        _idleTimerDisabled = YES;
+
+        idleTimerDisabledCount++;
+        if (idleTimerDisabledCount > 0) {
+            [UIApplication sharedApplication].idleTimerDisabled = YES;
+//            NSLog(@"idleTimerDisabled = YES");
+        }
+    }
+}
+
+- (void) startIdleTimer {
+    if (_idleTimerDisabled) {
+        _idleTimerDisabled = NO;
+
+        idleTimerDisabledCount--;
+        if (idleTimerDisabledCount <= 0) {
+            [UIApplication sharedApplication].idleTimerDisabled = NO;
+//            NSLog(@"idleTimerDisabled = NO");
+        }
+    }
 }
 
 -(UIView *)innerView{
@@ -44,6 +80,8 @@ CGFloat kMovieViewOffsetY = 20.0;
     
     [self removeMovieNotificationHandlers];
     self.moviePlayerController = nil;
+
+    [self startIdleTimer];
 }
 
 - (void) setSrc: (NSString *) src{
@@ -99,18 +137,21 @@ CGFloat kMovieViewOffsetY = 20.0;
 - (void) play{
     [OSUtils runBlockOnMain:^{
         [self.moviePlayerController play];
+        [self stopIdleTimer];
     }];
 }
 
 - (void) pause{
     [OSUtils runBlockOnMain:^{
         [self.moviePlayerController pause];
+        [self startIdleTimer];
     }];
 }
 
 - (void) stop{
     [OSUtils runBlockOnMain:^{
         [self.moviePlayerController stop];
+        [self startIdleTimer];
     }];
 }
 
@@ -304,6 +345,8 @@ CGFloat kMovieViewOffsetY = 20.0;
     } else {
         NSLog(@"Unhandled Event, %@", notification);
     }
+
+    [self startIdleTimer];
 }
 
 - (void)loadStateDidChange:(NSNotification *)notification
@@ -325,6 +368,18 @@ CGFloat kMovieViewOffsetY = 20.0;
         [self.model.onplaybackstate executeWithoutReturnValue: self, [NSNumber numberWithInt: player.playbackState], nil];
     } else {
         NSLog(@"Unhandled Event, %@", notification);
+    }
+
+    switch (player.playbackState) {
+        case MPMoviePlaybackStateStopped:
+        case MPMoviePlaybackStatePaused:
+        case MPMoviePlaybackStateInterrupted:
+            [self startIdleTimer];
+            break;
+
+        default:
+            [self stopIdleTimer];
+            break;
     }
 }
 

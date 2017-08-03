@@ -563,6 +563,10 @@
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    if (error.code == NSURLErrorCancelled){
+        return;
+    }
+    
     [self webViewDidFailLoadWithError: error];
 }
 
