@@ -566,11 +566,10 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    ListM *m = (ListM *) self.model;
-    if (m.sectionHeader == nil) {
+    if (!self.model.sectionHeader && !self.model.__section_header_layout) {
         return nil;
     }
-    
+
     NSDictionary *data = nil;
     
     if (self.model.__section_header_data) {
@@ -586,12 +585,31 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
         data = sectionItem.header;
     }
 
-    
+    NSString *identifier = data[@"identifier"];
+    UIWidgetM *sectionHeader = nil;
+    if ([identifier isKindOfClass: [NSString class]] && self.model.__section_header_layout) {
+        NSDictionary *modeldic = [OSUtils getObject: self.model.__section_header_layout
+                                         withObject: self
+                                         withObject: identifier
+                                         withObject: nil];
+
+        if ([modeldic isKindOfClass: [NSDictionary class]]) {
+            sectionHeader = [ModelBuilder buildModel: modeldic];
+        }
+    }
+
+    if (!sectionHeader) {
+        if (!self.model.sectionHeader) {
+            return nil;
+        } else {
+            sectionHeader = [self.model.sectionHeader copy];
+        }
+    }
+
     NSNumber *key = [NSNumber numberWithInteger: section];
     AbstractUIWidget *widget = [sectionHeaderWidgetMap objectForKey: key];
     if (widget == nil) {
-        UIWidgetM *cm = [m.sectionHeader copy];
-        widget = [WidgetBuilder buildWidget: cm withPageSandbox: self.pageSandbox];
+        widget = [WidgetBuilder buildWidget: sectionHeader withPageSandbox: self.pageSandbox];
         [widget createView];
         
         if(widget != nil){
@@ -636,8 +654,7 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    ListM *m = (ListM *) self.model;
-    if (m.sectionFooter == nil) {
+    if (self.model.sectionFooter == nil && !self.model.__section_footer_layout) {
         return nil;
     }
 
@@ -655,11 +672,32 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
         ListSectionModel *sectionItem = [sectionList objectAtIndex: section];
         data = sectionItem.footer;
     }
+
+    NSString *identifier = data[@"identifier"];
+    UIWidgetM *sectionFooter = nil;
+    if ([identifier isKindOfClass: [NSString class]] && self.model.__section_footer_layout) {
+        NSDictionary *modeldic = [OSUtils getObject: self.model.__section_footer_layout
+                                         withObject: self
+                                         withObject: identifier
+                                         withObject: nil];
+
+        if ([modeldic isKindOfClass: [NSDictionary class]]) {
+            sectionFooter = [ModelBuilder buildModel: modeldic];
+        }
+    }
+
+    if (!sectionFooter) {
+        if (!self.model.sectionFooter) {
+            return nil;
+        } else {
+            sectionFooter = [self.model.sectionFooter copy];
+        }
+    }
+
     NSNumber *key = [NSNumber numberWithInteger: section];
     AbstractUIWidget *widget = [sectionFooterWidgetMap objectForKey: key];
     if (widget == nil) {
-        UIWidgetM *cm = [m.sectionFooter copy];
-        widget = [WidgetBuilder buildWidget: cm withPageSandbox: self.pageSandbox];
+        widget = [WidgetBuilder buildWidget: sectionFooter withPageSandbox: self.pageSandbox];
         [widget createView];
         if(widget != nil){
             [sectionFooterWidgetMap setObject: widget forKey: key];
@@ -725,8 +763,10 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
 
 GETSET(NSObject *, __section_header_height)
 GETSET(NSObject *, __section_header_data)
+GETSET(NSObject *, __section_header_layout)
 GETSET(NSObject *, __section_footer_height)
 GETSET(NSObject *, __section_footer_data)
+GETSET(NSObject *, __section_footer_layout)
 GETSET(NSObject *, __section_count)
 GETSET(NSObject *, __row_count)
 GETSET(NSObject *, __row_data)

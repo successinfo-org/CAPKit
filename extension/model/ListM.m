@@ -56,11 +56,17 @@
     if ([dic valueForKey: @"__section_footer_height"]) {
         self.__section_footer_height = [dic valueForKey: @"__section_footer_height"];
     }
+    if ([dic valueForKey: @"__section_footer_layout"]) {
+        self.__section_footer_layout = [dic valueForKey: @"__section_footer_layout"];
+    }
     if ([dic valueForKey: @"__section_header_data"]) {
         self.__section_header_data = [dic valueForKey: @"__section_header_data"];
     }
     if ([dic valueForKey: @"__section_header_height"]) {
         self.__section_header_height = [dic valueForKey: @"__section_header_height"];
+    }
+    if ([dic valueForKey: @"__section_header_layout"]) {
+        self.__section_header_layout = [dic valueForKey: @"__section_header_layout"];
     }
     if ([dic valueForKey: @"__index_titles"]) {
         self.__index_titles = [dic valueForKey: @"__index_titles"];
@@ -109,6 +115,9 @@
     m.__section_footer_data = ___section_footer_data;
     m.__section_header_height = ___section_header_height;
     m.__section_header_data = ___section_header_data;
+
+    m.__section_footer_layout = ___section_footer_layout;
+    m.__section_header_layout = ___section_header_layout;
     
     m.__index_titles = ___index_titles;
     m.__title_index = ___title_index;

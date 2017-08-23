@@ -321,6 +321,7 @@ static int idleTimerDisabledCount;
     
     [tb.map setValue: [NSNumber numberWithInt: MPMovieLoadStateUnknown] forKey: @"LoadStateUnknown"];
     [tb.map setValue: [NSNumber numberWithInt: MPMovieLoadStatePlayable] forKey: @"LoadStatePlayable"];
+    [tb.map setValue: [NSNumber numberWithInt: MPMovieLoadStatePlaythroughOK] forKey: @"LoadStatePlaythroughOK"];
     [tb.map setValue: [NSNumber numberWithInt: MPMovieLoadStatePlaythroughOK] forKey: @"StatePlaythroughOK"];
     [tb.map setValue: [NSNumber numberWithInt: MPMovieLoadStateStalled] forKey: @"LoadStateStalled"];
     

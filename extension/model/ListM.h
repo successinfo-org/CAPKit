@@ -22,9 +22,11 @@
 
 @property (nonatomic, strong) NSObject *__section_header_height;
 @property (nonatomic, strong) NSObject *__section_header_data;
+@property (nonatomic, strong) NSObject *__section_header_layout;
 
 @property (nonatomic, strong) NSObject *__section_footer_height;
 @property (nonatomic, strong) NSObject *__section_footer_data;
+@property (nonatomic, strong) NSObject *__section_footer_layout;
 
 @property (nonatomic, strong) NSObject *__row_height;
 
