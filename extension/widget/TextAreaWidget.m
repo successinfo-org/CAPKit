@@ -34,7 +34,9 @@
 
 - (void) onCreateView{
     textView = [[EOSTextView alloc] initWithFrame: [self getActualCurrentRect]];
-    
+
+    self.clipsToBounds = textView.clipsToBounds;
+
     ScreenScale *scale = [self.pageSandbox getAppSandbox].scale;
     
     textView.contentInset = UIEdgeInsetsMake(-8 + [scale getActualLength: [self.model.paddingTop pixelValue: currentRect.size.height withDefault: 0]],
