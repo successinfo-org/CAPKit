@@ -35,4 +35,6 @@
 
 - (void) prepareForUse;
 
+- (NSNumber *) getStatusBarHeight;
+
 @end

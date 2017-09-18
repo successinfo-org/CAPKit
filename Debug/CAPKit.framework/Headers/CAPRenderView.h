@@ -5,6 +5,8 @@
     UIView *contentView;
 }
 
+@property (nonatomic, assign) CGRect rect;
+
 - (void) reloadSize;
 
 - (void) pushView: (CAPPanelView<PagePanel> *) view animated: (BOOL) animated;
