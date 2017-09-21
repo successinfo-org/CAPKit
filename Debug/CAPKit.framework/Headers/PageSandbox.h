@@ -29,6 +29,7 @@
 - (GlobalSandbox *) getGlobalSandbox;
 
 - (void) loadScripts: (PageM *) pagem;
+- (void) pushGlobalKey:(id)key value:(id)value;
 
 - (void) pushEditingFocus: (AbstractUIWidget *) view;
 - (void) removeEditingFocus: (AbstractUIWidget *) view;

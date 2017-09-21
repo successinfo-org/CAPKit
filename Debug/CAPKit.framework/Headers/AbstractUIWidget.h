@@ -72,7 +72,7 @@ dest;\
  @param m the model of this `Widget`
  @return self
  */
-- (id) initWithModel: (UIWidgetM *) m withPageSandbox: (PageSandbox *) sandbox;
+- (id) initWithModel: (UIWidgetM *) m withPageSandbox: (PageSandbox *) sandbox NS_REQUIRES_SUPER;
 
 /**get the UIView along with this `Widget`
  
@@ -90,10 +90,10 @@ dest;\
 - (void) onCreateView;
 
 /**invoked when this widget is going to destory*/
-- (void) onDestroy;
+- (void) onDestroy NS_REQUIRES_SUPER;
 
 /**invoked when this widget is removed from ui*/
-- (void) onRemoved;
+- (void) onRemoved NS_REQUIRES_SUPER;
 
 /**invoked when this widget is move to front of this screen*/
 - (void) onFronted;
@@ -111,10 +111,10 @@ dest;\
 - (CGSize) sizeUnionMargin: (CGSize) parentContentSize;
 
 - (void) reloadRect;
-- (void) setViewFrame: (CGRect) rect;
+- (void) setViewFrame: (CGRect) rect NS_REQUIRES_SUPER;
 - (CGRect) getActualCurrentRect;
 
-- (void) setDataProvider: (id) object;
+- (void) setDataProvider: (id) object NS_REQUIRES_SUPER;
 - (void) setData: (NSObject *) data;
 
 - (void) applyBackground: (UIView *) view;

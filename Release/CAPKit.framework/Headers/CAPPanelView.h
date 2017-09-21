@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong, readonly) NSURL *pageURL;
 
+@property (nonatomic, weak) CAPRenderView *renderView;
+
 @property (nonatomic, strong, readonly, getter=getSandbox) PageSandbox *sandbox;
 @property (nonatomic, strong, readonly) PageM *model;
 @property (nonatomic, strong, readonly) ViewWidget *root;

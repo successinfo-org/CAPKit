@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AbstractUIWidget.h</key>
 		<data>
-		J+cG4vXHykQlO8DrwBvA+So9rHI=
+		xBtpIYV+1lX2ZYum4SUFRFXEHTs=
 		</data>
 		<key>Headers/AppLifecycle.h</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Headers/CAPPanelView.h</key>
 		<data>
-		gngobmX0DGXbOXSpC+Xe88auQZk=
+		qUbNHmePmo7Dkk/fCr3jCeIHEOo=
 		</data>
 		<key>Headers/CAPRenderView.h</key>
 		<data>
-		BrmqknDze90iADFZkfIRTvl5r/k=
+		J2VJ/ovLSwuFv2JIN/E4jQM1cTs=
 		</data>
 		<key>Headers/ControllerMap.h</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>Headers/PageSandbox.h</key>
 		<data>
-		5oVQBMzcx0f3CqfnrMMf2Sp+/1o=
+		vGUDrvNpsp8gfSUjeKugoGnI7dk=
 		</data>
 		<key>Headers/PageSandboxInterface.h</key>
 		<data>
@@ -858,7 +858,7 @@
 		</data>
 		<key>PrivateHeaders/auxiliar.h</key>
 		<data>
-		eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+		7XHDGMt+Wksy0X0hq7TGG32EhJo=
 		</data>
 		<key>PrivateHeaders/base64.h</key>
 		<data>
@@ -1174,11 +1174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J+cG4vXHykQlO8DrwBvA+So9rHI=
+			xBtpIYV+1lX2ZYum4SUFRFXEHTs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Obhwhm6bVJ49t4pfannwlVvjnY0uGhB9MnC+6EQlEwU=
+			93+6OltI9kpEqB+tB8B+s1psNqHGUiOm1rH+4D9tsUo=
 			</data>
 		</dict>
 		<key>Headers/AppLifecycle.h</key>
@@ -1317,22 +1317,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gngobmX0DGXbOXSpC+Xe88auQZk=
+			qUbNHmePmo7Dkk/fCr3jCeIHEOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ir4fAP5bO7QfC5D7HxQSq/G3nGZV3VaraplQ2xFQbGQ=
+			WDqm4Duvzh3d3AxW9KkkAglUxmX48YWaUQAJ9Fhfh5A=
 			</data>
 		</dict>
 		<key>Headers/CAPRenderView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BrmqknDze90iADFZkfIRTvl5r/k=
+			J2VJ/ovLSwuFv2JIN/E4jQM1cTs=
 			</data>
 			<key>hash2</key>
 			<data>
-			e17/ieBwEV8ehLHxXe2n1+1s5wm8uaW0HgWk9gYhbj4=
+			WMMbMnDplByPr7R5XCTL1erPpEX+dFAPH5GfEPIPJeY=
 			</data>
 		</dict>
 		<key>Headers/ControllerMap.h</key>
@@ -1867,11 +1867,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5oVQBMzcx0f3CqfnrMMf2Sp+/1o=
+			vGUDrvNpsp8gfSUjeKugoGnI7dk=
 			</data>
 			<key>hash2</key>
 			<data>
-			CXmMguty7kFTT/Vyb0XxiA39EaitnNFAEulIP6FFNgQ=
+			Fj/7P6tab2O9X6ZbsfvnAMsqKexNUdKT5LNRc0Mc4VA=
 			</data>
 		</dict>
 		<key>Headers/PageSandboxInterface.h</key>
@@ -3495,11 +3495,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+			7XHDGMt+Wksy0X0hq7TGG32EhJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			GIsy/wgqD6O7mr1Kj51GtdUPYxr69FvJKC6s5r29ZGM=
+			JghCeDzwzd62mSMe6j4DrWyIo5c/W+giCp0bJ5XscdE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/base64.h</key>
