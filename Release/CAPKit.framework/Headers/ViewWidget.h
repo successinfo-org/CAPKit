@@ -24,7 +24,7 @@
 @property (nonatomic, readonly) ViewM *stableModel;
 #pragma clang diagnostic pop
 
-@property (nonatomic, readonly, copy) NSArray *subitems;
+@property (nonatomic, readonly, getter=getSubitems) NSArray *subitems;
 
 @property (nonatomic, assign) BOOL destroyOnRemoved;
 

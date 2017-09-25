@@ -44,7 +44,7 @@
 
         NSArray *subitems = self.subitems;
 
-        for (AbstractUIWidget *widget in self.subitems) {
+        for (AbstractUIWidget *widget in subitems) {
             if (widget.model.hidden) {
                 continue;
             }

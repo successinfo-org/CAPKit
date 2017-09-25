@@ -270,7 +270,8 @@
     
     CGRect content = CGRectMake(0, 0, totalRect.size.width, totalRect.size.height);
 
-    for (AbstractUIWidget *widget in self.subitems) {
+    NSArray *subitems = self.subitems;
+    for (AbstractUIWidget *widget in subitems) {
         CGRect expectedRect = [widget measureRect: contentRect.size];
         if (widget.model.hidden) {
             continue;
