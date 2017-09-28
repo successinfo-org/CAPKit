@@ -3,10 +3,6 @@
 
 #include "utlua.h"
 
-#undef FAN_RESUME
-#define FAN_RESUME caplua_resume
-
-
 lua_State* utlua_open_state();
 int caplua_resume(lua_State *co, lua_State *from, int count);
 
