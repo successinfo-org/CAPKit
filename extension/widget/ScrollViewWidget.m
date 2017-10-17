@@ -27,7 +27,7 @@
 }
 
 -(void)onCreateView{
-    EOSScrollView *v = [[EOSScrollView alloc] initWithFrame: CGRectZero];
+    EOSScrollView *v = [[EOSScrollView alloc] initWithFrame: [self getActualCurrentRect]];
     v.delegate = self;
     v.directionalLockEnabled = YES;
     v.decelerationRate = INT16_MAX;
