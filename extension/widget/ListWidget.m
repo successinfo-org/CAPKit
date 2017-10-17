@@ -63,6 +63,10 @@
     _listView.dataSource = self;
     _listView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+    if (@available(iOS 11, *)) {
+        _listView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+
     [self buildRefreshTableView];
 
     [_listView reloadData];
@@ -207,6 +211,8 @@ static NSInteger sort(ListSectionModel *obj1, ListSectionModel *obj2, void *cont
 }
 
 - (void) setDataProvider: (id) object {
+    [super setDataProvider: object];
+
     NSDictionary *data = nil;
     if ([object isKindOfClass: [NSString class]]) {
         data = [[CJSONDeserializer deserializer] deserializeAsDictionary: [object dataUsingEncoding: NSUTF8StringEncoding] error: nil];

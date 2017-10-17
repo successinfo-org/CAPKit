@@ -21,20 +21,27 @@
 -(id)initWithModel:(ScrollViewM *)m withPageSandbox: (PageSandbox *) sandbox{
     m.overflow = OverflowTypeHidden;
     
+    self = [self initWithModel: m withView: nil withPageSandbox: sandbox];
+    super.clipsToBounds = YES;
+    return self;
+}
+
+-(void)onCreateView{
     EOSScrollView *v = [[EOSScrollView alloc] initWithFrame: CGRectZero];
     v.delegate = self;
     v.directionalLockEnabled = YES;
     v.decelerationRate = INT16_MAX;
     v.showsHorizontalScrollIndicator = NO;
     v.showsVerticalScrollIndicator = NO;
-    self = [self initWithModel: m withView: v withPageSandbox: sandbox];
-    super.clipsToBounds = YES;
-    return self;
-}
 
--(void)onCreateView{
+    if (@available(iOS 11, *)) {
+        v.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+
+    view = v;
+
     [super onCreateView];
-    
+
     ((EOSScrollView *)[self innerView]).pagingEnabled = self.model.pagingEnabled;
 
     [self buildRefreshTableView];
@@ -42,17 +49,19 @@
 
 - (void) buildRefreshTableView{
     if ([self.model.dragDownLayout isKindOfClass: [ViewM class]] && self.model.dragDownMinMovement > 0) {
-        if (_refreshScrollView) {
-            _refreshScrollView.delegate = nil;
-            [_refreshScrollView removeFromSuperview];
-            _refreshScrollView = nil;
-        }
+        [OSUtils runBlockOnMain:^{
+            if (_refreshScrollView) {
+                _refreshScrollView.delegate = nil;
+                [_refreshScrollView removeFromSuperview];
+                _refreshScrollView = nil;
+            }
 
-        _refreshScrollView = [[EGORefreshScrollView alloc] initWithWidget: self];
-        _refreshScrollView.delegate = self;
-        [view addSubview: _refreshScrollView];
+            _refreshScrollView = [[EGORefreshScrollView alloc] initWithWidget: self];
+            _refreshScrollView.delegate = self;
+            [view addSubview: _refreshScrollView];
 
-        ((EOSScrollView *) view).alwaysBounceVertical = YES;
+            ((EOSScrollView *) view).alwaysBounceVertical = YES;
+        }];
     }
 }
 
