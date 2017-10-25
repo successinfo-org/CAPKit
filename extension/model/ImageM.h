@@ -10,7 +10,7 @@
 
 @interface ImageM : UIWidgetM
 
-@property (nonatomic, strong) NSObject *src;
+@property (nonatomic, strong) id src;
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) NSString *scale;
 

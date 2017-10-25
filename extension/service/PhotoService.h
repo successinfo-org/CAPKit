@@ -5,8 +5,6 @@
 
 @interface PhotoService : AbstractLuaTableCompatible <IService, LuaTableCompatible>
 
-@property (nonatomic, readonly) ALAssetsLibrary * assetsLibrary;
-
 - (void) load: (LuaFunction *) func;
 
 @end

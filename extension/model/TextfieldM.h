@@ -24,6 +24,8 @@
 @property (nonatomic, strong) NSObject *onblur;
 @property (nonatomic, strong) NSObject *onfocus;
 @property (nonatomic, strong) NSString *placeholder;
+@property (nonatomic, strong) NSObject *placeholderColor;
+@property (nonatomic, assign) float placeholderFontSize;
 
 - (void) parseKeyboard: (NSString *) value;
 - (NSString *) keyboardName;

@@ -17,8 +17,6 @@
     CGSize currentContentSize;
     CGPoint currentContentOffset;
     
-    CGRect originalRect;
-    
     BOOL dragDowning;
 }
 

@@ -52,7 +52,9 @@
     //textView.editable = NO;
     
     textView.text = [self.model.text description];
-    textView.placeholder = self.model.placeholder;
+    textView.placeholder = [self.model.placeholder description];
+    textView.placeholderColor = [OSUtils getColorFromObject: self.model.placeholderColor
+                                           withDefaultColor: [UIColor lightGrayColor]];
 
     textView.font = [self createFont];
 
@@ -194,10 +196,24 @@
         textView.textColor = [OSUtils getColor: self.model.color withAlpha: NAN withDefaultColor: [UIColor blackColor]];
     });
 
+    BOOL needReloadPlaceholder = NO;
+
     APPLY_DIRTY_MODEL_PROP_DO(placeholder, {
-        textView.placeholder = [self.model.placeholder description];
-        [textView setNeedsDisplay];
+        needReloadPlaceholder = YES;
     });
+    APPLY_DIRTY_MODEL_PROP_FLOAT_DO(placeholderFontSize, {
+        needReloadPlaceholder = YES;
+    });
+    APPLY_DIRTY_MODEL_PROP_DO(placeholderColor, {
+        needReloadPlaceholder = YES;
+    });
+
+    if (needReloadPlaceholder) {
+        textView.placeholder = [self.model.placeholder description];
+        textView.placeholderColor = [OSUtils getColorFromObject: self.model.placeholderColor
+                                               withDefaultColor: [UIColor lightGrayColor]];
+        [textView setNeedsDisplay];
+    }
 
     BOOL needRefreshFont = NO;
 

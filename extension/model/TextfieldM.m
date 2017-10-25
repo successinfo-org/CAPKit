@@ -186,6 +186,14 @@
     if ([dic valueForKey: @"hideClearButton"]) {
         _hideClearButton = [[dic valueForKey: @"hideClearButton"] boolValue];
     }
+
+    if ([dic valueForKey: @"placeholderFontSize"]) {
+        _placeholderFontSize = [[dic valueForKey: @"placeholderFontSize"] floatValue];
+    }
+
+    if ([dic valueForKey: @"placeholderColor"]) {
+        _placeholderColor = [dic valueForKey: @"placeholderColor"];
+    }
 }
 
 - (instancetype)init
@@ -194,6 +202,7 @@
     if (self) {
         _doneable = NO;
         _editable = YES;
+        _placeholderFontSize = NAN;
     }
     return self;
 }
@@ -213,6 +222,8 @@
     m.borderStyle = _borderStyle;
     m.doneable = _doneable;
     m.hideClearButton = _hideClearButton;
+    m.placeholderColor = _placeholderColor;
+    m.placeholderFontSize = _placeholderFontSize;
     
     return m;
 }

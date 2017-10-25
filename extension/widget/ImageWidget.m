@@ -125,17 +125,21 @@
 }
 
 - (void) applySrc{
-    id srcString = self.model.src;
-    if ([srcString isKindOfClass: [UIImage class]]) {
-        [self reloadImage: srcString];
-    } else if ([srcString isKindOfClass: [LuaImage class]]) {
-        [self reloadImage: [(LuaImage *)srcString getImage]];
-    } else if ([srcString isKindOfClass: [NSString class]]){
-        if ([srcString hasPrefix: @"data:"] && ![srcString hasPrefix: @"data://"]) {
-            UIImage *image = [OSUtils imageFromDataString: srcString];
+    if ([self.model.src isKindOfClass: [UIImage class]]) {
+        [self reloadImage: self.model.src];
+    } else if ([self.model.src isKindOfClass: [LuaImage class]]) {
+        LuaImage *luaImage = (LuaImage *) self.model.src;
+
+        __weak id weakSelf = self;
+        [luaImage getImage:^(UIImage *img) {
+            [weakSelf reloadImage: img];
+        }];
+    } else if ([self.model.src isKindOfClass: [NSString class]]){
+        if ([self.model.src hasPrefix: @"data:"] && ![self.model.src hasPrefix: @"data://"]) {
+            UIImage *image = [OSUtils imageFromDataString: self.model.src];
             [self processImageData: image];
         }else{
-            NSURL *imageURL = [self.pageSandbox resolveFile: srcString];
+            NSURL *imageURL = [self.pageSandbox resolveFile: self.model.src];
             if ([imageURL isFileURL]) {
                 [self processImageData:[imageURL path]];
             }else if([imageURL isKindOfClass: [NSURL class]]){
@@ -255,9 +259,8 @@
 
 #pragma mark Lua API Begin
 - (void) _LUA_setImage: (id) img{
-    if ([img isKindOfClass: [LuaImage class]]) {
-        [self setImage: [(LuaImage *)img getImage]];
-    }
+    self.model.src = img;
+    [self reload];
 }
 
 - (LuaImage *) _LUA_getImage{

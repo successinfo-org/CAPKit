@@ -30,10 +30,22 @@
             textfieldView.textAlignment = NSTextAlignmentLeft;
         }
     });
+
+    BOOL needReloadPlaceholder = NO;
     
     APPLY_DIRTY_MODEL_PROP_DO(placeholder, {
-        textfieldView.placeholder = [self.model.placeholder description];
+        needReloadPlaceholder = YES;
     });
+    APPLY_DIRTY_MODEL_PROP_FLOAT_DO(placeholderFontSize, {
+        needReloadPlaceholder = YES;
+    });
+    APPLY_DIRTY_MODEL_PROP_DO(placeholderColor, {
+        needReloadPlaceholder = YES;
+    });
+
+    if (needReloadPlaceholder) {
+        [self reloadPlaceholder];
+    }
 
     APPLY_DIRTY_MODEL_PROP_DO(color, {
         textfieldView.textColor = [OSUtils getColor: self.model.color withAlpha: NAN withDefaultColor: [UIColor blackColor]];
@@ -83,6 +95,28 @@
     return font;
 }
 
+- (void) reloadPlaceholder{
+    if (isnan(self.model.placeholderFontSize) && !self.model.placeholderColor) {
+        textfieldView.attributedPlaceholder = nil;
+        textfieldView.placeholder = self.model.placeholder;
+    } else {
+        NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString: self.model.placeholder];
+        if (!isnan(self.model.placeholderFontSize)) {
+            [attStr addAttribute: NSFontAttributeName
+                           value: [UIFont systemFontOfSize: self.model.placeholderFontSize]
+                           range: NSMakeRange(0, [self.model.placeholder length])];
+        }
+        if (self.model.placeholderColor) {
+            [attStr addAttribute: NSForegroundColorAttributeName
+                           value: [OSUtils getColorFromObject: self.model.placeholderColor
+                                             withDefaultColor: [UIColor lightGrayColor]]
+                           range: NSMakeRange(0, [self.model.placeholder length])];
+        }
+        textfieldView.placeholder = nil;
+        textfieldView.attributedPlaceholder = attStr;
+    }
+}
+
 - (void) onCreateView{
     TextfieldM *m = (TextfieldM *) self.model;
     textfieldView = [[EOSTextField alloc] initWithFrame: [self getActualCurrentRect]];
@@ -93,7 +127,9 @@
     
     textfieldView.text = [m.text description];
     textfieldView.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    textfieldView.placeholder = m.placeholder;
+
+    [self reloadPlaceholder];
+
     if (focus) {
         [textfieldView becomeFirstResponder];
     }

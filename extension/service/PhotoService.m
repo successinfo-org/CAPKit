@@ -1,4 +1,5 @@
 #import "PhotoService.h"
+#import <Photos/Photos.h>
 
 @implementation PhotoService
 
@@ -10,48 +11,69 @@
     return YES;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _assetsLibrary = [[ALAssetsLibrary alloc] init];
-    }
-    return self;
+- (NSArray *) loadGroupsWithType: (PHAssetCollectionType) type {
+    NSMutableArray *groupList = [NSMutableArray array];
+
+    PHFetchResult *groups = [PHAssetCollection
+                             fetchAssetCollectionsWithType: type
+                             subtype:PHAssetCollectionSubtypeAny
+                             options:nil];
+
+    [groups enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull collection, NSUInteger idx, BOOL * _Nonnull stop) {
+
+        PHFetchOptions *option = [[PHFetchOptions alloc] init];
+        option.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+        PHFetchResult *photos = [PHAsset fetchAssetsInAssetCollection:collection
+                                                              options:option];
+
+        NSString *name = collection.localizedTitle;
+        NSMutableArray *photoList = [NSMutableArray arrayWithCapacity: photos.count];
+
+        [photos enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (asset.mediaType == PHAssetMediaTypeImage) {
+                [photoList addObject: [[LuaImage alloc] initWithAsset: asset]];
+            }
+        }];
+
+        NSDictionary *group = @{@"name": name, @"type": @(collection.assetCollectionSubtype), @"photos": photoList};
+        if (collection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumUserLibrary) {
+            [groupList insertObject: group atIndex: 0];
+        } else {
+            [groupList addObject: group];
+        }
+    }];
+
+    return groupList;
+}
+
+- (void) loadAllGroups: (LuaFunction *) func{
+    NSMutableArray *groupList = [NSMutableArray array];
+
+    [groupList addObjectsFromArray: [self loadGroupsWithType: PHAssetCollectionTypeSmartAlbum]];
+    [groupList addObjectsFromArray: [self loadGroupsWithType: PHAssetCollectionTypeAlbum]];
+
+    [func executeWithoutReturnValue: groupList, nil];
 }
 
 - (void) load: (LuaFunction *) func{
     if (![func isKindOfClass: [LuaFunction class]]) {
         return;
     }
+
     
-    NSMutableArray *groups = [NSMutableArray array];
-    [_assetsLibrary enumerateGroupsWithTypes: ALAssetsGroupAll
-                                  usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-                                      if (group) {
-                                          [group setAssetsFilter:[ALAssetsFilter allPhotos]];
-                                          NSString *name = [group valueForProperty: ALAssetsGroupPropertyName];
-                                          NSNumber *type = [group valueForProperty: ALAssetsGroupPropertyType];
-                                          
-                                          NSMutableArray *photos = [NSMutableArray arrayWithCapacity: [group numberOfAssets]];
-                                          
-                                          if ([group numberOfAssets] > 0) {
-                                              [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-                                                  if (result) {
-                                                      [photos addObject: [[LuaImage alloc] initWithALAsset: result]];
-                                                  }
-                                              }];
-                                          }
-                                          
-                                          [groups addObject: @{@"name": name, @"type": type, @"photos": photos}];
-                                      } else {
-                                          *stop = YES;
-                                          [func executeWithoutReturnValue: groups, nil];
-                                      }
-                                  }
-                                failureBlock:^(NSError *error) {
-                                    NSLog(@"Error: %@", [error localizedDescription]);
-                                    [func executeWithoutReturnValue];
-                                }];
+    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if (status == PHAuthorizationStatusAuthorized) {
+                [self loadAllGroups: func];
+            } else {
+                [func executeWithoutReturnValue];
+            }
+        }];
+    } else if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
+        [self loadAllGroups: func];
+    } else {
+        [func executeWithoutReturnValue];
+    }
 }
 
 @end

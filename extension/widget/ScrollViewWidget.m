@@ -298,8 +298,6 @@
 
 -(void)setViewFrame:(CGRect)rect{
     [super setViewFrame: rect];
-    originalRect = [[self.pageSandbox getAppSandbox].scale getActualRect: rect];
-    
     ((UIScrollView *)[self innerView]).contentSize = [[self.pageSandbox getAppSandbox].scale getActualSize: currentContentSize];
 }
 
