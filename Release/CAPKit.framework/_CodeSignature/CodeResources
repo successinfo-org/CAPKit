@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/CAPKit.h</key>
 		<data>
-		c9Aa6nO4oQBvhCqES2QI+Y9SiQE=
+		nOrClAY08Jtk7voOBa6dTt3pIkY=
 		</data>
 		<key>Headers/CAPPanelView.h</key>
 		<data>
@@ -262,7 +262,11 @@
 		</data>
 		<key>Headers/PageSandbox.h</key>
 		<data>
-		vGUDrvNpsp8gfSUjeKugoGnI7dk=
+		aW9Lbee8gj3MJsYOWrn1+b6xmoY=
+		</data>
+		<key>Headers/PageSandboxDelegate.h</key>
+		<data>
+		5FPyjfT+L13C8LCeKMXWD8VCQeA=
 		</data>
 		<key>Headers/PageSandboxInterface.h</key>
 		<data>
@@ -330,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Y/CGCHU1QQ5ZUyM6bKhFrgJybk0=
+		IRmfsuf11dpsCORByefALjEohF0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1306,11 +1310,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c9Aa6nO4oQBvhCqES2QI+Y9SiQE=
+			nOrClAY08Jtk7voOBa6dTt3pIkY=
 			</data>
 			<key>hash2</key>
 			<data>
-			V7ma6YXN9zOAyp/LYa5n5Id7NXNXCuUK50uiEK6Mg1w=
+			iZoJFojmrcmtx8/70V87iNXtaxVFYhiThRA30WUZSMk=
 			</data>
 		</dict>
 		<key>Headers/CAPPanelView.h</key>
@@ -1867,11 +1871,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vGUDrvNpsp8gfSUjeKugoGnI7dk=
+			aW9Lbee8gj3MJsYOWrn1+b6xmoY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fj/7P6tab2O9X6ZbsfvnAMsqKexNUdKT5LNRc0Mc4VA=
+			cqCQYmA3LsPBj+xfmimUcFjQRMTVs9TXVHofpSM7bok=
+			</data>
+		</dict>
+		<key>Headers/PageSandboxDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5FPyjfT+L13C8LCeKMXWD8VCQeA=
+			</data>
+			<key>hash2</key>
+			<data>
+			FuKPIxrtmzO2ECqRdXFCijG79YtB28zwBP6D++iyCF8=
 			</data>
 		</dict>
 		<key>Headers/PageSandboxInterface.h</key>

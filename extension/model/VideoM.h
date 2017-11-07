@@ -16,6 +16,7 @@
 @property (nonatomic, assign) MPMovieRepeatMode repeatMode;
 @property (nonatomic, assign) MPMovieSourceType sourceType;
 @property (nonatomic, assign) BOOL allowsAirPlay;
+@property (nonatomic, assign) BOOL backgroundPlaybackEnabled;
 
 @property (nonatomic, strong) NSString *src;
 

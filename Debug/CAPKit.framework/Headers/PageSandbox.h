@@ -6,6 +6,8 @@
 
 @property (nonatomic, weak) AppSandbox *appSandbox;
 
+@property (nonatomic, weak) id<PageSandboxDelegate> delegate;
+
 @property (nonatomic, readonly) int envRef;
 @property (nonatomic, readonly) LuaState *state;
 

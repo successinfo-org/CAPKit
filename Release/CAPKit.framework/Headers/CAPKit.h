@@ -106,6 +106,7 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/AppSandbox.h>
 
 #import <CAPKit/PageSandboxInterface.h>
+#import <CAPKit/PageSandboxDelegate.h>
 #import <CAPKit/PageLifecycle.h>
 #import <CAPKit/PageSandbox.h>
 

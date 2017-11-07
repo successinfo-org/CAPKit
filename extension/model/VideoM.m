@@ -10,6 +10,15 @@
 
 @implementation VideoM
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _backgroundPlaybackEnabled = YES;
+    }
+    return self;
+}
+
 - (NSString *) scalingModeName{
     switch (_scalingMode) {
         case MPMovieScalingModeAspectFit:
@@ -125,6 +134,11 @@
     if ([allowsAirPlay respondsToSelector: @selector(boolValue)]) {
         self.allowsAirPlay = [allowsAirPlay boolValue];
     }
+
+    NSString *backgroundPlaybackEnabled = [dic valueForKey: @"backgroundPlaybackEnabled"];
+    if ([backgroundPlaybackEnabled respondsToSelector: @selector(boolValue)]) {
+        self.backgroundPlaybackEnabled = [backgroundPlaybackEnabled boolValue];
+    }
     
     NSString *src = [dic valueForKey: @"src"];
     if ([src isKindOfClass: [NSString class]]) {
@@ -140,6 +154,7 @@
     m.allowsAirPlay = _allowsAirPlay;
     m.sourceType = _sourceType;
     m.src = _src;
+    m.backgroundPlaybackEnabled = _backgroundPlaybackEnabled;
     
     return m;
 }

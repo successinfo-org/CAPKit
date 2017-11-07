@@ -7,6 +7,7 @@
 //
 
 #import "VideoWidget.h"
+#import "MPMoviePlayerController+BackgroundPlayback.h"
 
 CGFloat kMovieViewOffsetX = 20.0;
 CGFloat kMovieViewOffsetY = 20.0;
@@ -59,8 +60,9 @@ static int idleTimerDisabledCount;
 
 -(void)onCreateView{
     _view = [[UIView alloc] initWithFrame: [self getActualCurrentRect]];
-
     [self reloadSrc];
+
+    self.moviePlayerController.backgroundPlaybackEnabled = self.model.backgroundPlaybackEnabled;
 }
 
 -(void)setViewFrame:(CGRect)rect{
@@ -80,6 +82,7 @@ static int idleTimerDisabledCount;
     
     [self removeMovieNotificationHandlers];
     self.moviePlayerController = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
 
     [self startIdleTimer];
 }
@@ -283,7 +286,7 @@ static int idleTimerDisabledCount;
         self.moviePlayerController.scalingMode = self.model.scalingMode;
         self.moviePlayerController.repeatMode = self.model.repeatMode;
         self.moviePlayerController.allowsAirPlay = self.model.allowsAirPlay;
-        
+
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(loadStateDidChange:)
                                                      name:MPMoviePlayerLoadStateDidChangeNotification
