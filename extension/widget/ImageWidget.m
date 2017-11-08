@@ -12,6 +12,12 @@
 #import "NSData+Base64.h"
 #import "AnimatedGIFImageSerialization.h"
 
+@interface ImageWidget ()
+
+@property (nonatomic, retain) ASIHTTPRequest *req;
+
+@end
+
 @implementation ImageWidget
 
 +(void)load{
@@ -164,36 +170,42 @@
                     }
 
                     NSObject *taskSrc = self.model.src;
+                    if (_req && [_req isExecuting]) {
+                        [_req clearDelegatesAndCancel];
+                    }
 
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        if (taskSrc != self.model.src) {
+                    NSLog(@"%@", imageURL);
+
+                    _req = [ASIHTTPRequest requestWithURL: imageURL];
+                    [_req setDownloadDestinationPath: cacheName];
+
+                    __weak ImageWidget *weakSelf = self;
+
+                    [_req setCompletionBlock:^{
+                        if (![weakSelf.model.src isEqual: taskSrc]) {
                             return;
                         }
 
-                        ASIHTTPRequest *req = [ASIHTTPRequest requestWithURL: imageURL];
-                        [req setDownloadDestinationPath: cacheName];
-                        [req startSynchronous];
-
-                        if (taskSrc != self.model.src) {
-                            return;
-                        }
-                        
-                        if (req.responseStatusCode < 300 && req.responseStatusCode >= 200 && req.error == nil) {
+                        if (weakSelf.req.responseStatusCode < 300 && weakSelf.req.responseStatusCode >= 200 && weakSelf.req.error == nil) {
                             [OSUtils runBlockOnMain:^{
-                                [self processImageData:cacheName];
+                                [weakSelf processImageData: cacheName];
                             }];
                         }else{
-                            NSDictionary *resp = nil;
-                            if (req.error) {
-                                resp = @{@"responseCode": [NSNumber numberWithInt: req.responseStatusCode], @"error": req.error};
-                            }else{
-                                resp = @{@"responseCode": [NSNumber numberWithInt: req.responseStatusCode]};
-                            }
-                            [OSUtils executeDirect: self.model.onerror withSandbox: self.pageSandbox withObject: self withObject: resp];
-                            NSLog(@"image download failed! - %@", imageURL);
+                            NSDictionary *resp = @{@"responseCode": [NSNumber numberWithInt: weakSelf.req.responseStatusCode]};
+                            [OSUtils executeDirect: weakSelf.model.onerror withSandbox: weakSelf.pageSandbox withObject: weakSelf withObject: resp];
+                            NSLog(@"image download failed! - %@ - %@", imageURL, weakSelf.req.error);
                             [fm removeItemAtPath: cacheName error: nil];
                         }
-                    });
+                    }];
+
+                    [_req setFailedBlock:^{
+                        NSDictionary *resp = @{@"responseCode": [NSNumber numberWithInt: weakSelf.req.responseStatusCode], @"error": weakSelf.req.error};
+                        [OSUtils executeDirect: weakSelf.model.onerror withSandbox: weakSelf.pageSandbox withObject: weakSelf withObject: resp];
+                        NSLog(@"image download failed! - %@ - %@", imageURL, weakSelf.req.error);
+                        [fm removeItemAtPath: cacheName error: nil];
+                    }];
+
+                    [_req startAsynchronous];
                 }else{
                     [self processImageData:cacheName];
                 }
