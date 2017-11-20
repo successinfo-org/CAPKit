@@ -98,7 +98,9 @@ static int idleTimerDisabledCount;
 }
 
 - (void) setCurrentPlaybackTime: (NSTimeInterval) value {
-    self.moviePlayerController.currentPlaybackTime = value;
+    [OSUtils runBlockOnMain:^{
+        self.moviePlayerController.currentPlaybackTime = value;
+    }];
 }
 
 - (NSTimeInterval) getCurrentPlaybackTime{
@@ -114,7 +116,9 @@ static int idleTimerDisabledCount;
 }
 
 - (void) setCurrentPlaybackRate: (float) value {
-    self.moviePlayerController.currentPlaybackRate = value;
+    [OSUtils runBlockOnMain:^{
+        self.moviePlayerController.currentPlaybackRate = value;
+    }];
 }
 
 - (float) getCurrentPlaybackRate{
@@ -122,19 +126,27 @@ static int idleTimerDisabledCount;
 }
 
 - (void) setFullscreen: (NSNumber *) value {
-    [self.moviePlayerController setFullscreen: [value boolValue] animated: YES];
+    [OSUtils runBlockOnMain:^{
+        [self.moviePlayerController setFullscreen: [value boolValue] animated: YES];
+    }];
 }
 
 - (void)seekingForward{
-    [self.moviePlayerController beginSeekingForward];
+    [OSUtils runBlockOnMain:^{
+        [self.moviePlayerController beginSeekingForward];
+    }];
 }
 
 - (void)seekingBackward{
-    [self.moviePlayerController beginSeekingBackward];
+    [OSUtils runBlockOnMain:^{
+        [self.moviePlayerController beginSeekingBackward];
+    }];
 }
 
 - (void)endSeeking{
-    [self.moviePlayerController endSeeking];
+    [OSUtils runBlockOnMain:^{
+        [self.moviePlayerController endSeeking];
+    }];
 }
 
 - (void) play{
