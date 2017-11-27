@@ -62,6 +62,7 @@
     _listView.delegate = self;
     _listView.dataSource = self;
     _listView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _listView.estimatedRowHeight = 0;
 
     if (@available(iOS 11, *)) {
         _listView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
