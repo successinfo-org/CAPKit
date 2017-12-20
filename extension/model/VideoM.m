@@ -15,6 +15,8 @@
     self = [super init];
     if (self) {
         _backgroundPlaybackEnabled = YES;
+        _initialPlaybackTime = NAN;
+        _endPlaybackTime = NAN;
     }
     return self;
 }
@@ -134,12 +136,27 @@
     if ([allowsAirPlay respondsToSelector: @selector(boolValue)]) {
         self.allowsAirPlay = [allowsAirPlay boolValue];
     }
+    
+    NSString *usingAVPlayer = [dic valueForKey: @"useAVPlayer"];
+    if ([usingAVPlayer respondsToSelector: @selector(boolValue)]) {
+        self.useAVPlayer = [usingAVPlayer boolValue];
+    }
 
     NSString *backgroundPlaybackEnabled = [dic valueForKey: @"backgroundPlaybackEnabled"];
     if ([backgroundPlaybackEnabled respondsToSelector: @selector(boolValue)]) {
         self.backgroundPlaybackEnabled = [backgroundPlaybackEnabled boolValue];
     }
-    
+
+    NSString *initialPlaybackTime = [dic valueForKey: @"initialPlaybackTime"];
+    if ([initialPlaybackTime respondsToSelector: @selector(floatValue)]) {
+        self.initialPlaybackTime = [initialPlaybackTime floatValue];
+    }
+
+    NSString *endPlaybackTime = [dic valueForKey: @"endPlaybackTime"];
+    if ([endPlaybackTime respondsToSelector: @selector(floatValue)]) {
+        self.endPlaybackTime = [endPlaybackTime floatValue];
+    }
+
     NSString *src = [dic valueForKey: @"src"];
     if ([src isKindOfClass: [NSString class]]) {
         self.src = src;
@@ -152,6 +169,7 @@
     m.controlStyle = _controlStyle;
     m.repeatMode = _repeatMode;
     m.allowsAirPlay = _allowsAirPlay;
+    m.useAVPlayer = _useAVPlayer;
     m.sourceType = _sourceType;
     m.src = _src;
     m.backgroundPlaybackEnabled = _backgroundPlaybackEnabled;

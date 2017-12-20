@@ -30,4 +30,6 @@
 
 - (NSString *) getNetworkType;
 
+- (NSString *) getNetworkStatus;
+
 @end

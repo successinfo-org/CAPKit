@@ -8,11 +8,15 @@
 
 #import <CAPKit/CAPKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 #import "VideoM.h"
 #import "IVideoWidget.h"
 
 @interface VideoWidget : AbstractUIWidget <IVideoWidget>
 
+@property (nonatomic,strong) AVPlayer *player;
+@property (nonatomic,strong) AVPlayerItem *playerItem;
+@property (nonatomic,strong) AVPlayerLayer *playerLayer;
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayerController;
 @property (nonatomic, strong) UIView *view;
 

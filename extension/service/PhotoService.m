@@ -76,4 +76,10 @@
     }
 }
 
+-(LuaTable *)toLuaTable{
+    LuaTable *tb = [[LuaTable alloc] init];
+    [tb.map setValue: [NSNumber numberWithInt: 1] forKey: @"_VERSION"];
+
+    return tb;
+}
 @end

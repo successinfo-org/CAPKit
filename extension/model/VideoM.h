@@ -17,8 +17,11 @@
 @property (nonatomic, assign) MPMovieSourceType sourceType;
 @property (nonatomic, assign) BOOL allowsAirPlay;
 @property (nonatomic, assign) BOOL backgroundPlaybackEnabled;
-
+@property (nonatomic, assign) BOOL useAVPlayer;
 @property (nonatomic, strong) NSString *src;
+
+@property (nonatomic, assign) NSTimeInterval initialPlaybackTime;
+@property (nonatomic, assign) NSTimeInterval endPlaybackTime;
 
 @property (nonatomic, strong) LuaFunction *onloadstate;
 @property (nonatomic, strong) LuaFunction *onplaybackstate;

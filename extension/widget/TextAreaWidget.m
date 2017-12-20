@@ -164,9 +164,7 @@
 
     self.model.text = text;
     self.stableModel.text = text;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [OSUtils executeDirect: self.model.onchange withSandbox: self.pageSandbox withObject: self];
-    });
+    [OSUtils executeDirect: self.model.onchange withSandbox: self.pageSandbox withObject: self];
 }
 
 -(UIView *)innerView{
