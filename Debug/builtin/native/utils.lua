@@ -29,7 +29,10 @@ function registerPush()
 end
 
 function md5String(str)
-    return helper:md5String(str)
+    local md5 = require "md5"
+    local d = md5.new()
+    d:update(str)
+    return d:digest()
 end
 
 function exit(code)
