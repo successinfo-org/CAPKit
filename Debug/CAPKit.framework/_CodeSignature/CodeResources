@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AbstractUIWidget.h</key>
 		<data>
-		xBtpIYV+1lX2ZYum4SUFRFXEHTs=
+		zKIvrV+IOjGOJspqLKA473MIK1I=
 		</data>
 		<key>Headers/AppLifecycle.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/CAPCenter.h</key>
 		<data>
-		tUW7SOlJOcfNyzlNKRM9Axxd1KI=
+		qYdktpkzka5SjVrrXRu+6rTCY+A=
 		</data>
 		<key>Headers/CAPContainer.h</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/ILuaReference.h</key>
 		<data>
-		iX3dPKczUVFz2iimhhkGNLgiyi4=
+		gkcP/J4IxOmyPeT26pk6rXnJ+7o=
 		</data>
 		<key>Headers/IService.h</key>
 		<data>
@@ -334,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/2gCCA3oIOdQ03ZICek8uyhVhxQ=
+		Q/Lb1+ALZEi/bZVTKlirmwQaLyU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -858,7 +858,7 @@
 		</data>
 		<key>PrivateHeaders/auxiliar.h</key>
 		<data>
-		eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+		7XHDGMt+Wksy0X0hq7TGG32EhJo=
 		</data>
 		<key>PrivateHeaders/base64.h</key>
 		<data>
@@ -1174,11 +1174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xBtpIYV+1lX2ZYum4SUFRFXEHTs=
+			zKIvrV+IOjGOJspqLKA473MIK1I=
 			</data>
 			<key>hash2</key>
 			<data>
-			93+6OltI9kpEqB+tB8B+s1psNqHGUiOm1rH+4D9tsUo=
+			bkbUQ9kdmmI7mpfXc9KI2J89vIE4mq519ju97R5jqJA=
 			</data>
 		</dict>
 		<key>Headers/AppLifecycle.h</key>
@@ -1273,11 +1273,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tUW7SOlJOcfNyzlNKRM9Axxd1KI=
+			qYdktpkzka5SjVrrXRu+6rTCY+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			FIPlR1gfDb2LoBJSth/kXp0l1taql2BZS8qJFaJgoi4=
+			iW5/mie74DY0kVW8OGor1vYkKGDD3XowNgVvlZUy+9k=
 			</data>
 		</dict>
 		<key>Headers/CAPContainer.h</key>
@@ -1559,11 +1559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iX3dPKczUVFz2iimhhkGNLgiyi4=
+			gkcP/J4IxOmyPeT26pk6rXnJ+7o=
 			</data>
 			<key>hash2</key>
 			<data>
-			SeQykTG0PRVKybrmG+j5PABTyqBtbWcrngB7SYw9y70=
+			TgT5i9t0jbt3VososKXkiIYcK7+6Ltj74Z1ZJPLqaG8=
 			</data>
 		</dict>
 		<key>Headers/IService.h</key>
@@ -3495,11 +3495,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+			7XHDGMt+Wksy0X0hq7TGG32EhJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			GIsy/wgqD6O7mr1Kj51GtdUPYxr69FvJKC6s5r29ZGM=
+			JghCeDzwzd62mSMe6j4DrWyIo5c/W+giCp0bJ5XscdE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/base64.h</key>

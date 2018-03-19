@@ -18,6 +18,7 @@
 @property (nonatomic, assign) UIInterfaceOrientation orientation;
 @property (nonatomic, assign) BOOL statusBarHidden;
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+@property (nonatomic, assign) UIInterfaceOrientationMask defaultDirection;
 
 @property (nonatomic, assign) BOOL safemode;
 

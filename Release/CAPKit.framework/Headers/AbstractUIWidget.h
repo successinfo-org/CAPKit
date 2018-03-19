@@ -47,6 +47,7 @@ dest;\
     BOOL created;
     
     int ref;
+    lua_State *refState;
     
     CGRect selfRect;
     BOOL selfRectDirty;
