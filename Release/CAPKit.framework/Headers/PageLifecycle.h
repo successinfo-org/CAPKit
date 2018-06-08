@@ -13,6 +13,7 @@
 - (void) onSwipeRight;
 //- (void) onDestroy DEPRECATED_ATTRIBUTE;
 
-- (BOOL) onNavBack;
+- (void) onNavBack;
+- (BOOL) shouldNavBack;
 
 @end

@@ -8,13 +8,12 @@
 
 #import "ImageWidget.h"
 #import "ImageM.h"
-#import "ASIHTTPRequest.h"
 #import "NSData+Base64.h"
 #import "AnimatedGIFImageSerialization.h"
 
 @interface ImageWidget ()
 
-@property (nonatomic, retain) ASIHTTPRequest *req;
+@property (nonatomic, strong) NSURLSessionDataTask *dataTask;
 
 @end
 
@@ -75,8 +74,8 @@
 
 - (BOOL) reloadImage: (UIImage *) image{
     BOOL hasSet = NO;
-    if ([((ImageM *)self.model).scale hasPrefix: @"clip"]) {
-        NSString *clip = [((ImageM *)self.model).scale substringFromIndex: [@"clip" length]];
+    if ([self.model.scale hasPrefix: @"clip"]) {
+        NSString *clip = [self.model.scale substringFromIndex: [@"clip" length]];
         clip = [clip stringByReplacingOccurrencesOfString: @"(" withString: @""];
         clip = [clip stringByReplacingOccurrencesOfString: @")" withString: @""];
         NSArray *items = [clip componentsSeparatedByString: @","];
@@ -149,66 +148,64 @@
             if ([imageURL isFileURL]) {
                 [self processImageData:[imageURL path]];
             }else if([imageURL isKindOfClass: [NSURL class]]){
-                NSString *suffix = [imageURL pathExtension];
-                NSString *cachePath = [self.pageSandbox getDataFile: @"imagecache"];
-                NSString *cacheHashName = [cachePath stringByAppendingPathComponent: [OSUtils getHash: [imageURL absoluteString] withContainer: [self.pageSandbox getGlobalSandbox].container]];
-                NSString *cacheName = cacheHashName;
-                if (suffix) {
-                    cacheName = [cacheHashName stringByAppendingPathExtension:suffix];
-                }
-                //NSLog(@"#cacheName--->%@",cacheName);
-                NSFileManager *fm = [NSFileManager defaultManager];
-                [fm createDirectoryAtPath: cachePath withIntermediateDirectories: YES attributes: nil error: nil];
-                if (![fm fileExistsAtPath: cacheName]) {
-                    if ([((ImageM *)self.model).placeholder isKindOfClass: [NSString class]]) {
-                        NSURL *placeHolderURL = [self.pageSandbox resolveFile: ((ImageM *)self.model).placeholder];
-                        if ([placeHolderURL isFileURL]) {
-                            [OSUtils runBlockOnMain:^{
-                                [self processImageData:[placeHolderURL path]];
-                            }];
+                NSLog(@"%@", imageURL);
+                __weak ImageWidget *weakSelf = self;
+                NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: imageURL
+                                                                       cachePolicy: NSURLRequestUseProtocolCachePolicy
+                                                                   timeoutInterval: 60];
+
+                NSCachedURLResponse *cachedResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest: request];
+                if (cachedResponse.data) {
+                    NSDictionary *allHeaderFields = ((NSHTTPURLResponse *)cachedResponse.response).allHeaderFields;
+                    NSString *etag = nil;
+                    NSString *cache_control = nil;
+                    for (NSString *key in allHeaderFields.allKeys) {
+                        NSString *key_lower = [key lowercaseString];
+                        if ([key_lower isEqualToString: @"etag"]) {
+                            etag = allHeaderFields[key];
+                        } else if ([key_lower isEqualToString: @"cache-control"]) {
+                            cache_control = allHeaderFields[key];
                         }
                     }
 
-                    NSObject *taskSrc = self.model.src;
-                    if (_req && [_req isExecuting]) {
-                        [_req clearDelegatesAndCancel];
+                    if ([cache_control rangeOfString: @"no-cache"].length > 0) {
+                        request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
                     }
 
-                    NSLog(@"%@", imageURL);
-
-                    _req = [ASIHTTPRequest requestWithURL: imageURL];
-                    [_req setDownloadDestinationPath: cacheName];
-
-                    __weak ImageWidget *weakSelf = self;
-
-                    [_req setCompletionBlock:^{
-                        if (![weakSelf.model.src isEqual: taskSrc]) {
-                            return;
-                        }
-
-                        if (weakSelf.req.responseStatusCode < 300 && weakSelf.req.responseStatusCode >= 200 && weakSelf.req.error == nil) {
-                            [OSUtils runBlockOnMain:^{
-                                [weakSelf processImageData: cacheName];
-                            }];
-                        }else{
-                            NSDictionary *resp = @{@"responseCode": [NSNumber numberWithInt: weakSelf.req.responseStatusCode]};
-                            [OSUtils executeDirect: weakSelf.model.onerror withSandbox: weakSelf.pageSandbox withObject: weakSelf withObject: resp];
-                            NSLog(@"image download failed! - %@ - %@", imageURL, weakSelf.req.error);
-                            [fm removeItemAtPath: cacheName error: nil];
-                        }
-                    }];
-
-                    [_req setFailedBlock:^{
-                        NSDictionary *resp = @{@"responseCode": [NSNumber numberWithInt: weakSelf.req.responseStatusCode], @"error": weakSelf.req.error};
-                        [OSUtils executeDirect: weakSelf.model.onerror withSandbox: weakSelf.pageSandbox withObject: weakSelf withObject: resp];
-                        NSLog(@"image download failed! - %@ - %@", imageURL, weakSelf.req.error);
-                        [fm removeItemAtPath: cacheName error: nil];
-                    }];
-
-                    [_req startAsynchronous];
-                }else{
-                    [self processImageData:cacheName];
+                    [request addValue: etag forHTTPHeaderField: @"If-None-Match"];
                 }
+                if (cachedResponse.data){
+                    [self processImageData: [UIImage imageWithData: cachedResponse.data]];
+                } else if ([self.model.placeholder isKindOfClass: [NSString class]]) {
+                    NSURL *placeHolderURL = [self.pageSandbox resolveFile: self.model.placeholder];
+                    if ([placeHolderURL isFileURL]) {
+                        [self processImageData:[placeHolderURL path]];
+                    }
+                }
+
+                if (self.dataTask) {
+                    [self.dataTask cancel];
+                }
+                self.dataTask =
+                [[NSURLSession sharedSession]
+                 dataTaskWithRequest: request
+                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                     if (!error && data) {
+                         if (((NSHTTPURLResponse *) response).statusCode < 300 && ((NSHTTPURLResponse *) response).statusCode >= 200) {
+                             [OSUtils runBlockOnMain:^{
+                                 [weakSelf processImageData: [UIImage imageWithData: data]];
+                             }];
+                         }
+                     } else {
+                         NSDictionary *resp = @{@"responseCode": [NSNumber numberWithLong: ((NSHTTPURLResponse *) response).statusCode]};
+                         [OSUtils executeDirect: weakSelf.model.onerror withSandbox: weakSelf.pageSandbox withObject: weakSelf withObject: resp];
+                         NSLog(@"image download failed! - %@ - %@", imageURL, error);
+                     }
+
+                     weakSelf.dataTask = nil;
+                 }];
+
+                [self.dataTask resume];
             }
         }
     }

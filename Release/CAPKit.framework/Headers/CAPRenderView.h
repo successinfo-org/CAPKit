@@ -33,4 +33,6 @@
 - (BOOL) popAndPushApp: (AppContext *) context;
 - (void) reloadPage: (AppContext *) context;
 
+- (BOOL) onNavBack;
+
 @end
