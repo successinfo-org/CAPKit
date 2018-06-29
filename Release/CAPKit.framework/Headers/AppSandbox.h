@@ -25,6 +25,8 @@
 
 - (NSString *) getDataFile: (NSString *) path;
 
+- (NSString *) getDefaultFontName;
+
 - (void) reloadLuaPath;
 
 - (GlobalSandbox *) getGlobalSandbox;

@@ -26,6 +26,8 @@
 
 - (NSString *) getDataFile: (NSString *) path;
 
+- (NSString *) getDefaultFontName;
+
 - (AppSandbox *) getAppSandbox;
 
 - (GlobalSandbox *) getGlobalSandbox;

@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/AppSandbox.h</key>
 		<data>
-		x/XP2g2fG4HDVIGDuyccmI94P2Q=
+		hTH79JODpYeB47d9sSMmYreZfo8=
 		</data>
 		<key>Headers/AppSandboxInterface.h</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>Headers/PageSandbox.h</key>
 		<data>
-		aW9Lbee8gj3MJsYOWrn1+b6xmoY=
+		k4l9osiCvIRcbhcUADXSDP5uC7Q=
 		</data>
 		<key>Headers/PageSandboxDelegate.h</key>
 		<data>
@@ -334,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/Q9lpcxEZuuOVf0fGfnOze163GQ=
+		daeySt8WEA9SwgdtWlMFrWo/0NA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1207,11 +1207,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x/XP2g2fG4HDVIGDuyccmI94P2Q=
+			hTH79JODpYeB47d9sSMmYreZfo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			swHYFTXQ3GDV94y4mD+9Spf2/fpOOo3mHWftEIj3r80=
+			UDVBiyFT3Llk2wB5k5M2wk9Yn6U0pGox4uEjYFr3N1g=
 			</data>
 		</dict>
 		<key>Headers/AppSandboxInterface.h</key>
@@ -1867,11 +1867,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aW9Lbee8gj3MJsYOWrn1+b6xmoY=
+			k4l9osiCvIRcbhcUADXSDP5uC7Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			cqCQYmA3LsPBj+xfmimUcFjQRMTVs9TXVHofpSM7bok=
+			sI1VDu2Gk7N/2DtEtya8wX5MgCVotJ7ys/BB8kySRgc=
 			</data>
 		</dict>
 		<key>Headers/PageSandboxDelegate.h</key>
