@@ -121,14 +121,19 @@
     size = [[self.pageSandbox getAppSandbox].scale getFontSize: size];
     
     UIFont *font = nil;
-    
+
     if (self.model.fontName != nil) {
-        font = [UIFont fontWithName: ((LabelM *) self.model).fontName size: size];
+        font = [UIFont fontWithName: self.model.fontName size: size];
     }else{
-        if (self.model.bold) {
-            font = [UIFont boldSystemFontOfSize: size];
-        }else{
-            font = [UIFont systemFontOfSize: size];
+        NSString *defaultFontName = [self.pageSandbox getDefaultFontName];
+        if (defaultFontName) {
+            font = [UIFont fontWithName: defaultFontName size: size];
+        } else {
+            if (self.model.bold) {
+                font = [UIFont boldSystemFontOfSize: size];
+            }else{
+                font = [UIFont systemFontOfSize: size];
+            }
         }
     }
     
