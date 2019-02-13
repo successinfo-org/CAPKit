@@ -22,9 +22,9 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 
 #define AppContext NSMutableDictionary
 
-#include <lua53/lua.h>
-#include <lua53/lualib.h>
-#include <lua53/lauxlib.h>
+#import <lua53/lua.h>
+#import <lua53/lualib.h>
+#import <lua53/lauxlib.h>
 
 #import <CAPKit/caplua.h>
 #import <luafan/bytearray.h>
