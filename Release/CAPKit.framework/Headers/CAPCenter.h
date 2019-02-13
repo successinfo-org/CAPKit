@@ -29,7 +29,9 @@
 
 + (CAPCenter *) shared;
 
-- (void) applyDefaults: (NSUserDefaults *) uds;
+- (void) applyDefaults: (id) empty DEPRECATED_ATTRIBUTE;
+
+- (void) applyDefaults;
 
 - (void) setContainerClass: (Class) cls;
 

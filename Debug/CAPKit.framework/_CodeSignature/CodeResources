@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/CAPCenter.h</key>
 		<data>
-		qYdktpkzka5SjVrrXRu+6rTCY+A=
+		eEBR/AS13X99dCrVTpI2mdoN9Fk=
 		</data>
 		<key>Headers/CAPContainer.h</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Headers/SettingsManager.h</key>
 		<data>
-		i5h6/6EwsWOe7mVeIe5yX8PUzRI=
+		/a6T/PnximjHF+rssaAnP5AAkto=
 		</data>
 		<key>Headers/StorageHelper.h</key>
 		<data>
@@ -334,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		daeySt8WEA9SwgdtWlMFrWo/0NA=
+		QFaXWD88EMwy8fIXlw01Gj2f7us=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -858,7 +858,7 @@
 		</data>
 		<key>PrivateHeaders/auxiliar.h</key>
 		<data>
-		eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+		7XHDGMt+Wksy0X0hq7TGG32EhJo=
 		</data>
 		<key>PrivateHeaders/base64.h</key>
 		<data>
@@ -1136,6 +1136,15 @@
 		<data>
 		y4zOTT8SjcATkBAQtGLYUrTU2AQ=
 		</data>
+		<key>SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LlihTO/vSkU4IatcWawJIL8z1Pc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>oids.txt</key>
 		<data>
 		5L3tEJQulBBaD+pUfONrYbbL6WA=
@@ -1273,11 +1282,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qYdktpkzka5SjVrrXRu+6rTCY+A=
+			eEBR/AS13X99dCrVTpI2mdoN9Fk=
 			</data>
 			<key>hash2</key>
 			<data>
-			iW5/mie74DY0kVW8OGor1vYkKGDD3XowNgVvlZUy+9k=
+			+cOFG2IAgcjImOC0PAXL5OVT7x5opbg6z6vhK+jImok=
 			</data>
 		</dict>
 		<key>Headers/CAPContainer.h</key>
@@ -1955,11 +1964,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i5h6/6EwsWOe7mVeIe5yX8PUzRI=
+			/a6T/PnximjHF+rssaAnP5AAkto=
 			</data>
 			<key>hash2</key>
 			<data>
-			lFVP0hQqbuNsMGkJlYvcFV4HUS/CHIHRaVkgP8AOYCs=
+			KOHUl3bbycbMQDGVJrLnNugy9TFeS7naDvzU9z1Ga20=
 			</data>
 		</dict>
 		<key>Headers/StorageHelper.h</key>
@@ -3495,11 +3504,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eIqJr1Jb6ReXu67GpBlmQa+1w0w=
+			7XHDGMt+Wksy0X0hq7TGG32EhJo=
 			</data>
 			<key>hash2</key>
 			<data>
-			GIsy/wgqD6O7mr1Kj51GtdUPYxr69FvJKC6s5r29ZGM=
+			JghCeDzwzd62mSMe6j4DrWyIo5c/W+giCp0bJ5XscdE=
 			</data>
 		</dict>
 		<key>PrivateHeaders/base64.h</key>
@@ -4261,6 +4270,19 @@
 			V3FJv3NyrWLorT42uoJobJDvrAtpShknDHtyiZmvejk=
 			</data>
 		</dict>
+		<key>SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LlihTO/vSkU4IatcWawJIL8z1Pc=
+			</data>
+			<key>hash2</key>
+			<data>
+			SO23YR2zpjwSvKBtZP5bzkFnodS9j56NVtmrtL7iy0A=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>oids.txt</key>
 		<dict>
 			<key>hash</key>
@@ -4319,7 +4341,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -4350,24 +4372,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -4403,13 +4413,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

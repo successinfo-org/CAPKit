@@ -1,6 +1,8 @@
-@interface SettingsManager : NSObject {
+@interface SettingsManager : NSObject
 
-}
++ (id) valueForKey: (NSString *) key;
++ (BOOL) boolForKey: (NSString *) key;
 
-+ (NSUserDefaults *) loadUserSettings:(NSString *)aKey;
+
++ (NSUserDefaults *) loadUserSettings:(NSString *)aKey DEPRECATED_ATTRIBUTE;
 @end
