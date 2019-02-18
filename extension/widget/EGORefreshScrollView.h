@@ -44,15 +44,14 @@ typedef enum{
 	UILabel *_lastUpdatedLabel;
 	UILabel *_statusLabel;
 	CALayer *_arrowImage;
-	UIActivityIndicatorView *_activityView;
-	
-    ScrollViewWidget *scrollWidget;
+	UIActivityIndicatorView *_activityView;	
 }
 
 - (id)initWithWidget:(ScrollViewWidget *) widget;
 
 @property(nonatomic,weak) NSObject <EGORefreshScrollViewDelegate> *delegate;
 @property (nonatomic, readonly) ViewWidget *contentWidget;
+@property (nonatomic, weak) ScrollViewWidget *scrollWidget;
 
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
 - (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView;

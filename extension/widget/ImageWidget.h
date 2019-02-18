@@ -9,10 +9,12 @@
 #import <CAPKit/CAPKit.h>
 #import "IImageWidget.h"
 #import "ImageM.h"
+#import <YLGIFImage/YLGIFImage.h>
+#import <YLGIFImage/YLImageView.h>
 
 /**The Image Widget*/
 @interface ImageWidget : AbstractUIWidget <IImageWidget>{
-    UIImageView *imageView;
+    YLImageView *imageView;
     UIView *view;
 }
 

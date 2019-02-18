@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.2.25"
+  s.version      = "0.2.26"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -20,10 +20,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'extension/**/*.*'
     ss.resource = 'Release/builtin'
     ss.ios.vendored_frameworks = 'Release/CAPKit.framework'
-  end
-
-  s.subspec 'Resource' do |ss|
-    ss.resource = 'Release/builtin'
   end
 
   s.subspec 'Debug' do |ss|

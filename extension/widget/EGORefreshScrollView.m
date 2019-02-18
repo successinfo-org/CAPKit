@@ -42,7 +42,7 @@
     CGRect rect = CGRectMake(0, -listRect.size.height, listRect.size.width, listRect.size.height);
 
     if (self = [super initWithFrame: rect]) {
-        scrollWidget = widget;
+        self.scrollWidget = widget;
 
 //		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
@@ -70,16 +70,16 @@
 	
 	switch (aState) {
 		case EGOOPullRefreshPulling:
-            [scrollWidget.model.onDragDownStateChanged executeWithoutReturnValue: scrollWidget, [NSNumber numberWithBool: YES], nil];
+            [self.scrollWidget.model.onDragDownStateChanged executeWithoutReturnValue: self.scrollWidget, [NSNumber numberWithBool: YES], nil];
 			break;
 		case EGOOPullRefreshNormal:
-            [scrollWidget.model.onDragDownStateChanged executeWithoutReturnValue: scrollWidget, [NSNumber numberWithBool: NO], nil];
+            [self.scrollWidget.model.onDragDownStateChanged executeWithoutReturnValue: self.scrollWidget, [NSNumber numberWithBool: NO], nil];
 			break;
 		case EGOOPullRefreshLoading:
-            [scrollWidget.model.onDragDownAction executeWithoutReturnValue: scrollWidget, [NSNumber numberWithBool: YES], nil];
+            [self.scrollWidget.model.onDragDownAction executeWithoutReturnValue: self.scrollWidget, [NSNumber numberWithBool: YES], nil];
 			break;
         case EGOOPullRefreshIgnore:
-            [scrollWidget.model.onDragDownAction executeWithoutReturnValue: scrollWidget, [NSNumber numberWithBool: NO], nil];
+            [self.scrollWidget.model.onDragDownAction executeWithoutReturnValue: self.scrollWidget, [NSNumber numberWithBool: NO], nil];
 		default:
 			break;
 	}
@@ -94,7 +94,7 @@
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView {
 	if (_state == EGOOPullRefreshLoading) {
 		CGFloat offset = MAX(scrollView.contentOffset.y * -1, 0);
-		offset = MIN(offset, [[scrollWidget.pageSandbox getAppSandbox].scale getActualLength: scrollWidget.model.dragDownMinMovement]);
+		offset = MIN(offset, [[self.scrollWidget.pageSandbox getAppSandbox].scale getActualLength: self.scrollWidget.model.dragDownMinMovement]);
 		scrollView.contentInset = UIEdgeInsetsMake(offset, 0.0f, 0.0f, 0.0f);
 	} else if (scrollView.isDragging) {
 		BOOL _loading = NO;
@@ -103,11 +103,11 @@
 		}
 		
 		if ((_state == EGOOPullRefreshPulling || _state == EGOOPullRefreshIgnore)
-            && scrollView.contentOffset.y > - [[scrollWidget.pageSandbox getAppSandbox].scale getActualLength: scrollWidget.model.dragDownMinMovement] - 5.0f
+            && scrollView.contentOffset.y > - [[self.scrollWidget.pageSandbox getAppSandbox].scale getActualLength: self.scrollWidget.model.dragDownMinMovement] - 5.0f
             && scrollView.contentOffset.y < 0.0f && !_loading) {
 			[self setState:EGOOPullRefreshNormal];
 		} else if (_state == EGOOPullRefreshNormal
-                   && scrollView.contentOffset.y < - [[scrollWidget.pageSandbox getAppSandbox].scale getActualLength: scrollWidget.model.dragDownMinMovement] - 5.0f
+                   && scrollView.contentOffset.y < - [[self.scrollWidget.pageSandbox getAppSandbox].scale getActualLength: self.scrollWidget.model.dragDownMinMovement] - 5.0f
                    && !_loading) {
 			[self setState:EGOOPullRefreshPulling];
 		}
@@ -125,12 +125,12 @@
 		_loading = [_delegate egoRefreshScrollViewIsLoading:self];
 	}
 	
-	if (scrollView.contentOffset.y <= - [[scrollWidget.pageSandbox getAppSandbox].scale getActualLength: scrollWidget.model.dragDownMinMovement] - 5.0f && !_loading) {
+	if (scrollView.contentOffset.y <= - [[self.scrollWidget.pageSandbox getAppSandbox].scale getActualLength: self.scrollWidget.model.dragDownMinMovement] - 5.0f && !_loading) {
 		
 		[self setState:EGOOPullRefreshLoading];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.2];
-		scrollView.contentInset = UIEdgeInsetsMake([[scrollWidget.pageSandbox getAppSandbox].scale getActualLength: scrollWidget.model.dragDownMinMovement], 0.0f, 0.0f, 0.0f);
+		scrollView.contentInset = UIEdgeInsetsMake([[self.scrollWidget.pageSandbox getAppSandbox].scale getActualLength: self.scrollWidget.model.dragDownMinMovement], 0.0f, 0.0f, 0.0f);
 		[UIView commitAnimations];
     } else {
         [self setState: EGOOPullRefreshIgnore];

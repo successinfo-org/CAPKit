@@ -9,7 +9,6 @@
 #import "ImageWidget.h"
 #import "ImageM.h"
 #import "NSData+Base64.h"
-#import "AnimatedGIFImageSerialization.h"
 
 @interface ImageWidget ()
 
@@ -39,7 +38,7 @@
     }else{
         view.userInteractionEnabled = NO;
     }
-    imageView = [[UIImageView alloc] initWithFrame: view.bounds];
+    imageView = [[YLImageView alloc] initWithFrame: view.bounds];
 //    imageView.contentMode = UIViewContentModeCenter;
     [view addSubview: imageView];
     
@@ -175,7 +174,7 @@
                     [request addValue: etag forHTTPHeaderField: @"If-None-Match"];
                 }
                 if (cachedResponse.data){
-                    [self processImageData: [UIImage imageWithData: cachedResponse.data]];
+                    [self processImageData: [YLGIFImage imageWithData: cachedResponse.data]];
                 } else if ([self.model.placeholder isKindOfClass: [NSString class]]) {
                     NSURL *placeHolderURL = [self.pageSandbox resolveFile: self.model.placeholder];
                     if ([placeHolderURL isFileURL]) {
@@ -193,7 +192,7 @@
                      if (!error && data) {
                          if (((NSHTTPURLResponse *) response).statusCode < 300 && ((NSHTTPURLResponse *) response).statusCode >= 200) {
                              [OSUtils runBlockOnMain:^{
-                                 [weakSelf processImageData: [UIImage imageWithData: data]];
+                                 [weakSelf processImageData: [YLGIFImage imageWithData: data]];
                              }];
                          }
                      } else {
