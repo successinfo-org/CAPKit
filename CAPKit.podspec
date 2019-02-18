@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   s.dependency 'ZBarSDK', '~> 1.3.1'
   s.dependency 'GZIP', '~> 1.0.2'
   s.dependency 'SAMKeychain', '~> 1.5.3'
-  s.dependency 'YLGIFImage, '~> 0.11'
+  s.dependency 'YLGIFImage', '~> 0.11'
   s.dependency 'Bugly', '~> 2.4.8'
 
   s.dependency 'CAPKit-iOS-WebP', '~> 0.4'
