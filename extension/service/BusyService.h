@@ -16,7 +16,7 @@
     
     UIScreen *screen;
     
-    AbstractUIWidget *widget;
+    CAPAbstractUIWidget *widget;
     BOOL hidden;
 }
 

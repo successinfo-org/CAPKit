@@ -62,7 +62,7 @@ extern OSStatus DoConvertFile(CFURLRef sourceURL, CFURLRef destinationURL, OSTyp
 
     lastRecordPath = path;
 
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
     previewCategory = [AVAudioSession sharedInstance].category;
 
     [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
@@ -83,7 +83,7 @@ extern OSStatus DoConvertFile(CFURLRef sourceURL, CFURLRef destinationURL, OSTyp
         return;
     }
 
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
 
     NSURL *cafURL = [sandbox resolveFile: [lastRecordPath stringByAppendingPathExtension: @"caf"]];
 
@@ -100,7 +100,7 @@ extern OSStatus DoConvertFile(CFURLRef sourceURL, CFURLRef destinationURL, OSTyp
 }
 
 - (void) play: (NSString *) path{
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
 
     player = [[AVAudioPlayer alloc] initWithContentsOfURL: [sandbox resolveFile: path] error: nil];
     player.delegate = self;

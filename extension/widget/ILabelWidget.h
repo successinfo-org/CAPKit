@@ -7,7 +7,6 @@
 //
 
 #import <CAPKit/CAPKit.h>
-#import "IAbstractUIWidget.h"
 
 @protocol ILabelWidget <IAbstractUIWidget>
 

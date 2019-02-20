@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CanvasDisplayView : UIView{
-    CGRect needDisplayRect;
-    BOOL schedulingNeedsDisplay;
-    NSRecursiveLock *lock;
+@interface CanvasDisplayView : UIView{    
     @public
     CGContextRef bitmapContext;
     NSRecursiveLock *bitmapLock;
 }
+
+@property (nonatomic, strong) NSRecursiveLock *lock;
+@property (nonatomic, assign) BOOL schedulingNeedsDisplay;
 
 - (void) addNeedsDisplayRect: (CGRect) rect;
 @end

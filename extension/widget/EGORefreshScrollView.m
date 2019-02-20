@@ -25,7 +25,7 @@
 //
 
 #import "EGORefreshScrollView.h"
-#import "ScrollViewWidget.h"
+#import "CAPScrollViewWidget.h"
 
 #define TEXT_COLOR	 [UIColor colorWithRed:87.0/255.0 green:108.0/255.0 blue:137.0/255.0 alpha:1.0]
 #define FLIP_ANIMATION_DURATION 0.18f
@@ -37,7 +37,7 @@
 
 @implementation EGORefreshScrollView
 
-- (id)initWithWidget:(ScrollViewWidget *) widget {
+- (id)initWithWidget:(CAPScrollViewWidget *) widget {
     CGRect listRect = [widget innerView].bounds;
     CGRect rect = CGRectMake(0, -listRect.size.height, listRect.size.width, listRect.size.height);
 
@@ -46,7 +46,7 @@
 
 //		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-        _contentWidget = (ViewWidget *)[WidgetBuilder buildWidget: widget.model.dragDownLayout withPageSandbox: widget.pageSandbox];
+        _contentWidget = (CAPViewWidget *)[WidgetBuilder buildWidget: widget.model.dragDownLayout withPageSandbox: widget.pageSandbox];
         CGRect contentRect = [_contentWidget measureRect: [[widget.pageSandbox getAppSandbox].scale getRefSize: rect.size]];
         _contentWidget->currentRect = contentRect;
         [_contentWidget createView];

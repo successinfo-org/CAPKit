@@ -14,10 +14,10 @@
     L = value;
 }
 
-- (LuaImage *) load: (NSString *) path{
+- (CAPLuaImage *) load: (NSString *) path{
     NSURL *url = [[OSUtils getSandboxFromState: L] resolveFile: path];
     if ([url isFileURL]) {
-        return [[LuaImage alloc] initWithPath: [url path]];
+        return [[CAPLuaImage alloc] initWithPath: [url path]];
     } else {
         return nil;
     }

@@ -1,8 +1,7 @@
-@class PageSandbox;
-@class ViewWidget;
+@class CAPPageSandbox;
+@class CAPViewWidget;
 
 @interface CAPPanelView : UIView <PagePanel, UIGestureRecognizerDelegate> {
-    UIInterfaceOrientation lastOrientation;
     CGRect latestReloadFrame;
     
     BOOL tap_to_hide_keyboard;
@@ -22,13 +21,13 @@
 
 @property (nonatomic, weak) CAPRenderView *renderView;
 
-@property (nonatomic, strong, readonly, getter=getSandbox) PageSandbox *sandbox;
-@property (nonatomic, strong, readonly) PageM *model;
-@property (nonatomic, strong, readonly) ViewWidget *root;
+@property (nonatomic, strong, readonly, getter=getSandbox) CAPPageSandbox *sandbox;
+@property (nonatomic, strong, readonly) CAPPageM *model;
+@property (nonatomic, strong, readonly) CAPViewWidget *root;
 
 @property (nonatomic, readonly) AppContext *context;
 
-- (instancetype)initWithURL: (NSURL *) url withSandbox: (PageSandbox *) sandbox;
+- (instancetype)initWithURL: (NSURL *) url withSandbox: (CAPPageSandbox *) sandbox;
 
 - (void) reloadSize;
 

@@ -65,7 +65,7 @@
 
     lastRecordPath = path;
 
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
 
     [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
 
@@ -85,7 +85,7 @@
         return;
     }
 
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
 
     NSURL *cafURL = [sandbox resolveFile: [lastRecordPath stringByAppendingPathExtension: @"caf"]];
 
@@ -173,7 +173,7 @@
 }
 
 - (void) load: (NSString *) path{
-    AppSandbox *sandbox = [OSUtils getSandboxFromState: L];
+    CAPAppSandbox *sandbox = [OSUtils getSandboxFromState: L];
 
     player = [[AVAudioPlayer alloc] initWithContentsOfURL: [sandbox resolveFile: path] error: nil];
     player.delegate = self;

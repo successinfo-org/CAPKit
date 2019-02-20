@@ -5,6 +5,6 @@
     lua_State *L;
 }
 
-- (LuaImage *) load: (NSString *) path;
+- (CAPLuaImage *) load: (NSString *) path;
 
 @end

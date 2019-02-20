@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TextfieldM.h"
+#import "CAPTextfieldM.h"
 
 @interface EOSTextField : UITextField
 
-@property (nonatomic, weak) TextfieldM *model;
+@property (nonatomic, weak) CAPTextfieldM *model;
 
 @end

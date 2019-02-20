@@ -1,12 +1,12 @@
-@class AppSandbox;
-@class PageSandbox;
+@class CAPAppSandbox;
+@class CAPPageSandbox;
 @protocol PagePanel;
 
 @protocol GlobalSandboxDelegate <NSObject>
 
-- (void) onAppSandboxCreated: (AppSandbox *) sandbox;
+- (void) onAppSandboxCreated: (CAPAppSandbox *) sandbox;
 
-- (void) onPageSandboxCreated: (PageSandbox *) sandbox;
+- (void) onPageSandboxCreated: (CAPPageSandbox *) sandbox;
 
 - (void) onPagePanelCreated: (id<PagePanel>) pagepanel;
 

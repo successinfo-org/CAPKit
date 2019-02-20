@@ -13,7 +13,7 @@ typedef enum{
     AlignTypeBottom
 } AlignType;
 
-@class ViewM;
+@class CAPViewM;
 
 /**
  You must override copyWithZone,mergeFromDic,fillDic
@@ -46,7 +46,7 @@ typedef enum{
 
 @property (nonatomic, strong) NSString *tip;
 
-@property (nonatomic, weak) ViewM *parent;
+@property (nonatomic, weak) CAPViewM *parent;
 
 @property (nonatomic, assign) float backgroundAlpha;
 @property (nonatomic, assign) float alpha;

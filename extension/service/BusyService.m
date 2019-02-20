@@ -29,13 +29,13 @@
 }
 
 - (void) show: (id) dic{
-    if ([dic isKindOfClass: [AbstractUIWidget class]]) {
+    if ([dic isKindOfClass: [CAPAbstractUIWidget class]]) {
         widget = dic;
     }else if ([dic isKindOfClass: [NSDictionary class]]){
         CAPPanelView<PagePanel> *panelView = [[OSUtils getContainerFromState: L].renderView topPanelView];
-        PageSandbox *sandbox = [panelView getSandbox];
+        CAPPageSandbox *sandbox = [panelView getSandbox];
         
-        if ([sandbox isKindOfClass: [PageSandbox class]]) {
+        if ([sandbox isKindOfClass: [CAPPageSandbox class]]) {
             UIWidgetM *model = [ModelBuilder buildModel: dic];
             widget = [WidgetBuilder buildWidget: model withPageSandbox: sandbox];
             

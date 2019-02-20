@@ -19,7 +19,7 @@
  @param img The `Image` to be set into this `Widget`
  @see getImage
  */
-- (void) _LUA_setImage: (LuaImage *) img;
+- (void) _LUA_setImage: (CAPLuaImage *) img;
 
 /**get `Image` in this `Widget`
  
@@ -31,7 +31,7 @@
  @return `Image` in this `Widget`
  @see setImage:
  */
-- (LuaImage *) _LUA_getImage;
+- (CAPLuaImage *) _LUA_getImage;
 
 - (void) setSrc: (NSObject *) src;
 - (NSObject *)getSrc;

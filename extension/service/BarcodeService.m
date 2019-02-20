@@ -57,24 +57,24 @@
 }
 
 - (void) setOverlay: (NSObject *) overlay{
-    ViewWidget *widget = nil;
+    CAPViewWidget *widget = nil;
     if ([overlay isKindOfClass: [NSDictionary class]]) {
-        ViewM *vm = (ViewM *)[ModelBuilder buildModel: (NSDictionary *) overlay];
-        if (![vm isKindOfClass: [ViewM class]]) {
+        CAPViewM *vm = (CAPViewM *)[ModelBuilder buildModel: (NSDictionary *) overlay];
+        if (![vm isKindOfClass: [CAPViewM class]]) {
             return;
         }
 
         CAPPanelView<PagePanel> *panelView = [[OSUtils getContainerFromState: L].renderView topPanelView];
-        PageSandbox *sandbox = [panelView getSandbox];
+        CAPPageSandbox *sandbox = [panelView getSandbox];
 
         if (sandbox) {
-            widget = (ViewWidget *)[WidgetBuilder buildWidget: vm withPageSandbox: sandbox];
+            widget = (CAPViewWidget *)[WidgetBuilder buildWidget: vm withPageSandbox: sandbox];
         }
-    }else if([overlay isKindOfClass: [ViewWidget class]]){
-        widget = (ViewWidget *) overlay;
+    }else if([overlay isKindOfClass: [CAPViewWidget class]]){
+        widget = (CAPViewWidget *) overlay;
     }
 
-    if ([widget isKindOfClass: [ViewWidget class]]) {
+    if ([widget isKindOfClass: [CAPViewWidget class]]) {
         _overlay = widget;
     }
 }

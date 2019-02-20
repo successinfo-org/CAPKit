@@ -64,7 +64,7 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/EOSList.h>
 #import <CAPKit/PackedArray.h>
 
-#import <CAPKit/LuaImage.h>
+#import <CAPKit/CAPLuaImage.h>
 #import <CAPKit/ModelBuilder.h>
 
 #import <CAPKit/EventConstants.h>
@@ -78,15 +78,15 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/EventDispatcher.h>
 
 #import <CAPKit/UIWidgetM.h>
-#import <CAPKit/ViewM.h>
-#import <CAPKit/PageM.h>
+#import <CAPKit/CAPViewM.h>
+#import <CAPKit/CAPPageM.h>
 #import <CAPKit/ManifestM.h>
 
 #import <CAPKit/IAbstractUIWidget.h>
-#import <CAPKit/AbstractUIWidget.h>
+#import <CAPKit/CAPAbstractUIWidget.h>
 
 #import <CAPKit/IViewWidget.h>
-#import <CAPKit/ViewWidget.h>
+#import <CAPKit/CAPViewWidget.h>
 
 #import <CAPKit/WidgetMap.h>
 
@@ -103,12 +103,12 @@ FOUNDATION_EXPORT const unsigned char CAPKitVersionString[];
 #import <CAPKit/AppSandboxInterface.h>
 #import <CAPKit/AppLifecycle.h>
 #import <CAPKit/ScreenScale.h>
-#import <CAPKit/AppSandbox.h>
+#import <CAPKit/CAPAppSandbox.h>
 
 #import <CAPKit/PageSandboxInterface.h>
 #import <CAPKit/PageSandboxDelegate.h>
 #import <CAPKit/PageLifecycle.h>
-#import <CAPKit/PageSandbox.h>
+#import <CAPKit/CAPPageSandbox.h>
 
 #import <CAPKit/WidgetBuilder.h>
 

@@ -1,7 +1,7 @@
 @protocol IViewWidget <IAbstractUIWidget>
-- (AbstractUIWidget *) addChildJSON: (NSString *) jsonString DEPRECATED_ATTRIBUTE;
+- (CAPAbstractUIWidget *) addChildJSON: (NSString *) jsonString DEPRECATED_ATTRIBUTE;
 
-- (AbstractUIWidget *) addChildJSON: (NSString *) jsonString at: (int) idx DEPRECATED_ATTRIBUTE;
+- (CAPAbstractUIWidget *) addChildJSON: (NSString *) jsonString at: (int) idx DEPRECATED_ATTRIBUTE;
 
 /**Add `Widget` in this View
  
@@ -15,10 +15,10 @@
  @param t the input json string with `Widget` definition
  @return the new created `Widget`
  */
-- (AbstractUIWidget *) addChild: (id) t;
+- (CAPAbstractUIWidget *) addChild: (id) t;
 
-- (AbstractUIWidget *) addChild: (id) t at: (int) idx DEPRECATED_ATTRIBUTE;
-- (AbstractUIWidget *) addChild: (id) t : (int) idx;
+- (CAPAbstractUIWidget *) addChild: (id) t at: (int) idx DEPRECATED_ATTRIBUTE;
+- (CAPAbstractUIWidget *) addChild: (id) t : (int) idx;
 
 - (void) _LUA_removeChildById: (NSObject *) wid DEPRECATED_ATTRIBUTE;
 - (void) _LUA_removeChild: (NSObject *) wid;

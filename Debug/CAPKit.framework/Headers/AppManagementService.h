@@ -20,9 +20,9 @@
 
 - (NSString *) pathForApp: (NSString *) appId;
 
-- (AppSandbox *) getAppSandbox: (NSString *) appId;
+- (CAPAppSandbox *) getAppSandbox: (NSString *) appId;
 
-- (PageSandbox *) getPageSandbox: (NSString *) appId :(NSString *) pageId;
-- (PageSandbox *) getPageSandbox: (NSString *) appId;
+- (CAPPageSandbox *) getPageSandbox: (NSString *) appId :(NSString *) pageId;
+- (CAPPageSandbox *) getPageSandbox: (NSString *) appId;
 
 @end

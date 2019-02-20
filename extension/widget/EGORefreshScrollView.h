@@ -27,8 +27,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@class ScrollViewWidget;
-@class ViewWidget;
+@class CAPScrollViewWidget;
+@class CAPViewWidget;
 
 typedef enum{
 	EGOOPullRefreshPulling = 0,
@@ -47,11 +47,11 @@ typedef enum{
 	UIActivityIndicatorView *_activityView;	
 }
 
-- (id)initWithWidget:(ScrollViewWidget *) widget;
+- (id)initWithWidget:(CAPScrollViewWidget *) widget;
 
 @property(nonatomic,weak) NSObject <EGORefreshScrollViewDelegate> *delegate;
-@property (nonatomic, readonly) ViewWidget *contentWidget;
-@property (nonatomic, weak) ScrollViewWidget *scrollWidget;
+@property (nonatomic, readonly) CAPViewWidget *contentWidget;
+@property (nonatomic, weak) CAPScrollViewWidget *scrollWidget;
 
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
 - (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView;

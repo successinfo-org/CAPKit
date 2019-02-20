@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
 
-@class PageSandbox;
-@class PageM;
+@class CAPPageSandbox;
+@class CAPPageM;
 @class ManifestM;
 
 @protocol PagePanel
@@ -27,14 +27,14 @@
 /**invoked when this `Panel` is move to backend of this screen*/
 - (void) onBackend;
 
-- (PageM *) getModel;
+- (CAPPageM *) getModel;
 
 - (void) setContext: (AppContext *) context;
 
-- (PageSandbox *) getSandbox;
+- (CAPPageSandbox *) getSandbox;
 
 - (void) reloadSize;
 
--(id)initWithURL: (NSURL *) url withSandbox: (PageSandbox *) sandbox;
+-(id)initWithURL: (NSURL *) url withSandbox: (CAPPageSandbox *) sandbox;
 
 @end

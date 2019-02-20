@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class LabelWidget;
-@class PageSandbox;
+@class CAPLabelWidget;
+@class CAPPageSandbox;
 
 typedef enum VerticalAlignment {
     VerticalAlignmentTop,
@@ -21,7 +21,7 @@ typedef enum VerticalAlignment {
 }
 
 @property (nonatomic, assign) VerticalAlignment verticalAlign;
-@property (nonatomic, weak) PageSandbox *pageSandbox;
-@property (nonatomic, weak) LabelWidget *widget;
+@property (nonatomic, weak) CAPPageSandbox *pageSandbox;
+@property (nonatomic, weak) CAPLabelWidget *widget;
 
 @end

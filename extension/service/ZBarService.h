@@ -8,7 +8,7 @@
     CGRect scanCrop;
 }
 
-@property (nonatomic, strong) ViewWidget *overlay;
+@property (nonatomic, strong) CAPViewWidget *overlay;
 @property (nonatomic, strong) LuaFunction *callback;
 @property (nonatomic, strong) ZBarReaderViewController *reader;
 

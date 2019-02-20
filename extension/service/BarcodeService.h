@@ -4,7 +4,7 @@
 @interface BarcodeViewController : UIViewController
 
 @property (nonatomic, weak) AVCaptureSession *session;
-@property (nonatomic, weak) ViewWidget *overlay;
+@property (nonatomic, weak) CAPViewWidget *overlay;
 
 
 @end
@@ -16,7 +16,7 @@
     CGRect scanCrop;
 }
 
-@property (nonatomic, strong) ViewWidget *overlay;
+@property (nonatomic, strong) CAPViewWidget *overlay;
 @property (nonatomic, strong) LuaFunction *callback;
 @property (nonatomic, strong) BarcodeViewController *controller;
 

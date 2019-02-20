@@ -1,9 +1,9 @@
-@class PageSandbox;
+@class CAPPageSandbox;
 
 @protocol PageSandboxDelegate <NSObject>
 
-- (void) onFronted: (PageSandbox *) sandbox;
-- (void) onIdle: (PageSandbox *) sandbox;
+- (void) onFronted: (CAPPageSandbox *) sandbox;
+- (void) onIdle: (CAPPageSandbox *) sandbox;
 
 @end
 

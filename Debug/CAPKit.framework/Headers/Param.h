@@ -2,6 +2,6 @@
 
 @optional
 - (void) setParam: (NSObject *) param;
-- (void) setPageSandbox: (PageSandbox *) sandbox;
+- (void) setPageSandbox: (CAPPageSandbox *) sandbox;
 
 @end

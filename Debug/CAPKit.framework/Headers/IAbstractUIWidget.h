@@ -1,4 +1,4 @@
-@class LuaImage;
+@class CAPLuaImage;
 
 @protocol IAbstractUIWidget <NSObject>
 
@@ -20,9 +20,9 @@
 
 - (void) resumeLayout;
 
-- (LuaImage *) _COROUTINE_getSnapshot;
+- (CAPLuaImage *) _COROUTINE_getSnapshot;
 
-- (LuaImage *) _COROUTINE_getContentSnapshot;
+- (CAPLuaImage *) _COROUTINE_getContentSnapshot;
 
 - (PackedArray *) getRect;
 

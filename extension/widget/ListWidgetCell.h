@@ -10,13 +10,13 @@
 #import <CAPKit/CAPKit.h>
 #import "BMXSwipableCell.h"
 
-@class ListWidget;
+@class CAPListWidget;
 @interface ListWidgetCell : BMXSwipableCell
 
-@property (nonatomic, strong) AbstractUIWidget *widget;
-@property (nonatomic, strong) AbstractUIWidget *action;
+@property (nonatomic, strong) CAPAbstractUIWidget *widget;
+@property (nonatomic, strong) CAPAbstractUIWidget *action;
 @property (nonatomic, strong) NSMutableDictionary *dp;
-@property (nonatomic, weak) ListWidget *listWidget;
+@property (nonatomic, weak) CAPListWidget *listWidget;
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
 

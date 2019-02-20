@@ -1,4 +1,4 @@
-@class AppSandbox;
+@class CAPAppSandbox;
 @class PNum;
 
 @interface OSUtils : NSObject {
@@ -35,13 +35,13 @@
 
 + (NSString *) getHash: (NSString *) url withContainer: (CAPContainer *) container;
 
-+ (void) execute: (NSObject *) script withSandbox: (PageSandbox *) sandbox DEPRECATED_ATTRIBUTE;
++ (void) execute: (NSObject *) script withSandbox: (CAPPageSandbox *) sandbox DEPRECATED_ATTRIBUTE;
 
-+ (void) executeDirect: (NSObject *) script withSandbox: (PageSandbox *) sandbox;
++ (void) executeDirect: (NSObject *) script withSandbox: (CAPPageSandbox *) sandbox;
 
-+ (void) executeDirect: (NSObject *) script withSandbox: (PageSandbox *) sandbox withObject: (NSObject *) obj;
++ (void) executeDirect: (NSObject *) script withSandbox: (CAPPageSandbox *) sandbox withObject: (NSObject *) obj;
 
-+ (void) executeDirect: (NSObject *) script withSandbox: (PageSandbox *) sandbox withObject: (NSObject *) obj1 withObject: (NSObject *) obj2;
++ (void) executeDirect: (NSObject *) script withSandbox: (CAPPageSandbox *) sandbox withObject: (NSObject *) obj1 withObject: (NSObject *) obj2;
 
 + (NSObject *) getObject: (NSObject *) delegate withObject: (NSObject *) obj1 withObject: (NSObject *) obj2 withObject: (NSObject *) obj3 withObject: (NSObject *) obj4;
 
@@ -65,7 +65,7 @@ typedef id (^block_with_returnvalue)(void);
 
 + (void) runBlockOnBackground: (dispatch_block_t) blk;
 
-+ (AppSandbox *) getSandboxFromState: (lua_State *) L;
++ (CAPAppSandbox *) getSandboxFromState: (lua_State *) L;
 
 + (CAPContainer *) getContainerFromState: (lua_State *) L;
 

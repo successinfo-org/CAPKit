@@ -7,8 +7,8 @@
 //
 
 #import "ListWidgetCell.h"
-#import "ListWidget.h"
-#import "ListM.h"
+#import "CAPListWidget.h"
+#import "CAPListM.h"
 
 @implementation ListWidgetCell
 

@@ -2,7 +2,7 @@
 #import "AbstractLuaTableCompatible.h"
 #import "IService.h"
 #import "LuaFunction.h"
-#import "ViewWidget.h"
+#import "CAPViewWidget.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 @interface DeviceService : AbstractLuaTableCompatible <IService, MFMessageComposeViewControllerDelegate> {

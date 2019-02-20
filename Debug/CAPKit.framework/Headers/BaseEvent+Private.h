@@ -13,9 +13,6 @@
 
 @interface BaseEvent (Private)
 
-- (id) initWithKey: (EventKey) k withBroadcast: (BOOL) isBroadcast;
-+ (id) eventWithKey: (EventKey) k withBroadcast: (BOOL) isBroadcast;
-- (id) initWithKey: (EventKey) k;
 
 @end
 

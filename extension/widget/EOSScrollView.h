@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CAPKit/CAPKit.h>
-#import "ScrollViewM.h"
-#import "ScrollViewWidget.h"
+#import "CAPScrollViewM.h"
+#import "CAPScrollViewWidget.h"
 
 @interface EOSScrollView : UIScrollView{
 }

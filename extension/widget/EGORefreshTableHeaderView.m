@@ -26,7 +26,7 @@
 
 #import "EGORefreshTableHeaderView.h"
 #import <CAPKit/CAPKit.h>
-#import "ListWidget.h"
+#import "CAPListWidget.h"
 
 #define TEXT_COLOR	 [UIColor colorWithRed:87.0/255.0 green:108.0/255.0 blue:137.0/255.0 alpha:1.0]
 #define FLIP_ANIMATION_DURATION 0.18f
@@ -38,16 +38,16 @@
 
 @implementation EGORefreshTableHeaderView
 
-- (id)initWithWidget:(ListWidget *) widget {
+- (id)initWithWidget:(CAPListWidget *) widget {
     CGRect listRect = [widget innerView].bounds;
     CGRect rect = CGRectMake(0, -listRect.size.height, listRect.size.width, listRect.size.height);
 
     if (self = [super initWithFrame: rect]) {
-        listWidget = widget;
+        self.listWidget = widget;
 
 //		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-        _contentWidget = (ViewWidget *)[WidgetBuilder buildWidget: widget.model.dragDownLayout withPageSandbox: widget.pageSandbox];
+        _contentWidget = (CAPViewWidget *)[WidgetBuilder buildWidget: widget.model.dragDownLayout withPageSandbox: widget.pageSandbox];
         CGRect contentRect = [_contentWidget measureRect: [[widget.pageSandbox getAppSandbox].scale getRefSize: rect.size]];
         _contentWidget->currentRect = contentRect;
         [_contentWidget createView];
@@ -71,16 +71,16 @@
 	
 	switch (aState) {
 		case EGOOPullRefreshPulling:
-            [listWidget.model.onDragDownStateChanged executeWithoutReturnValue: listWidget, [NSNumber numberWithBool: YES], nil];
+            [self.listWidget.model.onDragDownStateChanged executeWithoutReturnValue: self.listWidget, [NSNumber numberWithBool: YES], nil];
 			break;
 		case EGOOPullRefreshNormal:
-            [listWidget.model.onDragDownStateChanged executeWithoutReturnValue: listWidget, [NSNumber numberWithBool: NO], nil];
+            [self.listWidget.model.onDragDownStateChanged executeWithoutReturnValue: self.listWidget, [NSNumber numberWithBool: NO], nil];
 			break;
 		case EGOOPullRefreshLoading:
-            [listWidget.model.onDragDownAction executeWithoutReturnValue: listWidget, [NSNumber numberWithBool: YES], nil];
+            [self.listWidget.model.onDragDownAction executeWithoutReturnValue: self.listWidget, [NSNumber numberWithBool: YES], nil];
 			break;
         case EGOOPullRefreshIgnore:
-            [listWidget.model.onDragDownAction executeWithoutReturnValue: listWidget, [NSNumber numberWithBool: NO], nil];
+            [self.listWidget.model.onDragDownAction executeWithoutReturnValue: self.listWidget, [NSNumber numberWithBool: NO], nil];
 		default:
 			break;
 	}
@@ -95,7 +95,7 @@
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView {
 	if (_state == EGOOPullRefreshLoading) {
 		CGFloat offset = MAX(scrollView.contentOffset.y * -1, 0);
-		offset = MIN(offset, [[listWidget.pageSandbox getAppSandbox].scale getActualLength: listWidget.model.dragDownMinMovement]);
+		offset = MIN(offset, [[self.listWidget.pageSandbox getAppSandbox].scale getActualLength: self.listWidget.model.dragDownMinMovement]);
 		scrollView.contentInset = UIEdgeInsetsMake(offset, 0.0f, 0.0f, 0.0f);
 	} else if (scrollView.isDragging) {
 		BOOL _loading = NO;
@@ -104,11 +104,12 @@
 		}
 		
 		if ((_state == EGOOPullRefreshPulling || _state == EGOOPullRefreshIgnore)
-            && scrollView.contentOffset.y > - [[listWidget.pageSandbox getAppSandbox].scale getActualLength: listWidget.model.dragDownMinMovement] - 5.0f
+            && scrollView.contentOffset.y > - [[self.listWidget
+                                                .pageSandbox getAppSandbox].scale getActualLength: self.listWidget.model.dragDownMinMovement] - 5.0f
             && scrollView.contentOffset.y < 0.0f && !_loading) {
 			[self setState:EGOOPullRefreshNormal];
 		} else if (_state == EGOOPullRefreshNormal
-                   && scrollView.contentOffset.y < - [[listWidget.pageSandbox getAppSandbox].scale getActualLength: listWidget.model.dragDownMinMovement] - 5.0f
+                   && scrollView.contentOffset.y < - [[self.listWidget.pageSandbox getAppSandbox].scale getActualLength: self.listWidget.model.dragDownMinMovement] - 5.0f
                    && !_loading) {
 			[self setState:EGOOPullRefreshPulling];
 		}
@@ -126,12 +127,12 @@
 		_loading = [_delegate egoRefreshTableHeaderDataSourceIsLoading:self];
 	}
 	
-	if (scrollView.contentOffset.y <= - [[listWidget.pageSandbox getAppSandbox].scale getActualLength: listWidget.model.dragDownMinMovement] - 5.0f && !_loading) {
+	if (scrollView.contentOffset.y <= - [[self.listWidget.pageSandbox getAppSandbox].scale getActualLength: self.listWidget.model.dragDownMinMovement] - 5.0f && !_loading) {
 		
 		[self setState:EGOOPullRefreshLoading];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.2];
-		scrollView.contentInset = UIEdgeInsetsMake([[listWidget.pageSandbox getAppSandbox].scale getActualLength: listWidget.model.dragDownMinMovement], 0.0f, 0.0f, 0.0f);
+		scrollView.contentInset = UIEdgeInsetsMake([[self.listWidget.pageSandbox getAppSandbox].scale getActualLength: self.listWidget.model.dragDownMinMovement], 0.0f, 0.0f, 0.0f);
 		[UIView commitAnimations];
     } else {
         [self setState: EGOOPullRefreshIgnore];

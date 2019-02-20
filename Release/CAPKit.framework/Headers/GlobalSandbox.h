@@ -1,4 +1,4 @@
-@class AppSandbox;
+@class CAPAppSandbox;
 
 @interface GlobalSandbox : DefaultSandbox <GlobalSandboxInterface>{
     NSMutableDictionary *pkgApps;

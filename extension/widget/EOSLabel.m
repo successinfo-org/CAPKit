@@ -7,8 +7,8 @@
 //
 
 #import "EOSLabel.h"
-#import "LabelM.h"
-#import "LabelWidget.h"
+#import "CAPLabelM.h"
+#import "CAPLabelWidget.h"
 
 @implementation EOSLabel
 

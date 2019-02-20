@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CAPKit/UIWidgetM.h>
-#import <CAPKit/ViewM.h>
+#import <CAPKit/CAPViewM.h>
 
-@class PageM;
+@class CAPPageM;
 
 @interface ModelBuilder : NSObject
 
 + (UIWidgetM *) buildModel: (NSDictionary *) dic;
 
-+ (ViewM *) buildModelFromArray: (NSArray *) list;
++ (CAPViewM *) buildModelFromArray: (NSArray *) list;
 
-+ (PageM *) buildPage: (NSDictionary *) dic;
-+ (PageM *) buildPageFromURL: (NSURL *) pageURL;
++ (CAPPageM *) buildPage: (NSDictionary *) dic;
++ (CAPPageM *) buildPageFromURL: (NSURL *) pageURL;
 
 @end

@@ -31,7 +31,7 @@
 
         [photos enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
             if (asset.mediaType == PHAssetMediaTypeImage) {
-                [photoList addObject: [[LuaImage alloc] initWithAsset: asset]];
+                [photoList addObject: [[CAPLuaImage alloc] initWithAsset: asset]];
             }
         }];
 
