@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.3.0"
+  s.version      = "0.3.1"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
   s.dependency 'SAMKeychain', '~> 1.5.3'
   s.dependency 'YLGIFImage', '~> 0.11'
   s.dependency 'Bugly', '~> 2.4.8'
+  s.dependency 'RSSwizzle', '~> 0.1.0'
 
   s.dependency 'CAPKit-iOS-WebP', '~> 0.4'
   s.dependency 'CAPKit-lua53', '~> 0.1.0'
