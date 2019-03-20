@@ -94,7 +94,7 @@
 - (void)closeDragDown{
     __weak typeof(self) weakSelf = self;
     [OSUtils runBlockOnMain:^{
-        [weakSelf.refreshScrollView egoRefreshScrollViewDataSourceDidFinishedLoading: (UIScrollView *) weakSelf];
+        [weakSelf.refreshScrollView egoRefreshScrollViewDataSourceDidFinishedLoading: (UIScrollView *) [weakSelf innerView]];
     }];
 }
 
