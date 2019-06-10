@@ -349,7 +349,11 @@
 }
 
 - (PackedArray *) getContentOffset{
-    CGPoint contentOffset = ((UIScrollView *)[self innerView]).contentOffset;
+    __block CGPoint contentOffset;
+    [OSUtils runSyncBlockOnMain:^{
+        contentOffset = ((UIScrollView *)[self innerView]).contentOffset;
+    }];
+
     return [[PackedArray alloc] initWithArray: @[
             [NSNumber numberWithFloat: [[self.pageSandbox getAppSandbox].scale getRefLength:contentOffset.x]],
             [NSNumber numberWithFloat: [[self.pageSandbox getAppSandbox].scale getRefLength:contentOffset.y]]
