@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.3.6"
+  s.version      = "0.3.7"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
