@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAPKit"
-  s.version      = "0.3.7"
+  s.version      = "0.4.0"
   s.summary      = "CAPKit Framework."
   s.description  = <<-DESC
                    CAPKit Framework, Cloud Application Platform.
@@ -14,19 +14,8 @@ Pod::Spec.new do |s|
   s.weak_framework = 'WebKit'
   s.libraries = 'resolv'
 
-  s.default_subspec = 'Release'
-
-  s.subspec 'Release' do |ss|
-    ss.source_files = 'extension/**/*.*'
-    ss.resource = 'Release/builtin'
-    ss.ios.vendored_frameworks = 'Release/CAPKit.framework'
-  end
-
-  s.subspec 'Debug' do |ss|
-    ss.source_files = 'extension/**/*.*'
-    ss.resource = 'Debug/builtin'
-    ss.ios.vendored_frameworks = 'Debug/CAPKit.framework'
-  end
+  s.resource = 'Debug/builtin'
+  s.ios.vendored_frameworks = 'Debug/CAPKit.framework'
 
   s.dependency 'DTCoreText', '~> 1.6.12'
   s.dependency 'TouchJSON', '~> 1.1'
@@ -40,7 +29,6 @@ Pod::Spec.new do |s|
   s.dependency 'GZIP', '~> 1.0.2'
   s.dependency 'SAMKeychain', '~> 1.5.3'
   s.dependency 'YLGIFImage', '~> 0.11'
-  s.dependency 'Bugly', '~> 2.4.8'
   s.dependency 'RSSwizzle', '~> 0.1.0'
 
   s.dependency 'CAPKit-iOS-WebP', '~> 0.4'

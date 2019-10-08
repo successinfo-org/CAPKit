@@ -1,10 +1,12 @@
-#import "Reachability.h"
-
 @class CAPContainer;
 @class CAPRenderView;
+@class Reachability;
 
 #define CAPDidEnterBackgroundNotification @"CAPDidEnterBackgroundNotification"
 #define CAPWillEnterForegroundNotification @"CAPWillEnterForegroundNotification"
+
+typedef void (^exceptionBlock)(NSException *);
+typedef void (^errorBlock)(NSError *);
 
 @interface CAPCenter : NSObject {
     NSMutableArray *containers;
@@ -26,6 +28,9 @@
 
 @property (nonatomic, strong) NSString *userAgent;
 
+@property (nonatomic, strong) exceptionBlock exceptionHandler;
+@property (nonatomic, strong) errorBlock errorHandler;
+
 
 + (CAPCenter *) shared;
 
@@ -44,7 +49,7 @@
 
 - (void) removeAllContainers;
 
-- (CAPContainer *) lastContainer DEPRECATED_ATTRIBUTE;
+- (CAPContainer *) lastContainer;
 
 - (void) initProxy: (NSURL *) optionalURL;
 

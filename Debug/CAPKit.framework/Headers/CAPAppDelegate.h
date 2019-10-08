@@ -1,5 +1,4 @@
 #import <MessageUI/MessageUI.h>
-#import <Reachability.h>
 
 @interface CAPAppDelegate : UIResponder <UIApplicationDelegate>
 
