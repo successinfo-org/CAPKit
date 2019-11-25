@@ -7,8 +7,8 @@
 @interface LuaABRecord : AbstractLuaTableCompatible
 
 @property (nonatomic, strong) ContactsService *service;
-@property (nonatomic, assign) ABRecordID recordID;
+@property (nonatomic, strong) NSString *identifier;
 
-- (instancetype) initWithRecordID: (ABRecordID) recordID
-                      withService: (ContactsService *) service;
+- (instancetype) initWithIdentifier: (NSString *) identifier
+                        withService: (ContactsService *) service;
 @end

@@ -8,6 +8,7 @@
 
 #import <CAPKit/CAPKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface CAPVideoM : UIWidgetM
 
@@ -19,6 +20,8 @@
 @property (nonatomic, assign) BOOL backgroundPlaybackEnabled;
 @property (nonatomic, assign) BOOL useAVPlayer;
 @property (nonatomic, strong) NSString *src;
+
+@property (nonatomic, assign) AVLayerVideoGravity videoGravity;
 
 @property (nonatomic, assign) NSTimeInterval initialPlaybackTime;
 @property (nonatomic, assign) NSTimeInterval endPlaybackTime;
