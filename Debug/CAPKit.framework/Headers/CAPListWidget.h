@@ -33,19 +33,7 @@
 
 @end
 
-@interface CAPListWidget : CAPAbstractUIWidget <UITableViewDataSource, UITableViewDelegate, IListWidget, EGORefreshTableHeaderDelegate> {
-    NSMutableArray *sectionList;
-    NSMutableArray *sectionIndexTitles;
-    NSMutableDictionary *sectionHeaderWidgetMap;
-    NSMutableDictionary *sectionFooterWidgetMap;
-
-    NSMutableDictionary *heightCache;
-    
-    NSMutableArray *pendingReloadCellIndexPaths;
-    BOOL reloadPending;
-
-    BOOL dragDowning;
-}
+@interface CAPListWidget : CAPAbstractUIWidget <UITableViewDataSource, UITableViewDelegate, IListWidget, EGORefreshTableHeaderDelegate>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-property-synthesis"
@@ -53,8 +41,20 @@
 @property (nonatomic, readonly) CAPListM *stableModel;
 #pragma clang diagnostic pop
 
-@property (nonatomic, readonly) UITableView *listView;
-@property (nonatomic, readonly) EGORefreshTableHeaderView *refreshTableView;
+@property (nonatomic, strong) NSMutableArray *sectionList;
+@property (nonatomic, strong) NSMutableArray *sectionIndexTitles;
+@property (nonatomic, strong) NSMutableDictionary *sectionHeaderWidgetMap;
+@property (nonatomic, strong) NSMutableDictionary *sectionFooterWidgetMap;
+
+@property (nonatomic, strong) NSMutableDictionary *heightCache;
+
+@property (nonatomic, strong) NSMutableArray *pendingReloadCellIndexPaths;
+@property (nonatomic) BOOL reloadPending;
+
+@property (nonatomic) BOOL dragDowning;
+
+@property (nonatomic, strong) UITableView *listView;
+@property (nonatomic, strong) EGORefreshTableHeaderView *refreshTableView;
 
 @property (nonatomic, weak) id<ListWidgetDelegate> delegate;
 

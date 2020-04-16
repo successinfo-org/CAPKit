@@ -12,9 +12,7 @@
 @interface CAPWebViewM : UIWidgetM
 
 @property (nonatomic, strong) NSString *src;
-@property (nonatomic, assign) BOOL zoomable;
 @property (nonatomic, assign) BOOL opaque;
-@property (nonatomic, assign) BOOL jit;
 
 @property (nonatomic, strong) LuaFunction *didStartLoad;
 @property (nonatomic, strong) LuaFunction *didStopLoad;

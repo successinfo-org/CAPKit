@@ -18,7 +18,7 @@
     BOOL hidden;
 }
 
-@property (nonatomic, strong) CAPAbstractUIWidget *widget;
+@property (nonatomic, strong) CAPAbstractUIWidget *contentWidget;
 @property (nonatomic, strong) UIViewController *rootViewController;
 
 - (void)refreshScreen: (NSNotification *)notification;

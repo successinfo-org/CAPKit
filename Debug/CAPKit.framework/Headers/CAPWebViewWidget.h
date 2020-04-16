@@ -12,12 +12,8 @@
 #import "CAPWebViewM.h"
 #import <WebKit/WebKit.h>
 
-@interface CAPWebViewWidget : CAPAbstractUIWidget <UIWebViewDelegate, IWebViewWidget,
+@interface CAPWebViewWidget : CAPAbstractUIWidget <IWebViewWidget,
     WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>{
-    UIWebView *uiwebview;
-
-    WKWebView *wkwebview;
-
     UIView *mainView;
     
     UIView *coverView;
@@ -34,8 +30,6 @@
     UIImageView *indicatorBackgroundView;
     
     NSMutableDictionary *schemeHandlerMap;
-
-    BOOL usingJit;
 }
 
 #pragma clang diagnostic push
@@ -48,6 +42,7 @@
 @property (nonatomic, strong) NSString *lastFileParent;
 @property (nonatomic, strong) NSString *lastURLParent;
 @property (nonatomic, strong) NSURL *lastURL;
+@property (nonatomic, strong) WKWebView *wkwebview;
 
 - (void) execute: (NSString *) js;
 - (void) loadPage: (NSString *) urlString;

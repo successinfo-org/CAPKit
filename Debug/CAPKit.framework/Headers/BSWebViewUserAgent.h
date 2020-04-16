@@ -7,10 +7,11 @@
 //
 
 #import <CAPKit/CAPKit.h>
+#import <WebKit/WebKit.h>
 
-@interface BSWebViewUserAgent : NSObject <UIWebViewDelegate> {
+@interface BSWebViewUserAgent : NSObject {
 	NSString *userAgent;
-	UIWebView *webView;
+	WKWebView *webView;
 }
 @property (nonatomic, strong) NSString *userAgent;
 -(NSString*)userAgentString;
